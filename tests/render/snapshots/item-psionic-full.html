@@ -1,0 +1,85 @@
+<!-- part: body -->
+<div class="skill-body psionic-body">
+<header class="item-header skill-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="Item &lt;name&gt;" />
+<div class="skill-header-main">
+<input class="name-input" type="text" name="name" value="Item &lt;name&gt;" placeholder="{SCARMARK.NamePlaceholder}" />
+</div>
+</header>
+<hr class="section-divider" />
+<div class="skill-levels">
+<div class="skill-level-box">
+<label>{SCARMARK.Skill.sbFull}</label>
+<div class="skill-level-value">
+</div>
+</div>
+<div class="skill-level-box">
+<label>{SCARMARK.Skill.slFull}</label>
+<input type="number" step="1" name="system.level" value="1" />
+</div>
+<div class="skill-level-box">
+<label>{SCARMARK.Combat.fatigue}</label>
+<input type="number" step="1" min="0" name="system.fatigue" value="1" />
+</div>
+</div>
+<div class="skill-attributes">
+<label>{SCARMARK.Skill.attributes}</label>
+<div class="skill-attributes-row">
+<select name="system.attribute1">
+<option value="str" >{SCARMARK.Attribute.str}</option>
+<option value="sta" >{SCARMARK.Attribute.sta}</option>
+<option value="dex" >{SCARMARK.Attribute.dex}</option>
+<option value="agl" >{SCARMARK.Attribute.agl}</option>
+<option value="wil" >{SCARMARK.Attribute.wil}</option>
+<option value="per" >{SCARMARK.Attribute.per}</option>
+<option value="pre" >{SCARMARK.Attribute.pre}</option>
+<option value="int" >{SCARMARK.Attribute.int}</option>
+<option value="spi" selected>{SCARMARK.Attribute.spi}</option>
+</select>
+<select name="system.attribute2">
+<option value="str" >{SCARMARK.Attribute.str}</option>
+<option value="sta" >{SCARMARK.Attribute.sta}</option>
+<option value="dex" >{SCARMARK.Attribute.dex}</option>
+<option value="agl" >{SCARMARK.Attribute.agl}</option>
+<option value="wil" >{SCARMARK.Attribute.wil}</option>
+<option value="per" >{SCARMARK.Attribute.per}</option>
+<option value="pre" >{SCARMARK.Attribute.pre}</option>
+<option value="int" >{SCARMARK.Attribute.int}</option>
+<option value="spi" selected>{SCARMARK.Attribute.spi}</option>
+</select>
+<select name="system.attribute3">
+<option value="str" >{SCARMARK.Attribute.str}</option>
+<option value="sta" >{SCARMARK.Attribute.sta}</option>
+<option value="dex" >{SCARMARK.Attribute.dex}</option>
+<option value="agl" >{SCARMARK.Attribute.agl}</option>
+<option value="wil" selected>{SCARMARK.Attribute.wil}</option>
+<option value="per" >{SCARMARK.Attribute.per}</option>
+<option value="pre" >{SCARMARK.Attribute.pre}</option>
+<option value="int" >{SCARMARK.Attribute.int}</option>
+<option value="spi" >{SCARMARK.Attribute.spi}</option>
+</select>
+</div>
+</div>
+<div class="skill-sunsigns">
+<div class="skill-sunsigns-header">
+<label>{SCARMARK.Skill.sunsignBonuses}</label>
+<a class="add-sunsign-bonus" data-action="addSunsignBonus">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+</div>
+<div class="field skill-note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<input type="text" name="system.notes" value="&lt;b&gt;text&lt;/b&gt;" />
+</div>
+<div class="field skill-description">
+<h3>{SCARMARK.Description}</h3>
+<prose-mirror name="system.description" value="&lt;b&gt;text&lt;/b&gt;">
+</prose-mirror>
+</div>
+<div class="field skill-description">
+<h3>{SCARMARK.Psionic.misfire}</h3>
+<prose-mirror name="system.misfire" value="&lt;b&gt;text&lt;/b&gt;">
+</prose-mirror>
+</div>
+</div>

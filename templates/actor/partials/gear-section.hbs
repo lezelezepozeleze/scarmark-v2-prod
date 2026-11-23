@@ -1,0 +1,71 @@
+{{!--
+  One section of the Gear tab (Gear, Weapons, Missiles, Runes, Armor): header and rows.
+  Parameters (hash):
+    title    lang key of the section name        cls      extra class of the section
+    add      data-action of the Add button       items    the items to list
+    wq       show the DUR (weapon) column        aq       show the DUR / Layer (armor) columns
+    charges  show the Class column               consume  show the Consume button on consumables
+--}}
+<div class="gear-section{{#if cls}} {{cls}}{{/if}}">
+  <div class="gear-section-header">
+    <span class="col-name">{{localize title}}</span>
+    <span class="col-qty">{{localize 'SCARMARK.Quantity'}}</span>
+    <span class="col-weight">{{localize 'SCARMARK.Weight'}}</span>
+    {{#if wq}}
+    <span class="col-wq">{{localize 'SCARMARK.Gear.wq'}}</span>
+    {{/if}}
+    {{#if aq}}
+    <span class="col-aq">{{localize 'SCARMARK.Gear.aq'}}</span>
+    <span class="col-layer">{{localize 'SCARMARK.Gear.layer'}}</span>
+    {{/if}}
+    <span class="col-notes">{{localize 'SCARMARK.Trait.notes'}}</span>
+    {{#if charges}}
+    <span class="col-charges">{{localize 'SCARMARK.Artifact.class'}}</span>
+    {{/if}}
+    <a class="col-actions add-gear" data-action="{{add}}">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+  <ol class="gear-list">
+    {{#each items as |item|}}
+    <li class="gear-entry{{#unless item.system.carried}} not-carried{{/unless}}" data-item-id="{{item.id}}" data-item-name="{{item.name}}">
+      <span class="col-name">
+        <img class="gear-icon" src="{{item.img}}" alt="" />
+        <span class="name-text">{{item.name}}</span>
+      </span>
+      <span class="col-qty">{{item.system.quantity}}</span>
+      <span class="col-weight">{{num item.system.totalWeight}}</span>
+      {{#if ../wq}}
+      <span class="col-wq">{{item.system.quality}}</span>
+      {{/if}}
+      {{#if ../aq}}
+      <span class="col-aq" title="{{lookup (lookup @root.armorDur item.id) 'title'}}"><input class="dur-input" type="number" step="1" min="-1" data-item-field="quality" value="{{lookup (lookup @root.armorDur item.id) 'current'}}" /><span class="dur-original">/{{lookup (lookup @root.armorDur item.id) 'original'}}</span></span>
+      <span class="col-layer">{{item.system.layer}}</span>
+      {{/if}}
+      <span class="col-notes" title="{{item.system.notes}}">{{item.system.notes}}</span>
+      {{#if ../charges}}
+      <span class="col-charges">{{#if item.system.rune}}{{item.system.artifact.class}}{{else}}{{#if item.system.artifact.active}}{{item.system.artifact.class}}{{/if}}{{/if}}</span>
+      {{/if}}
+      <span class="col-actions">
+        {{#if ../consume}}
+        {{#if item.system.usable}}
+        <a class="gear-use" title="{{localize 'SCARMARK.Gear.use'}}"><i class="fa-solid fa-hand-sparkles"></i></a>
+        {{/if}}
+        {{#if item.system.consumable}}
+        <a class="gear-consume" title="{{localize 'SCARMARK.Gear.consume'}}"><i class="fa-solid fa-flask"></i></a>
+        {{/if}}
+        {{/if}}
+        <a class="gear-store" data-action="storeItem" title="{{localize 'SCARMARK.Gear.store'}}"><i class="fa-solid fa-box-archive"></i></a>
+        <a class="gear-carry" data-action="toggleCarried" title="{{localize 'SCARMARK.Gear.carry'}}">
+          <i class="fa-solid {{#if item.system.carried}}fa-briefcase{{else}}fa-box{{/if}}"></i>
+        </a>
+        <a class="gear-edit" data-action="editGear" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a class="gear-delete" data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+      </span>
+    </li>
+    {{/each}}
+    {{#unless items.length}}
+    <li class="gear-empty">{{localize 'SCARMARK.None'}}</li>
+    {{/unless}}
+  </ol>
+</div>

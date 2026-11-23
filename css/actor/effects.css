@@ -1,0 +1,131 @@
+/* Actor sheet Effects tab and the Add drop-down (Special Abilities moved to attributes.css, where it is rendered). */
+
+/* ---------- Effects ---------- */
+.scarmark .effects-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.scarmark .add-effect {
+  cursor: pointer;
+}
+
+/* Fixed to the window and placed by onCreateEffect (sheets/actions/profile.mjs), so the scrolling tab does not clip it. */
+.scarmark .effect-add-menu {
+  position: fixed;
+  z-index: 100;
+  min-width: 220px;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-border-subtle);
+  box-shadow: var(--sm-shadow-popup);
+  overscroll-behavior: contain;
+}
+
+/* The sheets hide every scrollbar (base/sheet.css); this long list needs a visible one. Same selector plus the menu class, so it wins. */
+.scarmark.sheet:is(.actor, .item) .effect-add-menu {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sm-gold) transparent;
+}
+
+.scarmark .effect-add-group {
+  font-family: var(--sm-font-heading);
+  font-size: var(--sm-fs-sm);
+  border-bottom: var(--sm-rule-accent);
+  margin: 6px 0 2px 0;
+}
+
+.scarmark .effect-add-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+.scarmark .effect-add-item:hover {
+  background: var(--sm-surface-hover);
+}
+
+.scarmark .effect-add-item img {
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+
+.scarmark .effects-category {
+  margin-bottom: 12px;
+}
+
+/* Looks like the shared section headings in base/sheet.css but with a 4px margin and no padding-bottom, so it is not added to that list. */
+.scarmark .effects-category h3 {
+  font-family: var(--sm-font-heading);
+  font-size: 1rem;
+  border-bottom: var(--sm-rule-accent);
+  margin: 0 0 4px 0;
+}
+
+.scarmark .effects-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scarmark .effect-entry {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--sm-border-subtle);
+}
+
+.scarmark .effect-entry.is-disabled {
+  opacity: 0.5;
+}
+
+.scarmark .effect-icon {
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
+/* Default effect icons are drawn with white strokes; darken them on parchment. */
+:where(.theme-light) .scarmark .effect-icon,
+.scarmark.theme-light .effect-icon {
+  filter: brightness(0) opacity(0.85);
+}
+
+.scarmark .effect-name {
+  font-weight: 700;
+  cursor: pointer;
+  flex: 1;
+}
+
+.scarmark .effect-source {
+  font-size: var(--sm-fs-xs);
+  color: var(--sm-text-muted);
+}
+
+.scarmark .effect-toggle {
+  cursor: pointer;
+}
+
+.scarmark .effect-save {
+  cursor: pointer;
+}
+
+.scarmark .effect-delete {
+  cursor: pointer;
+  color: var(--sm-accent);
+}
+
+.scarmark .effect-empty {
+  color: var(--sm-text-muted);
+  font-size: var(--sm-fs-sm);
+  font-style: italic;
+}

@@ -1,0 +1,165 @@
+/* Actor sheet Combat tab. */
+
+/* ---------- Combat tab ---------- */
+/* The .combat-section frame is shared with the Armor sections: see "Fieldset boxes" in base/sheet.css. */
+.scarmark .combat-section > legend {
+  padding: 0 6px;
+  font-size: var(--sm-fs-sm);
+  font-weight: 700;
+  color: var(--sm-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.scarmark .combat-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.scarmark .combat-stats-row .stat-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.scarmark .combat-stats-row .stat-cell > label {
+  font-weight: 700;
+  font-size: var(--sm-fs-xs);
+  color: var(--sm-text-muted);
+}
+
+.scarmark .combat-stats-row .stat-cell input {
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: var(--sm-pad-field);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.scarmark .combat-stats-row .stat-roll {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+}
+
+.scarmark .combat-stats-row .stat-roll a {
+  cursor: pointer;
+  color: var(--sm-gold);
+}
+
+.scarmark .combat-stats-row .stat-value {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.scarmark .combat-stats-row .stat-value.over {
+  color: var(--sm-warn);
+}
+
+.scarmark .combat-stats-row .stat-hint {
+  font-size: 0.75rem;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .combat-rolls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.scarmark .combat-roll {
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sm-gap-sm);
+}
+
+.scarmark .combat-roll i {
+  color: var(--sm-gold);
+}
+
+/* The sheets hide every scrollbar (base/sheet.css); a wide table needs a visible one to scroll sideways. */
+.scarmark.sheet:is(.actor, .item) .combat-table-wrap {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.scarmark .combat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--sm-fs-sm);
+}
+
+.scarmark .combat-table th {
+  text-align: center;
+  color: var(--sm-text-muted);
+  font-weight: 700;
+  padding: 3px 5px;
+  border-bottom: var(--sm-line);
+  white-space: nowrap;
+}
+
+.scarmark .combat-table td {
+  text-align: center;
+  padding: 3px 5px;
+  border-bottom: 1px solid var(--sm-border-faint);
+}
+
+.scarmark .combat-table .col-name-th,
+.scarmark .combat-table .col-name-td {
+  text-align: left;
+}
+
+.scarmark .combat-table .col-name-td a {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.scarmark .combat-table .col-notes-td {
+  text-align: left;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .combat-table .strong {
+  font-weight: 700;
+  color: var(--sm-text);
+}
+
+.scarmark .combat-table .empty {
+  color: var(--sm-text-muted);
+  font-style: italic;
+}
+
+.scarmark .combat-table .col-actions-th {
+  text-align: right;
+}
+
+.scarmark .combat-table .col-actions {
+  width: max-content;
+  padding-right: 6px;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.scarmark .combat-table .col-actions a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .combat-table .col-actions a[data-action="deleteGear"] {
+  color: var(--sm-accent);
+}
+
+/* Heavy-bleeding marker in the Injuries table. */
+.scarmark .combat-table .bleed-heavy {
+  color: var(--sm-warn);
+  font-weight: 700;
+}

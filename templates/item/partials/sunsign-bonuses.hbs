@@ -1,0 +1,21 @@
+{{!-- The sunsign bonus rows of a skill or psionic talent, with the Add link (context: sunsignOptions, system). --}}
+<div class="skill-sunsigns">
+  <div class="skill-sunsigns-header">
+    <label>{{localize 'SCARMARK.Skill.sunsignBonuses'}}</label>
+    <a class="add-sunsign-bonus" data-action="addSunsignBonus">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+  {{#each system.sunsignBonuses as |entry index|}}
+  <div class="skill-sunsign-row" data-index="{{index}}">
+    <select name="system.sunsignBonuses.{{index}}.sunsign">
+      <option value=""></option>
+      {{#each ../sunsignOptions as |label key|}}
+      <option value="{{key}}" {{#if (eq key entry.sunsign)}}selected{{/if}}>{{localize label}}</option>
+      {{/each}}
+    </select>
+    <input type="number" step="1" name="system.sunsignBonuses.{{index}}.bonus" value="{{entry.bonus}}" />
+    <a class="delete-sunsign-bonus" data-action="deleteSunsignBonus" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+  </div>
+  {{/each}}
+</div>

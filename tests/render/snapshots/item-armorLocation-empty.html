@@ -1,0 +1,129 @@
+<!-- part: header -->
+<header class="sheet-header item-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="" />
+<input class="name-input" type="text" name="name" value="" placeholder="{SCARMARK.NamePlaceholder}" />
+</header>
+<!-- part: body -->
+<div class="armor-location-body">
+<div class="field armor-loc-type">
+<label>{SCARMARK.ArmorLocation.locationType}</label>
+<select name="system.locationType">
+<option value="head" selected>{SCARMARK.ArmorLocation.type.head}</option>
+<option value="neck" >{SCARMARK.ArmorLocation.type.neck}</option>
+<option value="shoulder" >{SCARMARK.ArmorLocation.type.shoulder}</option>
+<option value="arm" >{SCARMARK.ArmorLocation.type.arm}</option>
+<option value="hand" >{SCARMARK.ArmorLocation.type.hand}</option>
+<option value="chest" >{SCARMARK.ArmorLocation.type.chest}</option>
+<option value="belly" >{SCARMARK.ArmorLocation.type.belly}</option>
+<option value="hip" >{SCARMARK.ArmorLocation.type.hip}</option>
+<option value="thigh" >{SCARMARK.ArmorLocation.type.thigh}</option>
+<option value="shin" >{SCARMARK.ArmorLocation.type.shin}</option>
+<option value="wing" >{SCARMARK.ArmorLocation.type.wing}</option>
+<option value="tentacle" >{SCARMARK.ArmorLocation.type.tentacle}</option>
+<option value="tail" >{SCARMARK.ArmorLocation.type.tail}</option>
+<option value="creatureHead" >{SCARMARK.ArmorLocation.type.creatureHead}</option>
+<option value="creatureNeck" >{SCARMARK.ArmorLocation.type.creatureNeck}</option>
+<option value="creatureForeLeg" >{SCARMARK.ArmorLocation.type.creatureForeLeg}</option>
+<option value="creatureHindLeg" >{SCARMARK.ArmorLocation.type.creatureHindLeg}</option>
+<option value="creatureChest" >{SCARMARK.ArmorLocation.type.creatureChest}</option>
+<option value="creatureBelly" >{SCARMARK.ArmorLocation.type.creatureBelly}</option>
+</select>
+</div>
+<div class="field armor-loc-side">
+<label>{SCARMARK.ArmorLocation.side}</label>
+<select name="system.side">
+<option value="" selected>{SCARMARK.ArmorLocation.sides.none}</option>
+<option value="left">{SCARMARK.ArmorLocation.sides.left}</option>
+<option value="right">{SCARMARK.ArmorLocation.sides.right}</option>
+</select>
+</div>
+<fieldset class="armor-loc-section">
+<legend>{SCARMARK.ArmorLocation.hitProbability}</legend>
+<div class="gear-row">
+<div class="field">
+<label>{SCARMARK.ArmorLocation.highAim}</label>
+<input type="number" step="1" min="0" name="system.aim.high" value="300" />
+</div>
+<div class="field">
+<label>{SCARMARK.ArmorLocation.mediumAim}</label>
+<input type="number" step="1" min="0" name="system.aim.medium" value="100" />
+</div>
+<div class="field">
+<label>{SCARMARK.ArmorLocation.lowAim}</label>
+<input type="number" step="1" min="0" name="system.aim.low" value="0" />
+</div>
+</div>
+</fieldset>
+<fieldset class="armor-loc-section">
+<legend>{SCARMARK.ArmorLocation.hitLocationSettings}</legend>
+<div class="armor-loc-risks">
+<label class="checkbox-label">
+<input type="checkbox" name="system.risk.fumble" /> {SCARMARK.ArmorLocation.fumble} </label>
+<label class="checkbox-label">
+<input type="checkbox" name="system.risk.stumble" /> {SCARMARK.ArmorLocation.stumble} </label>
+<label class="checkbox-label">
+<input type="checkbox" name="system.risk.amputate" /> {SCARMARK.ArmorLocation.amputate} </label>
+</div>
+<div class="injury-grid">
+<div class="field">
+<label>{SCARMARK.ArmorLocation.thresholdFrom}</label>
+<select name="system.injury.t1">
+<option value="0" >&mdash;</option>
+<option value="1" selected>{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="2" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="3" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="4" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="5" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+</select>
+</div>
+<div class="field">
+<label>{SCARMARK.ArmorLocation.thresholdFrom}</label>
+<select name="system.injury.t5">
+<option value="0" >&mdash;</option>
+<option value="1" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="2" selected>{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="3" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="4" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="5" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+</select>
+</div>
+<div class="field">
+<label>{SCARMARK.ArmorLocation.thresholdFrom}</label>
+<select name="system.injury.t9">
+<option value="0" >&mdash;</option>
+<option value="1" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="2" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="3" selected>{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="4" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="5" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+</select>
+</div>
+<div class="field">
+<label>{SCARMARK.ArmorLocation.thresholdFrom}</label>
+<select name="system.injury.t13">
+<option value="0" >&mdash;</option>
+<option value="1" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="2" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="3" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="4" selected>{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="5" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+</select>
+</div>
+<div class="field">
+<label>{SCARMARK.ArmorLocation.thresholdFrom}</label>
+<select name="system.injury.t17">
+<option value="0" >&mdash;</option>
+<option value="1" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="2" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="3" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="4" >{SCARMARK.ArmorLocation.woundLevelOption}</option>
+<option value="5" selected>{SCARMARK.ArmorLocation.woundLevelOption}</option>
+</select>
+</div>
+</div>
+</fieldset>
+<div class="field note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<input type="text" name="system.notes" value="" />
+</div>
+</div>

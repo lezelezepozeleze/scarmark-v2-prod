@@ -1,0 +1,31 @@
+{{!-- The body of the Spell and Invocation sheets: header, a skill select and a number field, note and description. Parameters: bodyClass; selectLabel (lang key), selectName, selectValue, skills (names to choose from); numLabel (lang key), numName, numValue, numMax. --}}
+<div class="{{bodyClass}}">
+
+  {{> "systems/scarmark/templates/item/partials/esoteric-header.hbs"}}
+
+  <hr class="section-divider" />
+
+  <div class="esoteric-fields">
+    <div class="field esoteric-select">
+      <label>{{localize selectLabel}}</label>
+      <select name="{{selectName}}">
+        <option value="" {{#if (eq selectValue "")}}selected{{/if}}>&mdash;</option>
+        {{#each skills as |name|}}
+        <option value="{{name}}" {{#if (eq ../selectValue name)}}selected{{/if}}>{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="field esoteric-num">
+      <label>{{localize numLabel}}</label>
+      <input type="number" step="1" min="{{limits.esotericMin}}" max="{{numMax}}" name="{{numName}}" value="{{numValue}}" />
+    </div>
+  </div>
+
+  {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="skill-note"}}
+
+  <div class="field skill-description">
+    <h3>{{localize 'SCARMARK.Description'}}</h3>
+    <prose-mirror name="system.description" value="{{system.description}}"></prose-mirror>
+  </div>
+
+</div>

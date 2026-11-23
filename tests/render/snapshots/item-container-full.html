@@ -1,0 +1,62 @@
+<!-- part: header -->
+<header class="sheet-header item-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="Item &lt;name&gt;" />
+<input class="name-input" type="text" name="name" value="Item &lt;name&gt;" placeholder="{SCARMARK.NamePlaceholder}" />
+</header>
+<!-- part: details -->
+<div class="tab details active" data-group="primary" data-tab="details">
+<div class="sm-item-form">
+<fieldset class="sm-box item-general">
+<legend>{SCARMARK.Section.general}</legend>
+<div class="item-basics">
+<div class="field quantity">
+<label>{SCARMARK.Quantity}</label>
+<input type="number" step="1" name="system.quantity" value="2" />
+</div>
+<div class="field weight">
+<label>{SCARMARK.WeightKg}</label>
+<input type="number" step="any" name="system.weight" value="1" />
+</div>
+<div class="field value">
+<label>{SCARMARK.Value}</label>
+<input type="number" step="any" name="system.value" value="1" />
+</div>
+<div class="field max-capacity">
+<label>{SCARMARK.Container.maxCapacity}</label>
+<input type="number" step="0.1" min="0" name="system.maxCapacity" value="2" />
+</div>
+</div>
+</fieldset>
+<div class="field note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<textarea rows="1" name="system.notes">&lt;b&gt;text&lt;/b&gt;</textarea>
+</div>
+</div>
+</div>
+<!-- part: stored -->
+<div class="tab stored active" data-group="primary" data-tab="stored">
+<div class="gear-section-header stored-header">
+<span class="col-name">{SCARMARK.Container.colItem}</span>
+<span class="col-qty">{SCARMARK.Container.colQuantity}</span>
+<span class="col-weight">{SCARMARK.Container.colWeight}</span>
+<span class="col-actions">{SCARMARK.Container.colUnpack}</span>
+</div>
+<ol class="gear-list stored-list">
+<li class="gear-empty">{SCARMARK.Container.noStored}</li>
+</ol>
+</div>
+<!-- part: actions -->
+<div class="tab actions active" data-group="primary" data-tab="actions">
+<div class="actions-panel" data-actions-path="system.actions">
+<div class="actions-header">
+<span class="col-action">{SCARMARK.Action.colActions}</span>
+<span class="col-when">{SCARMARK.Action.colWhen}</span>
+<a class="add-action" data-action="createAction">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="actions-list">
+<li class="action-empty">{SCARMARK.Action.none}</li>
+</ol>
+</div>
+</div>

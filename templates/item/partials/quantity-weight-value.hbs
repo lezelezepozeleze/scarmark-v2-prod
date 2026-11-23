@@ -1,0 +1,13 @@
+{{!-- The Quantity, Weight and Value fields of a storable item (inside item-basics). Parameter: weightLabel - lang key of the weight label (default SCARMARK.WeightKg). --}}
+<div class="field quantity">
+  <label>{{localize 'SCARMARK.Quantity'}}</label>
+  <input type="number" step="1" name="system.quantity" value="{{system.quantity}}" />
+</div>
+<div class="field weight">
+  <label>{{#if weightLabel}}{{localize weightLabel}}{{else}}{{localize 'SCARMARK.WeightKg'}}{{/if}}</label>
+  <input type="number" step="any" name="system.weight" value="{{system.weight}}" />
+</div>
+<div class="field value">
+  <label>{{localize 'SCARMARK.Value'}}</label>
+  <input type="number" step="any" name="system.value" value="{{system.value}}" />
+</div>

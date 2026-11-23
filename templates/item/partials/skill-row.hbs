@@ -1,0 +1,18 @@
+{{!-- The "Skill" box of a weapon or a missile: Associated skill | Specialization in one row. Parameters: skills - the skills on offer (key -> lang key); label - lang key of the skill label. --}}
+<fieldset class="sm-box sm-skill">
+  <legend>{{localize 'SCARMARK.Section.skill'}}</legend>
+  <div class="sm-row-2">
+    <div class="field weapon-skill">
+      <label>{{localize label}}</label>
+      <select name="system.associatedSkill">
+        {{#each skills as |text key|}}
+        <option value="{{key}}" {{#if (eq ../system.associatedSkill key)}}selected{{/if}}>{{localize text}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="field weapon-specialization">
+      <label>{{localize 'SCARMARK.Weapon.specialization'}}</label>
+      <input type="number" step="1" name="system.specialization" value="{{system.specialization}}" />
+    </div>
+  </div>
+</fieldset>

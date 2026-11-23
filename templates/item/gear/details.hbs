@@ -1,0 +1,43 @@
+{{#> "systems/scarmark/templates/item/partials/details-tab.hbs"}}
+
+  <div class="sm-item-form">
+
+    {{> "systems/scarmark/templates/item/partials/item-basics.hbs" container=true}}
+
+    {{!-- Usage: Consumable | Toxicity | Usable | One-use only. Toxicity and One-use only are always shown, greyed out and locked until their box is ticked. --}}
+    <fieldset class="sm-box sm-usage">
+      <legend>{{localize 'SCARMARK.Section.usage'}}</legend>
+      <div class="sm-row-spread">
+        <label class="checkbox-label sm-icon-toggle" data-tooltip="{{localize 'SCARMARK.Gear.consumable'}}" aria-label="{{localize 'SCARMARK.Gear.consumable'}}">
+          <input type="checkbox" name="system.consumable" {{#if system.consumable}}checked{{/if}} />
+          <i class="fa-solid fa-flask" aria-hidden="true"></i>
+        </label>
+        <label class="sm-inline-field{{#unless system.consumable}} is-disabled{{/unless}}">
+          {{localize 'SCARMARK.Gear.toxicity'}}
+          <input type="number" step="1" min="0" name="system.toxicity" value="{{system.toxicity}}" {{#unless system.consumable}}disabled{{/unless}} />
+        </label>
+        <label class="checkbox-label sm-icon-toggle" data-tooltip="{{localize 'SCARMARK.Gear.usable'}}" aria-label="{{localize 'SCARMARK.Gear.usable'}}">
+          <input type="checkbox" name="system.usable" {{#if system.usable}}checked{{/if}} />
+          <i class="fa-solid fa-hand" aria-hidden="true"></i>
+        </label>
+        <label class="checkbox-label{{#unless system.usable}} is-disabled{{/unless}}">
+          <input type="checkbox" name="system.usedUp" {{#if system.usedUp}}checked{{/if}} {{#unless system.usable}}disabled{{/unless}} />
+          {{localize 'SCARMARK.Gear.usedUp'}}
+        </label>
+      </div>
+    </fieldset>
+
+    {{> "systems/scarmark/templates/item/partials/artifact-fields.hbs"}}
+
+    {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="note" grow=true}}
+
+    {{!-- The hidden description of a gear item: only while the macro toggle-hidden-description.js has it on. --}}
+    {{#if showDescription}}
+    <div class="field gear-description">
+      <label class="plain-label">{{localize 'SCARMARK.Description'}}</label>
+      <prose-mirror name="system.description" value="{{system.description}}"></prose-mirror>
+    </div>
+    {{/if}}
+
+  </div>
+{{/"systems/scarmark/templates/item/partials/details-tab.hbs"}}

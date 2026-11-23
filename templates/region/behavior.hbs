@@ -1,0 +1,37 @@
+{{!-- The sheet of a region behavior (sheets/region-behavior-sheet.mjs). Context: view/region-behavior-view.mjs buildRegionBehaviorSheet, and actionsPanel for the Actions panel. Every field is named after the data it saves. --}}
+<section class="region-body">
+
+  <header class="effect-head">
+    <input type="text" name="name" value="{{name}}" placeholder="{{localize 'SCARMARK.Region.namePlaceholder'}}" />
+    <label class="checkbox-label"><input type="checkbox" name="disabled" {{#if disabled}}checked{{/if}} /> {{localize 'SCARMARK.Region.disabled'}}</label>
+  </header>
+
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Region.setOff'}}</legend>
+    <div class="effect-pair">
+      <label>
+        <span>{{localize 'SCARMARK.Region.whenLabel'}}</span>
+        <select name="system.when">{{#each whenOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      </label>
+      <label>
+        <span>{{localize 'SCARMARK.Region.whoLabel'}}</span>
+        <select name="system.who">{{#each whoOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      </label>
+      <label>
+        <span>{{localize 'SCARMARK.Region.frequencyLabel'}}</span>
+        <select name="system.frequency">{{#each frequencyOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      </label>
+    </div>
+    <p class="effect-hint">{{whenHint}}</p>
+    <label class="checkbox-label"><input type="checkbox" name="system.pause" {{#if pause}}checked{{/if}} /> {{localize 'SCARMARK.Region.pause'}}</label>
+    {{#if showSpent}}
+    <label class="checkbox-label"><input type="checkbox" name="system.spent" {{#if spent}}checked{{/if}} /> {{localize 'SCARMARK.Region.spent'}}</label>
+    {{/if}}
+  </fieldset>
+
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Tabs.actions'}}</legend>
+    {{> "systems/scarmark/templates/common/actions-panel.hbs" panel=actionsPanel}}
+  </fieldset>
+
+</section>

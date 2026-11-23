@@ -1,0 +1,94 @@
+<div class="armor-location-body">
+
+  <div class="field armor-loc-type">
+    <label>{{localize 'SCARMARK.ArmorLocation.locationType'}}</label>
+    <select name="system.locationType">
+      {{#each locationTypes as |loc key|}}
+      <option value="{{key}}" {{#if (eq ../system.locationType key)}}selected{{/if}}>{{localize loc.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="field armor-loc-side">
+    <label>{{localize 'SCARMARK.ArmorLocation.side'}}</label>
+    <select name="system.side">
+      <option value=""{{#unless system.side}} selected{{/unless}}>{{localize 'SCARMARK.ArmorLocation.sides.none'}}</option>
+      {{#each sideOptions as |side|}}
+      <option value="{{side}}"{{#if (eq ../system.side side)}} selected{{/if}}>{{localize (concat 'SCARMARK.ArmorLocation.sides.' side)}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <fieldset class="armor-loc-section">
+    <legend>{{localize 'SCARMARK.ArmorLocation.hitProbability'}}</legend>
+    <div class="gear-row">
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.highAim'}}</label>
+        <input type="number" step="1" min="0" name="system.aim.high" value="{{system.aim.high}}" />
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.mediumAim'}}</label>
+        <input type="number" step="1" min="0" name="system.aim.medium" value="{{system.aim.medium}}" />
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.lowAim'}}</label>
+        <input type="number" step="1" min="0" name="system.aim.low" value="{{system.aim.low}}" />
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="armor-loc-section">
+    <legend>{{localize 'SCARMARK.ArmorLocation.hitLocationSettings'}}</legend>
+
+    <div class="armor-loc-risks">
+      <label class="checkbox-label">
+        <input type="checkbox" name="system.risk.fumble" {{#if system.risk.fumble}}checked{{/if}} />
+        {{localize 'SCARMARK.ArmorLocation.fumble'}}
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" name="system.risk.stumble" {{#if system.risk.stumble}}checked{{/if}} />
+        {{localize 'SCARMARK.ArmorLocation.stumble'}}
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" name="system.risk.amputate" {{#if system.risk.amputate}}checked{{/if}} />
+        {{localize 'SCARMARK.ArmorLocation.amputate'}}
+      </label>
+    </div>
+
+    <div class="injury-grid">
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.thresholdFrom' n=1}}</label>
+        <select name="system.injury.t1">
+          {{#each injuryResults as |code|}}<option value="{{code}}" {{#if (eq ../system.injury.t1 code)}}selected{{/if}}>{{#if code}}{{localize 'SCARMARK.ArmorLocation.woundLevelOption' code=code}}{{else}}&mdash;{{/if}}</option>{{/each}}
+        </select>
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.thresholdFrom' n=5}}</label>
+        <select name="system.injury.t5">
+          {{#each injuryResults as |code|}}<option value="{{code}}" {{#if (eq ../system.injury.t5 code)}}selected{{/if}}>{{#if code}}{{localize 'SCARMARK.ArmorLocation.woundLevelOption' code=code}}{{else}}&mdash;{{/if}}</option>{{/each}}
+        </select>
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.thresholdFrom' n=9}}</label>
+        <select name="system.injury.t9">
+          {{#each injuryResults as |code|}}<option value="{{code}}" {{#if (eq ../system.injury.t9 code)}}selected{{/if}}>{{#if code}}{{localize 'SCARMARK.ArmorLocation.woundLevelOption' code=code}}{{else}}&mdash;{{/if}}</option>{{/each}}
+        </select>
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.thresholdFrom' n=13}}</label>
+        <select name="system.injury.t13">
+          {{#each injuryResults as |code|}}<option value="{{code}}" {{#if (eq ../system.injury.t13 code)}}selected{{/if}}>{{#if code}}{{localize 'SCARMARK.ArmorLocation.woundLevelOption' code=code}}{{else}}&mdash;{{/if}}</option>{{/each}}
+        </select>
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.ArmorLocation.thresholdFrom' n=17}}</label>
+        <select name="system.injury.t17">
+          {{#each injuryResults as |code|}}<option value="{{code}}" {{#if (eq ../system.injury.t17 code)}}selected{{/if}}>{{#if code}}{{localize 'SCARMARK.ArmorLocation.woundLevelOption' code=code}}{{else}}&mdash;{{/if}}</option>{{/each}}
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="note"}}
+
+</div>

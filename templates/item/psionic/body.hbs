@@ -1,0 +1,38 @@
+<div class="skill-body psionic-body">
+
+  {{> "systems/scarmark/templates/item/partials/esoteric-header.hbs"}}
+
+  <hr class="section-divider" />
+
+  <div class="skill-levels">
+    <div class="skill-level-box">
+      <label>{{localize 'SCARMARK.Skill.sbFull'}}</label>
+      <div class="skill-level-value">{{system.sb}}</div>
+    </div>
+    <div class="skill-level-box">
+      <label>{{localize 'SCARMARK.Skill.slFull'}}</label>
+      <input type="number" step="1" name="system.level" value="{{system.level}}" />
+    </div>
+    <div class="skill-level-box">
+      <label>{{localize 'SCARMARK.Combat.fatigue'}}</label>
+      <input type="number" step="1" min="0" name="system.fatigue" value="{{system.fatigue}}" />
+    </div>
+  </div>
+
+  {{> "systems/scarmark/templates/item/partials/skill-attributes.hbs"}}
+
+  {{> "systems/scarmark/templates/item/partials/sunsign-bonuses.hbs"}}
+
+  {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="skill-note"}}
+
+  <div class="field skill-description">
+    <h3>{{localize 'SCARMARK.Description'}}</h3>
+    <prose-mirror name="system.description" value="{{system.description}}"></prose-mirror>
+  </div>
+
+  <div class="field skill-description">
+    <h3>{{localize 'SCARMARK.Psionic.misfire'}}</h3>
+    <prose-mirror name="system.misfire" value="{{system.misfire}}"></prose-mirror>
+  </div>
+
+</div>

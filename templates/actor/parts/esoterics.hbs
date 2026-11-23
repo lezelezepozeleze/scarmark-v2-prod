@@ -1,0 +1,109 @@
+<div class="tab esoterics{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="esoterics">
+
+  <fieldset class="combat-section esoterics-stats">
+    <legend>{{localize 'SCARMARK.Esoterics.statistics'}}</legend>
+    <div class="combat-stats-row">
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Esoterics.spiritCapacity'}}</label>
+        <input type="number" step="1" min="0" name="system.resources.spiritCapacity" value="{{esotericsStats.spiritCapacity}}" />
+        {{#if esotericsStats.spirit}}<span class="stat-hint">{{localize 'SCARMARK.Attribute.spi'}} {{esotericsStats.spirit}}</span>{{/if}}
+      </div>
+      {{#each esotericsStats.religions as |rel|}}
+      <div class="stat-cell" data-item-id="{{rel.id}}">
+        <label>{{localize 'SCARMARK.Esoterics.faithPoints'}}{{#if ../esotericsStats.manyReligions}} &middot; {{rel.name}}{{/if}}</label>
+        <input type="number" step="1" min="0" data-skill-field="faithPoints" value="{{rel.fp}}" title="{{rel.name}}" aria-label="{{localize 'SCARMARK.FieldOf' field=(localize 'SCARMARK.Esoterics.faithPoints') name=rel.name}}" />
+      </div>
+      {{else}}
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Esoterics.faithPoints'}}</label>
+        <span class="stat-value">&mdash;</span>
+        <span class="stat-hint">{{localize 'SCARMARK.Esoterics.noReligionSkill'}}</span>
+      </div>
+      {{/each}}
+    </div>
+  </fieldset>
+
+  {{#> "systems/scarmark/templates/actor/partials/esoteric-section.hbs" title="SCARMARK.Esoterics.magicSpells" add="addSpell"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=spells colspan=6}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.Combat.name'}}</th>
+        <th>{{localize 'SCARMARK.Spell.magicType'}}</th>
+        <th>{{localize 'SCARMARK.Spell.level'}}</th>
+        <th>{{localize 'SCARMARK.Skill.esl'}}</th>
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+        <th class="col-actions-th"></th>
+      {{/inline}}
+      {{#each spells as |s|}}
+      <tr data-item-id="{{s.id}}">
+        <td class="col-name-td"><a data-action="castSpell" title="{{localize 'SCARMARK.Esoterics.cast'}}">{{s.name}}</a></td>
+        <td>{{s.magicType}}</td>
+        <td><input type="number" class="esoteric-field" data-skill-field="level" value="{{s.level}}" min="{{@root.limits.esotericMin}}" max="{{@root.limits.spellLevelMax}}" step="1" aria-label="{{localize 'SCARMARK.FieldOf' field=(localize 'SCARMARK.Spell.level') name=s.name}}"></td>
+        <td class="strong">{{s.esl}}</td>
+        <td class="col-notes-td">{{s.notes}}</td>
+        <td class="col-actions">
+          <a data-action="postEsoteric" title="{{localize 'SCARMARK.Esoterics.toChat'}}"><i class="fa-solid fa-comment"></i></a>
+          <a data-action="editGear" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/esoteric-section.hbs"}}
+
+  {{#> "systems/scarmark/templates/actor/partials/esoteric-section.hbs" title="SCARMARK.Esoterics.religiousInvocations" add="addInvocation"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=invocations colspan=6}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.Combat.name'}}</th>
+        <th>{{localize 'SCARMARK.Invocation.religion'}}</th>
+        <th>{{localize 'SCARMARK.Esoterics.circle'}}</th>
+        <th>{{localize 'SCARMARK.Skill.esl'}}</th>
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+        <th class="col-actions-th"></th>
+      {{/inline}}
+      {{#each invocations as |inv|}}
+      <tr data-item-id="{{inv.id}}">
+        <td class="col-name-td"><a data-action="invokeInvocation" title="{{localize 'SCARMARK.Invocation.invoke'}}">{{inv.name}}</a></td>
+        <td>{{inv.religion}}</td>
+        <td><input type="number" class="esoteric-field" data-skill-field="circle" value="{{inv.circle}}" min="{{@root.limits.esotericMin}}" max="{{@root.limits.invocationCircleMax}}" step="1" aria-label="{{localize 'SCARMARK.FieldOf' field=(localize 'SCARMARK.Esoterics.circle') name=inv.name}}"></td>
+        <td class="strong">{{inv.esl}}</td>
+        <td class="col-notes-td">{{inv.notes}}</td>
+        <td class="col-actions">
+          <a data-action="postEsoteric" title="{{localize 'SCARMARK.Esoterics.toChat'}}"><i class="fa-solid fa-comment"></i></a>
+          <a data-action="editGear" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/esoteric-section.hbs"}}
+
+  {{#> "systems/scarmark/templates/actor/partials/esoteric-section.hbs" title="SCARMARK.Esoterics.psionicTalents" add="addPsionic"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=psionics colspan=7}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.Combat.name'}}</th>
+        <th>{{localize 'SCARMARK.Skill.sb'}}</th>
+        <th>{{localize 'SCARMARK.Skill.sl'}}</th>
+        <th>{{localize 'SCARMARK.Skill.esl'}}</th>
+        <th>{{localize 'SCARMARK.Combat.fatigue'}}</th>
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+        <th class="col-actions-th"></th>
+      {{/inline}}
+      {{#each psionics as |p|}}
+      <tr data-item-id="{{p.id}}">
+        <td class="col-name-td"><a data-action="usePsionic" title="{{localize 'SCARMARK.Esoterics.use'}}">{{p.name}}</a></td>
+        <td>{{p.sb}}</td>
+        <td><input type="number" class="esoteric-field" data-skill-field="level" value="{{p.level}}" min="0" step="1" aria-label="{{localize 'SCARMARK.FieldOf' field=(localize 'SCARMARK.Skill.sl') name=p.name}}"></td>
+        <td class="strong">{{p.esl}}</td>
+        <td>{{p.fatigue}}</td>
+        <td class="col-notes-td">{{p.notes}}</td>
+        <td class="col-actions">
+          <a data-action="postEsoteric" title="{{localize 'SCARMARK.Esoterics.toChat'}}"><i class="fa-solid fa-comment"></i></a>
+          <a data-action="editGear" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/esoteric-section.hbs"}}
+
+</div>

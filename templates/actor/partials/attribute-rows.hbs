@@ -1,0 +1,17 @@
+{{!-- The attribute cards of the Profile tab, in rows (context: attributeRows). --}}
+{{#each attributeRows as |row rowIndex|}}
+<div class="attribute-row">
+  {{#each row as |attr|}}
+  <div class="attribute-card">
+    <label class="attribute-label">{{localize attr.label}}</label>
+    <div class="attribute-effective">{{attr.effective}}</div>
+    <div class="attribute-footer">
+      <input class="attribute-base" type="number" name="system.attributes.{{attr.key}}.base" value="{{attr.base}}" />
+      <a class="attribute-roll" data-action="rollAttribute" data-attribute="{{attr.key}}" title="{{localize 'SCARMARK.D100Test'}}">
+        <i class="fa-solid fa-dice-d20"></i>
+      </a>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/each}}

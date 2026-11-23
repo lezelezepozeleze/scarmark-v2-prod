@@ -1,0 +1,2066 @@
+[
+  {
+    "id": "ignore-cf",
+    "source": "executed",
+    "input": {
+      "defense": "ignore",
+      "attackerLevel": "cf",
+      "defenderLevel": null
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "ignore-mf",
+    "source": "executed",
+    "input": {
+      "defense": "ignore",
+      "attackerLevel": "mf",
+      "defenderLevel": null
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "ignore-ms",
+    "source": "executed",
+    "input": {
+      "defense": "ignore",
+      "attackerLevel": "ms",
+      "defenderLevel": null
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "ignore-cs",
+    "source": "executed",
+    "input": {
+      "defense": "ignore",
+      "attackerLevel": "cs",
+      "defenderLevel": null
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-mf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "mf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-mf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-mf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "mf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-mf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "mf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-ms-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-ms-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-ms-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-ms-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cs-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cs-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cs-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-cs-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-mf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "mf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-mf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-mf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "mf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-mf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "mf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-ms-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-ms-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-ms-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-ms-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cs-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cs-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cs-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-cs-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-mf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "mf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-mf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-mf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "mf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-mf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "mf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-ms-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-ms-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-ms-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": "attacker",
+        "a": 40,
+        "d": 30
+      }
+    }
+  },
+  {
+    "id": "riposte-ms-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cs-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cs-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cs-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-cs-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": "attacker",
+        "a": 40,
+        "d": 30
+      }
+    }
+  },
+  {
+    "id": "counterstrike-cf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-mf-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "mf",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-mf-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-mf-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "mf",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-mf-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "mf",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-ms-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-ms-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-ms-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 2,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-ms-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": true,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cs-vs-cf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "cf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cs-vs-mf",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "mf",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cs-vs-ms",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "ms",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-cs-vs-cs",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 40,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 3,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-ms-33-vs-27",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 33,
+      "defenderRoll": 27
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-ms-27-vs-33",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 27,
+      "defenderRoll": 33
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-ms-30-vs-30",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 30,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-cs-45-vs-20",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 45,
+      "defenderRoll": 20
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-cs-20-vs-45",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 20,
+      "defenderRoll": 45
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-cs-25-vs-25",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 25,
+      "defenderRoll": 25
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-mf-70-vs-60",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 70,
+      "defenderRoll": 60
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "block-tie-cf-100-vs-90",
+    "source": "executed",
+    "input": {
+      "defense": "block",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 100,
+      "defenderRoll": 90
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-ms-33-vs-27",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 33,
+      "defenderRoll": 27
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-ms-27-vs-33",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 27,
+      "defenderRoll": 33
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-ms-30-vs-30",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 30,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-cs-45-vs-20",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 45,
+      "defenderRoll": 20
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-cs-20-vs-45",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 20,
+      "defenderRoll": 45
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-cs-25-vs-25",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 25,
+      "defenderRoll": 25
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-mf-70-vs-60",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 70,
+      "defenderRoll": 60
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "dodge-tie-cf-100-vs-90",
+    "source": "executed",
+    "input": {
+      "defense": "dodge",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 100,
+      "defenderRoll": 90
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-tie-ms-33-vs-27",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 33,
+      "defenderRoll": 27
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 2,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": "attacker",
+        "a": 33,
+        "d": 27
+      }
+    }
+  },
+  {
+    "id": "riposte-tie-ms-27-vs-33",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 27,
+      "defenderRoll": 33
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": "defender",
+        "a": 27,
+        "d": 33
+      }
+    }
+  },
+  {
+    "id": "riposte-tie-ms-30-vs-30",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 30,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": null,
+        "a": 30,
+        "d": 30
+      }
+    }
+  },
+  {
+    "id": "riposte-tie-cs-45-vs-20",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 45,
+      "defenderRoll": 20
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": "attacker",
+        "a": 45,
+        "d": 20
+      }
+    }
+  },
+  {
+    "id": "riposte-tie-cs-20-vs-45",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 20,
+      "defenderRoll": 45
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": true,
+      "strikeDice": 0,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": "defender",
+        "a": 20,
+        "d": 45
+      }
+    }
+  },
+  {
+    "id": "riposte-tie-cs-25-vs-25",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 25,
+      "defenderRoll": 25
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": null,
+        "a": 25,
+        "d": 25
+      }
+    }
+  },
+  {
+    "id": "riposte-tie-mf-70-vs-60",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 70,
+      "defenderRoll": 60
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-tie-cf-100-vs-90",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 100,
+      "defenderRoll": 90
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-ms-33-vs-27",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 33,
+      "defenderRoll": 27
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 2,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-ms-27-vs-33",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 27,
+      "defenderRoll": 33
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 2,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-ms-30-vs-30",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms",
+      "attackerRoll": 30,
+      "defenderRoll": 30
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 2,
+      "defStrikeDice": 2,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-cs-45-vs-20",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 45,
+      "defenderRoll": 20
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 3,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-cs-20-vs-45",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 20,
+      "defenderRoll": 45
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 3,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-cs-25-vs-25",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cs",
+      "defenderLevel": "cs",
+      "attackerRoll": 25,
+      "defenderRoll": 25
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": true,
+      "strikeDice": 3,
+      "defStrikeDice": 3,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-mf-70-vs-60",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "mf",
+      "defenderLevel": "mf",
+      "attackerRoll": 70,
+      "defenderRoll": 60
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "counterstrike-tie-cf-100-vs-90",
+    "source": "executed",
+    "input": {
+      "defense": "counterstrike",
+      "attackerLevel": "cf",
+      "defenderLevel": "cf",
+      "attackerRoll": 100,
+      "defenderRoll": 90
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": null
+    }
+  },
+  {
+    "id": "riposte-tie-ms-rolls-omitted",
+    "source": "executed",
+    "input": {
+      "defense": "riposte",
+      "attackerLevel": "ms",
+      "defenderLevel": "ms"
+    },
+    "expected": {
+      "attackerStrikes": false,
+      "defenderStrikes": false,
+      "strikeDice": 0,
+      "defStrikeDice": 0,
+      "ata": false,
+      "dta": false,
+      "tie": {
+        "winner": null,
+        "a": 0,
+        "d": 0
+      }
+    }
+  },
+  {
+    "id": "ignore-cs-defender-level-given",
+    "source": "executed",
+    "input": {
+      "defense": "ignore",
+      "attackerLevel": "cs",
+      "defenderLevel": "cf"
+    },
+    "expected": {
+      "attackerStrikes": true,
+      "defenderStrikes": false,
+      "strikeDice": 3,
+      "defStrikeDice": 0,
+      "ata": true,
+      "dta": false,
+      "tie": null
+    }
+  }
+]

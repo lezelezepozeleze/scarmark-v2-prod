@@ -1,0 +1,96 @@
+/* Chat cards (.scarmark-card), also used by the world macros. */
+
+/* ---------- Combat chat cards ---------- */
+.scarmark-card {
+  border: var(--sm-line);
+  /* 4px, not --sm-radius (3px): the card frame is intentionally 1px rounder than the buttons inside. */
+  border-radius: 4px;
+  padding: 8px 10px;
+  background: var(--sm-bg);
+  color: var(--sm-text);
+}
+
+.scarmark-card .card-title {
+  font-weight: 700;
+  color: var(--sm-gold);
+  margin-bottom: 4px;
+}
+
+.scarmark-card .card-line {
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+/* Armor-durability (AQ) wear note on a strike card: muted meta-info. */
+.scarmark-card .card-line.armor-wear {
+  font-size: 0.82rem;
+  color: var(--sm-text-muted);
+}
+
+.scarmark-card .card-prompt {
+  margin: 6px 0 4px 0;
+  font-weight: 700;
+  color: var(--sm-text-muted);
+}
+
+.scarmark-card .card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sm-gap-sm);
+  margin-top: 6px;
+}
+
+.scarmark-card .card-buttons button {
+  flex: 1;
+  min-width: 70px;
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: 4px 6px;
+  cursor: pointer;
+  border-radius: var(--sm-radius);
+}
+
+.scarmark-card .card-buttons button:hover {
+  background: var(--sm-surface-hover);
+  border-color: var(--sm-accent);
+}
+
+.scarmark-card .ta {
+  color: var(--sm-gold);
+  font-weight: 700;
+}
+
+.scarmark-card .card-sep {
+  border: 0;
+  border-top: 1px solid var(--sm-border);
+  margin: 6px 0;
+}
+
+.scarmark-card .test-outcome {
+  margin-top: 2px;
+  font-size: 0.95rem;
+}
+
+.scarmark-card .outcome-cs {
+  color: var(--sm-success);
+  font-weight: 700;
+}
+
+.scarmark-card .outcome-ms {
+  color: var(--sm-success);
+}
+
+.scarmark-card .outcome-mf {
+  color: var(--sm-danger);
+}
+
+.scarmark-card .outcome-cf {
+  color: var(--sm-danger);
+  font-weight: 700;
+}
+
+.scarmark-card .card-line.broken {
+  color: var(--sm-danger);
+  font-weight: 700;
+}

@@ -1,0 +1,153 @@
+<div class="tab combat{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="combat">
+
+  <fieldset class="combat-section">
+    <legend>{{localize 'SCARMARK.Combat.statistics'}}</legend>
+
+    <div class="combat-stats-row">
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Combat.fatigue'}}</label>
+        <input type="number" step="1" min="0" name="system.resources.fatigue" value="{{combat.fatigueSource}}" />
+      </div>
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Combat.dodge'}}</label>
+        <span class="stat-roll">
+          <a data-action="rollCombatSkill" data-skill-id="{{combat.dodge.skillId}}" title="{{localize 'SCARMARK.D100Test'}}"><i class="fa-solid fa-dice-d20"></i></a>
+          <span class="stat-value">{{combat.dodge.esl}}</span>
+        </span>
+      </div>
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Combat.encumbrance'}}</label>
+        <span class="stat-value{{#if combat.loadOverMax}} over{{/if}}">{{combat.load}}</span>
+      </div>
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Combat.endurance'}}</label>
+        <span class="stat-value">{{combat.endurance}}</span>
+      </div>
+      <div class="stat-cell">
+        <label>{{localize 'SCARMARK.Esoterics.willCapacity'}}</label>
+        <input type="number" step="1" min="0" name="system.resources.willCapacity" value="{{esotericsStats.willCapacity}}" />
+        <small class="stat-hint">{{localize 'SCARMARK.Attribute.wil'}} {{esotericsStats.will}}</small>
+      </div>
+    </div>
+
+    <div class="combat-rolls-row">
+      <a class="combat-roll" data-action="rollInjury"><i class="fa-solid fa-dice-d20"></i> {{localize 'SCARMARK.Combat.injury'}}</a>
+      <a class="combat-roll" data-action="rollShock"><i class="fa-solid fa-dice-d20"></i> {{localize 'SCARMARK.Combat.shock'}}</a>
+      <a class="combat-roll" data-action="rollStumble"><i class="fa-solid fa-dice-d20"></i> {{localize 'SCARMARK.Combat.stumble'}}</a>
+      <a class="combat-roll" data-action="rollFumble"><i class="fa-solid fa-dice-d20"></i> {{localize 'SCARMARK.Combat.fumble'}}</a>
+      <a class="combat-roll" data-action="rollDamage"><i class="fa-solid fa-dice-d20"></i> {{localize 'SCARMARK.Combat.damage'}}</a>
+    </div>
+  </fieldset>
+
+  {{#> "systems/scarmark/templates/actor/partials/combat-section.hbs" legend="SCARMARK.Combat.meleeWeapons"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=meleeWeapons colspan=12}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.Combat.name'}}</th>
+        <th>{{localize 'SCARMARK.Combat.qty'}}</th>
+        <th>{{localize 'SCARMARK.Combat.wq'}}</th>
+        <th>{{localize 'SCARMARK.Combat.ad'}}</th>
+        <th>{{localize 'SCARMARK.Combat.spec'}}</th>
+        {{#each @root.aspectLetters}}<th>{{this}}</th>{{/each}}
+        <th>{{localize 'SCARMARK.Combat.asl'}}</th>
+        <th>{{localize 'SCARMARK.Combat.dsl'}}</th>
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+      {{/inline}}
+      {{#each meleeWeapons as |w|}}
+      <tr data-item-id="{{w.id}}">
+        <td class="col-name-td"><a data-action="declareAttack" title="{{localize 'SCARMARK.CombatAuto.attack'}}">{{w.name}}</a></td>
+        <td>{{w.qty}}</td>
+        <td>{{w.wq}}</td>
+        <td>{{w.a}}/{{w.d}}</td>
+        <td>{{w.spec}}</td>
+        <td>{{w.b}}</td><td>{{w.e}}</td><td>{{w.p}}</td><td>{{w.f}}</td>
+        <td class="strong">{{w.asl}}</td>
+        <td class="strong">{{w.dsl}}</td>
+        <td class="col-notes-td">{{w.notes}}</td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/combat-section.hbs"}}
+
+  {{#> "systems/scarmark/templates/actor/partials/combat-section.hbs" legend="SCARMARK.Combat.missileWeapons"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=missileWeapons colspan=10}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.Combat.name'}}</th>
+        <th>{{localize 'SCARMARK.Combat.qty'}}</th>
+        <th>{{localize 'SCARMARK.Combat.skill'}}</th>
+        <th>{{localize 'SCARMARK.Combat.spec'}}</th>
+        <th>{{localize 'SCARMARK.Missile.short'}}</th>
+        <th>{{localize 'SCARMARK.Missile.medium'}}</th>
+        <th>{{localize 'SCARMARK.Missile.long'}}</th>
+        <th>{{localize 'SCARMARK.Missile.extreme'}}</th>
+        <th>{{localize 'SCARMARK.Combat.asl'}}</th>
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+      {{/inline}}
+      {{#each missileWeapons as |m|}}
+      <tr data-item-id="{{m.id}}">
+        <td class="col-name-td"><a data-action="declareRangeAttack" title="{{localize 'SCARMARK.CombatAuto.rangeAttack'}}">{{m.name}}</a></td>
+        <td>{{m.qty}}</td>
+        <td>{{m.skillName}}</td>
+        <td>{{m.spec}}</td>
+        <td>{{m.short}}</td><td>{{m.medium}}</td><td>{{m.long}}</td><td>{{m.extreme}}</td>
+        <td class="strong">{{m.asl}}</td>
+        <td class="col-notes-td">{{m.notes}}</td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/combat-section.hbs"}}
+
+  {{#> "systems/scarmark/templates/actor/partials/combat-section.hbs" legend="SCARMARK.Combat.injuries"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=injuries colspan=7}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.Combat.name'}}</th>
+        <th>{{localize 'SCARMARK.Injury.severity'}}</th>
+        <th>{{localize 'SCARMARK.Combat.wl'}}</th>
+        <th>{{localize 'SCARMARK.Combat.mend'}}</th>
+        <th>{{localize 'SCARMARK.Injury.heavyBleeding'}}</th>
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+        <th class="col-actions-th">
+        <a data-action="addInjury"><i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}</a>
+        </th>
+      {{/inline}}
+      {{#each injuries as |inj|}}
+      <tr data-item-id="{{inj.id}}">
+        <td class="col-name-td"><a data-action="editGear">{{inj.name}}</a></td>
+        <td>{{inj.severity}}</td>
+        <td class="strong">{{inj.woundLevel}}</td>
+        <td><a data-action="rollMend" title="{{localize 'SCARMARK.Injury.mendRoll'}}"><i class="fa-solid fa-dice-d20"></i> {{inj.mend}}</a></td>
+        <td class="{{#if inj.heavy}}bleed-heavy{{/if}}">{{#if inj.heavy}}<i class="fa-solid fa-droplet"></i>{{else}}—{{/if}}</td>
+        <td class="col-notes-td">{{inj.notes}}</td>
+        <td class="col-actions">
+          <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/combat-section.hbs"}}
+
+  {{#> "systems/scarmark/templates/actor/partials/combat-section.hbs" legend="SCARMARK.Combat.armorLocations"}}
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=combatArmorLocations colspan=8}}
+      {{#*inline "head"}}
+        <th class="col-name-th">{{localize 'SCARMARK.ArmorLocation.locationType'}}</th>
+        <th>{{localize 'SCARMARK.Combat.layers'}}</th>
+        {{#each @root.aspectLetters}}<th>{{this}}</th>{{/each}}
+        <th>{{localize 'SCARMARK.Trait.notes'}}</th>
+        <th class="col-actions-th">
+        <a data-action="addArmorLocation"><i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}</a>
+        </th>
+      {{/inline}}
+      {{#each combatArmorLocations as |loc|}}
+      <tr data-item-id="{{loc.id}}">
+        <td class="col-name-td"><a data-action="editGear">{{loc.name}}</a></td>
+        <td>{{loc.layers}}</td>
+        <td>{{loc.b}}</td><td>{{loc.e}}</td><td>{{loc.p}}</td><td>{{loc.f}}</td>
+        <td class="col-notes-td">{{loc.notes}}</td>
+        <td class="col-actions">
+          <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+      {{/each}}
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  {{/"systems/scarmark/templates/actor/partials/combat-section.hbs"}}
+
+</div>

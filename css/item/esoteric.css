@@ -1,0 +1,44 @@
+/* Spell and Invocation item sheets. */
+
+/* ---------- Invocation / Spell (esoteric single-page) ---------- */
+.scarmark .esoteric-fields {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+  align-items: flex-end;
+}
+
+.scarmark .esoteric-fields .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scarmark .esoteric-fields .esoteric-select {
+  flex: 1;
+}
+
+.scarmark .esoteric-fields .esoteric-num {
+  width: 120px;
+}
+
+.scarmark .esoteric-fields label {
+  font-weight: 700;
+  font-size: var(--sm-fs-xs);
+  color: var(--sm-text-muted);
+}
+
+.scarmark .esoteric-fields select,
+.scarmark .esoteric-fields input {
+  width: 100%;
+}
+
+.scarmark .invocation-body .field.skill-note {
+  margin: 12px 0;
+}
+
+/* Note/text inputs use the full width of a widened sheet. */
+.scarmark .invocation-body .skill-note input {
+  width: 100%;
+  box-sizing: border-box;
+}

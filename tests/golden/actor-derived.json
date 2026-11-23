@@ -1,0 +1,8092 @@
+[
+  {
+    "id": "character-baseline",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "character-baseline-with-skills",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Lore",
+          "system": {
+            "category": "craft",
+            "attribute1": "int",
+            "attribute2": "per",
+            "attribute3": "wil",
+            "level": 25,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        },
+        {
+          "name": "Lore",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": "fatigue-1-no-penalty",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 1,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "fatigue-2-penalty-1",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 2,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 1,
+      "effective": {
+        "str": 11,
+        "sta": 10,
+        "dex": 13,
+        "agl": 9,
+        "wil": 12,
+        "per": 8,
+        "pre": 7,
+        "int": 14,
+        "spi": 6
+      },
+      "endurance": 11,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 11,
+        "max": 11,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 9,
+      "resources": {
+        "condition": {
+          "value": 11,
+          "max": 11
+        },
+        "move": {
+          "value": 9,
+          "max": 9
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 11
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": "fatigue-5-penalty-2",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 5,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 2,
+      "effective": {
+        "str": 10,
+        "sta": 9,
+        "dex": 12,
+        "agl": 8,
+        "wil": 11,
+        "per": 7,
+        "pre": 6,
+        "int": 13,
+        "spi": 5
+      },
+      "endurance": 10,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 10,
+        "max": 10,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 10,
+          "max": 10
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 10
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "fatigue-30-floors-attributes",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 30,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 15,
+      "effective": {
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "agl": 0,
+        "wil": 0,
+        "per": 0,
+        "pre": 0,
+        "int": 0,
+        "spi": 0
+      },
+      "endurance": 0,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 0,
+        "pct": 0,
+        "band": "out",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 0,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 1
+        },
+        "move": {
+          "value": 0,
+          "max": 0
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 0
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "fatigue-negative",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": -3,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "fatigue-missing",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "fatigue-from-effect",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 1,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "fatigueEffect": 3
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 2,
+      "effective": {
+        "str": 10,
+        "sta": 9,
+        "dex": 12,
+        "agl": 8,
+        "wil": 11,
+        "per": 7,
+        "pre": 6,
+        "int": 13,
+        "spi": 5
+      },
+      "endurance": 10,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 10,
+        "max": 10,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 10,
+          "max": 10
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 10
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "endurance-rounding",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 10
+        },
+        "sta": {
+          "base": 10
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 11
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 10,
+        "sta": 10,
+        "dex": 14,
+        "agl": 10,
+        "wil": 11,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 10,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 10,
+        "max": 10,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 20,
+        "max": 40,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 10,
+          "max": 10
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 20,
+        "endurance": 10
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "endurance-mod-plus-2",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [],
+      "mods": {
+        "endurance": 2
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 14,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 14,
+        "max": 14,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 14,
+          "max": 14
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 14
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "endurance-mod-floor-0",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [],
+      "mods": {
+        "endurance": -100
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 12,
+        "agl": 8,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 0,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 0,
+        "pct": 0,
+        "band": "out",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 1
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 0
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "endurance-attribute-effect",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Willpower",
+          "system": {
+            "category": "physical",
+            "attribute1": "wil",
+            "attribute2": "wil",
+            "attribute3": "int",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "attributeEffects": {
+        "str": 3,
+        "wil": -2
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 15,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 11,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 26,
+        "max": 52,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 26,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        },
+        {
+          "name": "Willpower",
+          "sb": 14,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "load-at-capacity-metric",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 23",
+          "system": {
+            "weight": 23,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 23,
+        "capacity": 23,
+        "max": 46,
+        "pct": 100,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 23,
+        "total": 23,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-20pct-over-exact",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 13
+        },
+        "sta": {
+          "base": 12
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 30",
+          "system": {
+            "weight": 30,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 13,
+        "sta": 12,
+        "dex": 14,
+        "agl": 9,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 13,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 13,
+        "max": 13,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 30,
+        "capacity": 25,
+        "max": 50,
+        "pct": 120,
+        "steps": 1,
+        "overMax": false
+      },
+      "burden": 1,
+      "move": 9,
+      "resources": {
+        "condition": {
+          "value": 13,
+          "max": 13
+        },
+        "move": {
+          "value": 9,
+          "max": 9
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 30,
+        "total": 30,
+        "capacity": 25,
+        "endurance": 13
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-30pct-over",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 30",
+          "system": {
+            "weight": 30,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 8,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 30,
+        "capacity": 23,
+        "max": 46,
+        "pct": 130,
+        "steps": 2,
+        "overMax": false
+      },
+      "burden": 2,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 30,
+        "total": 30,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-max-steps-and-over-max",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 100",
+          "system": {
+            "weight": 100,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 5,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 100,
+        "capacity": 23,
+        "max": 46,
+        "pct": 435,
+        "steps": 5,
+        "overMax": true
+      },
+      "burden": 5,
+      "move": 5,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 5,
+          "max": 5
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 100,
+        "total": 100,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-legacy-units-2-per-kg",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": false,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 46",
+          "system": {
+            "weight": 46,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Gear 10",
+          "system": {
+            "weight": 10,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 8,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 28,
+        "capacity": 23,
+        "max": 46,
+        "pct": 122,
+        "steps": 2,
+        "overMax": false
+      },
+      "burden": 2,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 56,
+        "total": 56,
+        "capacity": 46,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-setting-unregistered",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 46",
+          "system": {
+            "weight": 46,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Gear 10",
+          "system": {
+            "weight": 10,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 8,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 28,
+        "capacity": 23,
+        "max": 46,
+        "pct": 122,
+        "steps": 2,
+        "overMax": false
+      },
+      "burden": 2,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 56,
+        "total": 56,
+        "capacity": 46,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-fractional-kg",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 0.1",
+          "system": {
+            "weight": 0.1,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Gear 0.2",
+          "system": {
+            "weight": 0.2,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Gear 23.7",
+          "system": {
+            "weight": 23.7,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 9,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 24,
+        "capacity": 23,
+        "max": 46,
+        "pct": 104,
+        "steps": 1,
+        "overMax": false
+      },
+      "burden": 1,
+      "move": 9,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 9,
+          "max": 9
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 24,
+        "total": 24,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-capacity-0-no-load",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 0
+        },
+        "sta": {
+          "base": 0
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 0,
+        "sta": 0,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 4,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 4,
+        "max": 4,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 0,
+        "max": 0,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 4,
+          "max": 4
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 0,
+        "endurance": 4
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-capacity-0-with-load",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 0
+        },
+        "sta": {
+          "base": 0
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 1",
+          "system": {
+            "weight": 1,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 0,
+        "sta": 0,
+        "dex": 14,
+        "agl": 5,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 4,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 4,
+        "max": 4,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 1,
+        "capacity": 0,
+        "max": 0,
+        "pct": 999,
+        "steps": 5,
+        "overMax": true
+      },
+      "burden": 5,
+      "move": 5,
+      "resources": {
+        "condition": {
+          "value": 4,
+          "max": 4
+        },
+        "move": {
+          "value": 5,
+          "max": 5
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 1,
+        "total": 1,
+        "capacity": 0,
+        "endurance": 4
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-capacity-uses-effects-not-penalties",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 6,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 28",
+          "system": {
+            "weight": 28,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ],
+      "attributeEffects": {
+        "str": 5
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 3,
+      "effective": {
+        "str": 14,
+        "sta": 8,
+        "dex": 11,
+        "agl": 7,
+        "wil": 10,
+        "per": 6,
+        "pre": 5,
+        "int": 12,
+        "spi": 4
+      },
+      "endurance": 11,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 11,
+        "max": 11,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 28,
+        "capacity": 28,
+        "max": 56,
+        "pct": 100,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 7,
+      "resources": {
+        "condition": {
+          "value": 11,
+          "max": 11
+        },
+        "move": {
+          "value": 7,
+          "max": 7
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 28,
+        "total": 28,
+        "capacity": 28,
+        "endurance": 11
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-categories",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "weapon",
+          "name": "Sword",
+          "system": {
+            "weight": 2,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "missile",
+          "name": "Arrows",
+          "system": {
+            "weight": 0.1,
+            "quantity": 20,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "armor",
+          "name": "Mail",
+          "system": {
+            "weight": 12,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": "",
+            "locations": [
+              "chest"
+            ]
+          }
+        },
+        {
+          "type": "container",
+          "id": "pack",
+          "name": "Pack",
+          "system": {
+            "weight": 1.5,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "maxCapacity": 30
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Rope",
+          "system": {
+            "weight": 3,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": "pack"
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 20.5,
+        "capacity": 23,
+        "max": 46,
+        "pct": 89,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 2,
+        "missile": 2,
+        "armor": 12,
+        "miscGear": 4.5,
+        "total": 20.5,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-container-dropped",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "container",
+          "id": "pack",
+          "name": "Pack",
+          "system": {
+            "weight": 1.5,
+            "quantity": 1,
+            "value": 0,
+            "carried": false,
+            "maxCapacity": 30
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Tent",
+          "system": {
+            "weight": 10,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": "pack"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Torch",
+          "system": {
+            "weight": 2,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 2,
+        "capacity": 23,
+        "max": 46,
+        "pct": 9,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 2,
+        "total": 2,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-container-id-missing",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Tent",
+          "system": {
+            "weight": 10,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": "gone"
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 10,
+        "capacity": 23,
+        "max": 46,
+        "pct": 43,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 10,
+        "total": 10,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "load-not-carried",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 10",
+          "system": {
+            "weight": 10,
+            "quantity": 1,
+            "value": 0,
+            "carried": false,
+            "container": ""
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Gear 5",
+          "system": {
+            "weight": 5,
+            "quantity": 3,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 15,
+        "capacity": 23,
+        "max": 46,
+        "pct": 65,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 15,
+        "total": 15,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-wl-3",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 3",
+          "system": {
+            "woundLevel": 3,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 3,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 9,
+        "max": 12,
+        "pct": 75,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 9,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-band-wounded-at-50pct",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 12
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 12
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 6",
+          "system": {
+            "woundLevel": 6,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 12,
+        "dex": 13,
+        "agl": 9,
+        "wil": 12,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 6,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 6,
+        "max": 12,
+        "pct": 50,
+        "band": "wounded",
+        "vital": "",
+        "penalty": 1
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 24,
+        "max": 48,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 9,
+      "resources": {
+        "condition": {
+          "value": 6,
+          "max": 12
+        },
+        "move": {
+          "value": 9,
+          "max": 9
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 24,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": "condition-band-critical-at-25pct",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 12
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 12
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 5",
+          "system": {
+            "woundLevel": 5,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 4",
+          "system": {
+            "woundLevel": 4,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 12,
+        "dex": 12,
+        "agl": 8,
+        "wil": 12,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 9,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 3,
+        "max": 12,
+        "pct": 25,
+        "band": "critical",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 24,
+        "max": 48,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 3,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 24,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "condition-just-above-25pct",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 12
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 12
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 8",
+          "system": {
+            "woundLevel": 8,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 12,
+        "dex": 13,
+        "agl": 9,
+        "wil": 12,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 8,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 4,
+        "max": 12,
+        "pct": 33,
+        "band": "wounded",
+        "vital": "",
+        "penalty": 1
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 24,
+        "max": 48,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 9,
+      "resources": {
+        "condition": {
+          "value": 4,
+          "max": 12
+        },
+        "move": {
+          "value": 9,
+          "max": 9
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 24,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-0-out",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 12
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 12
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 5",
+          "system": {
+            "woundLevel": 5,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 5",
+          "system": {
+            "woundLevel": 5,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 5",
+          "system": {
+            "woundLevel": 5,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 12,
+        "dex": 12,
+        "agl": 8,
+        "wil": 12,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 15,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 12,
+        "pct": 0,
+        "band": "out",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 24,
+        "max": 48,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 24,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-vital-out",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 4",
+          "system": {
+            "woundLevel": 4,
+            "heavyBleeding": false,
+            "vital": "out",
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 12,
+        "agl": 8,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 4,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 12,
+        "pct": 0,
+        "band": "out",
+        "vital": "out",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-vital-dying-beats-out",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 4",
+          "system": {
+            "woundLevel": 4,
+            "heavyBleeding": false,
+            "vital": "out",
+            "mend": 0
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 5",
+          "system": {
+            "woundLevel": 5,
+            "heavyBleeding": true,
+            "vital": "dying",
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 12,
+        "agl": 8,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 9,
+      "heavyBleed": 1,
+      "condition": {
+        "value": 0,
+        "max": 12,
+        "pct": 0,
+        "band": "dying",
+        "vital": "dying",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 12
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-heavy-bleed-count",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 2",
+          "system": {
+            "woundLevel": 2,
+            "heavyBleeding": true,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 3",
+          "system": {
+            "woundLevel": 3,
+            "heavyBleeding": true,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 1",
+          "system": {
+            "woundLevel": 1,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 13,
+        "agl": 9,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 6,
+      "heavyBleed": 2,
+      "condition": {
+        "value": 6,
+        "max": 12,
+        "pct": 50,
+        "band": "wounded",
+        "vital": "",
+        "penalty": 1
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 9,
+      "resources": {
+        "condition": {
+          "value": 6,
+          "max": 12
+        },
+        "move": {
+          "value": 9,
+          "max": 9
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-mods-injury",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 2",
+          "system": {
+            "woundLevel": 2,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        }
+      ],
+      "mods": {
+        "injury": 3
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 5,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 7,
+        "max": 12,
+        "pct": 58,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 7,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-mods-injury-negative-floor",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Wound 2",
+          "system": {
+            "woundLevel": 2,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        }
+      ],
+      "mods": {
+        "injury": -5
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-endurance-0",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 0
+        },
+        "sta": {
+          "base": 0
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 0
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 0,
+        "sta": 0,
+        "dex": 12,
+        "agl": 8,
+        "wil": 0,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 0,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 0,
+        "pct": 0,
+        "band": "out",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 0,
+        "max": 0,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 1
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 0,
+        "endurance": 0
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "condition-wound-level-missing",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "injury",
+          "name": "Odd",
+          "system": {
+            "mend": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "skill-zodiac-bonus",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "jan",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": [
+              {
+                "sunsign": "capricornus",
+                "bonus": 5
+              },
+              {
+                "sunsign": "aries",
+                "bonus": 9
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "capricornus",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 5,
+          "esl": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-zodiac-other-sign",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "apr",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": [
+              {
+                "sunsign": "capricornus",
+                "bonus": 5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "aries",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-zodiac-blank-entry",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": [
+              {
+                "sunsign": "",
+                "bonus": 4
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-category-mod",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Lore",
+          "system": {
+            "category": "craft",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "mods": {
+        "skills": {
+          "physical": 3,
+          "craft": -4
+        }
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 33
+        },
+        {
+          "name": "Lore",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 26
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-named-mod-case-insensitive",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Lore",
+          "system": {
+            "category": "craft",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "mods": {
+        "skill": {
+          "CLIMBING": 4,
+          "lore": 2
+        }
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 34
+        },
+        {
+          "name": "Lore",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 32
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-sb-delta-effect",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "attributeEffects": {
+        "str": 3
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 15,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 13,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 13,
+        "max": 13,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 26,
+        "max": 52,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 13,
+          "max": 13
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 26,
+        "endurance": 13
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-sb-delta-rounding",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "attributeEffects": {
+        "str": 1
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 13,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 24,
+        "max": 48,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 24,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-sb-delta-negative-to-floor",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 40,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 5,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 20,
+      "effective": {
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "agl": 0,
+        "wil": 0,
+        "per": 0,
+        "pre": 0,
+        "int": 0,
+        "spi": 0
+      },
+      "endurance": 0,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 0,
+        "pct": 0,
+        "band": "out",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 0,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 1
+        },
+        "move": {
+          "value": 0,
+          "max": 0
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 0
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-level-0",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 0,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-level-missing",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-unknown-category",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Odd",
+          "system": {
+            "category": "weird",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Odd",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-override",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Vitality",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 20,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "skillOverrides": [
+        {
+          "skill": "Vitality",
+          "value": 50,
+          "priority": 50
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Vitality",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 50
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-override-priority-highest-wins",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Vitality",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "skillOverrides": [
+        {
+          "skill": "Vitality",
+          "value": 70,
+          "priority": 60
+        },
+        {
+          "skill": "vitality",
+          "value": 40,
+          "priority": 10
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Vitality",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 70
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-override-priority-missing-is-50",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Vitality",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "skillOverrides": [
+        {
+          "skill": "Vitality",
+          "value": 70
+        },
+        {
+          "skill": "Vitality",
+          "value": 40,
+          "priority": 49
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Vitality",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 70
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-override-negative-floor",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Vitality",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "skillOverrides": [
+        {
+          "skill": "Vitality",
+          "value": -10,
+          "priority": 50
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Vitality",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-override-not-a-number-ignored",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Vitality",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "skillOverrides": [
+        {
+          "skill": "Vitality",
+          "value": "abc",
+          "priority": 50
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Vitality",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "skill-add-type-not-an-override",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Vitality",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "skillOverrides": [
+        {
+          "type": "add",
+          "skill": "Vitality",
+          "value": 70,
+          "priority": 50
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Vitality",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "psionic-mod-and-sb-delta",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "psionic",
+          "name": "Telepathy",
+          "system": {
+            "attribute1": "spi",
+            "attribute2": "spi",
+            "attribute3": "wil",
+            "level": 20,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "mods": {
+        "skills": {
+          "psionic": 6,
+          "physical": 3
+        }
+      },
+      "attributeEffects": {
+        "spi": 3
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 10
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Telepathy",
+          "sb": 9,
+          "sunsignBonus": 0,
+          "esl": 26
+        }
+      ]
+    }
+  },
+  {
+    "id": "psionic-zodiac",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "feb",
+      "items": [
+        {
+          "type": "psionic",
+          "name": "Telepathy",
+          "system": {
+            "attribute1": "spi",
+            "attribute2": "spi",
+            "attribute3": "wil",
+            "level": 20,
+            "sunsignBonuses": [
+              {
+                "sunsign": "aquarius",
+                "bonus": 3
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "aquarius",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Telepathy",
+          "sb": 9,
+          "sunsignBonus": 3,
+          "esl": 23
+        }
+      ]
+    }
+  },
+  {
+    "id": "combined-fatigue-load-wounds",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 4,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 30",
+          "system": {
+            "weight": 30,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 8",
+          "system": {
+            "woundLevel": 8,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Juggling",
+          "system": {
+            "category": "physical",
+            "attribute1": "dex",
+            "attribute2": "dex",
+            "attribute3": "per",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ],
+      "attributeEffects": {
+        "dex": 2
+      }
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 2,
+      "effective": {
+        "str": 10,
+        "sta": 9,
+        "dex": 12,
+        "agl": 4,
+        "wil": 11,
+        "per": 7,
+        "pre": 6,
+        "int": 13,
+        "spi": 5
+      },
+      "endurance": 10,
+      "wl": 8,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 2,
+        "max": 10,
+        "pct": 20,
+        "band": "critical",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 30,
+        "capacity": 23,
+        "max": 46,
+        "pct": 130,
+        "steps": 2,
+        "overMax": false
+      },
+      "burden": 2,
+      "move": 4,
+      "resources": {
+        "condition": {
+          "value": 2,
+          "max": 10
+        },
+        "move": {
+          "value": 4,
+          "max": 4
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 30,
+        "total": 30,
+        "capacity": 23,
+        "endurance": 10
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        },
+        {
+          "name": "Juggling",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "attribute-missing-agl",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 0,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 0,
+          "max": 0
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 9,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "attribute-stray-legacy-key",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        },
+        "eye": {
+          "base": 12
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": []
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7,
+        "eye": null
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "attribute-all-zero",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 0
+        },
+        "sta": {
+          "base": 0
+        },
+        "dex": {
+          "base": 0
+        },
+        "agl": {
+          "base": 0
+        },
+        "wil": {
+          "base": 0
+        },
+        "per": {
+          "base": 0
+        },
+        "pre": {
+          "base": 0
+        },
+        "int": {
+          "base": 0
+        },
+        "spi": {
+          "base": 0
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "agl": 0,
+        "wil": 0,
+        "per": 0,
+        "pre": 0,
+        "int": 0,
+        "spi": 0
+      },
+      "endurance": 0,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 0,
+        "max": 0,
+        "pct": 0,
+        "band": "out",
+        "vital": "",
+        "penalty": 2
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 0,
+        "max": 0,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 0,
+      "resources": {
+        "condition": {
+          "value": 0,
+          "max": 1
+        },
+        "move": {
+          "value": 0,
+          "max": 0
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 0,
+        "endurance": 0
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 0,
+          "sunsignBonus": 0,
+          "esl": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "attribute-high",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 30
+        },
+        "sta": {
+          "base": 30
+        },
+        "dex": {
+          "base": 30
+        },
+        "agl": {
+          "base": 30
+        },
+        "wil": {
+          "base": 30
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 90,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 30,
+        "sta": 30,
+        "dex": 30,
+        "agl": 30,
+        "wil": 30,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 30,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 30,
+        "max": 30,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 60,
+        "max": 120,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 30,
+      "resources": {
+        "condition": {
+          "value": 30,
+          "max": 30
+        },
+        "move": {
+          "value": 30,
+          "max": 30
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 60,
+        "endurance": 30
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 30,
+          "sunsignBonus": 0,
+          "esl": 90
+        }
+      ]
+    }
+  },
+  {
+    "id": "resources-missing",
+    "source": "executed",
+    "input": {
+      "actorType": "character",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "dobMonth": "",
+      "items": [],
+      "noResources": true
+    },
+    "expected": {
+      "sunsign": "",
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": null,
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": []
+    }
+  },
+  {
+    "id": "npc-baseline",
+    "source": "executed",
+    "input": {
+      "actorType": "npc",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": [
+              {
+                "sunsign": "capricornus",
+                "bonus": 5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": null,
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "pre": 8,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "creature-baseline",
+    "source": "executed",
+    "input": {
+      "actorType": "creature",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 0,
+      "metricUnits": true,
+      "items": [
+        {
+          "type": "skill",
+          "name": "Climbing",
+          "system": {
+            "category": "physical",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Charm",
+          "system": {
+            "category": "communication",
+            "attribute1": "pre",
+            "attribute2": "int",
+            "attribute3": "wil",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": null,
+      "fatiguePenalty": 0,
+      "effective": {
+        "str": 12,
+        "sta": 11,
+        "dex": 14,
+        "agl": 10,
+        "wil": 13,
+        "per": 9,
+        "int": 15,
+        "spi": 7
+      },
+      "endurance": 12,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 12,
+        "max": 12,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 10,
+      "resources": {
+        "condition": {
+          "value": 12,
+          "max": 12
+        },
+        "move": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 12
+      },
+      "skills": [
+        {
+          "name": "Climbing",
+          "sb": 12,
+          "sunsignBonus": 0,
+          "esl": 30
+        },
+        {
+          "name": "Charm",
+          "sb": 9,
+          "sunsignBonus": 0,
+          "esl": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "creature-skill-on-presence-no-sb-delta",
+    "source": "executed",
+    "input": {
+      "actorType": "creature",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 4,
+      "metricUnits": true,
+      "items": [
+        {
+          "type": "skill",
+          "name": "Charm",
+          "system": {
+            "category": "communication",
+            "attribute1": "pre",
+            "attribute2": "int",
+            "attribute3": "wil",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": null,
+      "fatiguePenalty": 2,
+      "effective": {
+        "str": 10,
+        "sta": 9,
+        "dex": 12,
+        "agl": 8,
+        "wil": 11,
+        "per": 7,
+        "int": 13,
+        "spi": 5
+      },
+      "endurance": 10,
+      "wl": 0,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 10,
+        "max": 10,
+        "pct": 100,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 0,
+        "capacity": 23,
+        "max": 46,
+        "pct": 0,
+        "steps": 0,
+        "overMax": false
+      },
+      "burden": 0,
+      "move": 8,
+      "resources": {
+        "condition": {
+          "value": 10,
+          "max": 10
+        },
+        "move": {
+          "value": 8,
+          "max": 8
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 0,
+        "total": 0,
+        "capacity": 23,
+        "endurance": 10
+      },
+      "skills": [
+        {
+          "name": "Charm",
+          "sb": 9,
+          "sunsignBonus": 0,
+          "esl": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "creature-wounded-loaded",
+    "source": "executed",
+    "input": {
+      "actorType": "creature",
+      "attributes": {
+        "str": {
+          "base": 20
+        },
+        "sta": {
+          "base": 18
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 10
+        },
+        "per": {
+          "base": 9
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 2,
+      "metricUnits": false,
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 90",
+          "system": {
+            "weight": 90,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 10",
+          "system": {
+            "woundLevel": 10,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Bite",
+          "system": {
+            "category": "combat",
+            "attribute1": "str",
+            "attribute2": "dex",
+            "attribute3": "agl",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": null,
+      "fatiguePenalty": 1,
+      "effective": {
+        "str": 19,
+        "sta": 17,
+        "dex": 12,
+        "agl": 7,
+        "wil": 9,
+        "per": 8,
+        "int": 14,
+        "spi": 6
+      },
+      "endurance": 15,
+      "wl": 10,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 5,
+        "max": 15,
+        "pct": 33,
+        "band": "wounded",
+        "vital": "",
+        "penalty": 1
+      },
+      "load": {
+        "kg": 45,
+        "capacity": 38,
+        "max": 76,
+        "pct": 118,
+        "steps": 1,
+        "overMax": false
+      },
+      "burden": 1,
+      "move": 7,
+      "resources": {
+        "condition": {
+          "value": 5,
+          "max": 15
+        },
+        "move": {
+          "value": 7,
+          "max": 7
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 90,
+        "total": 90,
+        "capacity": 76,
+        "endurance": 15
+      },
+      "skills": [
+        {
+          "name": "Bite",
+          "sb": 15,
+          "sunsignBonus": 0,
+          "esl": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": "animal-baseline",
+    "source": "executed",
+    "input": {
+      "actorType": "animal",
+      "attributes": {
+        "str": {
+          "base": 16
+        },
+        "sta": {
+          "base": 14
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 15
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "fatigue": 3,
+      "metricUnits": true,
+      "items": [
+        {
+          "type": "gear",
+          "name": "Gear 40",
+          "system": {
+            "weight": 40,
+            "quantity": 1,
+            "value": 0,
+            "carried": true,
+            "container": ""
+          }
+        },
+        {
+          "type": "injury",
+          "name": "Wound 4",
+          "system": {
+            "woundLevel": 4,
+            "heavyBleeding": false,
+            "vital": "",
+            "mend": 0
+          }
+        },
+        {
+          "type": "skill",
+          "name": "Running",
+          "system": {
+            "category": "physical",
+            "attribute1": "agl",
+            "attribute2": "sta",
+            "attribute3": "sta",
+            "level": 30,
+            "sunsignBonuses": []
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sunsign": null,
+      "fatiguePenalty": 1,
+      "effective": {
+        "str": 15,
+        "sta": 13,
+        "dex": 13,
+        "agl": 12,
+        "wil": 12,
+        "per": 8,
+        "int": 14,
+        "spi": 6
+      },
+      "endurance": 13,
+      "wl": 4,
+      "heavyBleed": 0,
+      "condition": {
+        "value": 9,
+        "max": 13,
+        "pct": 69,
+        "band": "ok",
+        "vital": "",
+        "penalty": 0
+      },
+      "load": {
+        "kg": 40,
+        "capacity": 30,
+        "max": 60,
+        "pct": 133,
+        "steps": 2,
+        "overMax": false
+      },
+      "burden": 2,
+      "move": 12,
+      "resources": {
+        "condition": {
+          "value": 9,
+          "max": 13
+        },
+        "move": {
+          "value": 12,
+          "max": 12
+        }
+      },
+      "gearSummary": {
+        "weapon": 0,
+        "missile": 0,
+        "armor": 0,
+        "miscGear": 40,
+        "total": 40,
+        "capacity": 30,
+        "endurance": 13
+      },
+      "skills": [
+        {
+          "name": "Running",
+          "sb": 14,
+          "sunsignBonus": 0,
+          "esl": 15
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,69 @@
+/* Shared controls: checkboxes, checkbox rows, inline number fields (Class, Toxicity), disabled look. */
+
+.scarmark .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.scarmark input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.scarmark input[type="checkbox"]:checked {
+  background: var(--sm-gold);
+  border-color: var(--sm-gold);
+}
+
+.scarmark input[type="checkbox"]:checked::after {
+  content: "\2713";
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sm-on-gold);
+}
+
+/* Standard row of checkbox toggles (Shield, Broken, ...): left-aligned, same
+   look as the Artifact toggle. Use this wrapper for any future checkbox group. */
+.scarmark .checkbox-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 4px 0 14px;
+}
+
+/* A label with a small number box next to it (Class, Toxicity); same font as the checkbox labels. */
+.scarmark :is(.artifact-class, .sm-inline-field) {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* A control that does not apply yet (Toxicity until Consumable is ticked): greyed out and locked. */
+.scarmark .is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.scarmark .is-disabled :is(input, label) {
+  cursor: not-allowed;
+}

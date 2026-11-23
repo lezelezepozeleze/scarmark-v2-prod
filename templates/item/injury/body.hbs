@@ -1,0 +1,46 @@
+{{#> "systems/scarmark/templates/item/partials/details-tab.hbs"}}
+<div class="injury-body">
+
+  <div class="gear-row">
+    <div class="field injury-wound-level">
+      <label>{{localize 'SCARMARK.Injury.woundLevel'}}</label>
+      <input type="number" step="1" min="0" name="system.woundLevel" value="{{system.woundLevel}}" />
+    </div>
+    <div class="field injury-severity-display">
+      <label>{{localize 'SCARMARK.Injury.severity'}}</label>
+      <span class="derived-value">{{severityLabel}}</span>
+    </div>
+    <div class="field injury-mend">
+      <div class="mend-heading">
+        <label title="{{localize 'SCARMARK.Injury.mendHint'}}">{{localize 'SCARMARK.Injury.mend'}}</label>
+        <a data-action="rollMend" title="{{localize 'SCARMARK.Injury.mendRoll'}}"><i class="fa-solid fa-dice-d20"></i></a>
+      </div>
+      <select name="system.mend" data-dtype="Number">
+        {{#each mendOptions as |opt|}}
+        <option value="{{opt.value}}" {{#if opt.selected}}selected{{/if}}>{{opt.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+
+  <div class="field injury-heavy-bleeding">
+    <label class="checkbox-label">
+      <input type="checkbox" name="system.heavyBleeding" {{#if system.heavyBleeding}}checked{{/if}} />
+      {{localize 'SCARMARK.Injury.heavyBleedingQ'}}
+    </label>
+  </div>
+
+  <div class="field injury-vital">
+    <label class="plain-label">{{localize 'SCARMARK.Injury.vital'}}</label>
+    <select name="system.vital">
+      <option value=""></option>
+      {{#each vitalOptions as |label key|}}
+      <option value="{{key}}" {{#if (eq key ../system.vital)}}selected{{/if}}>{{localize label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="note"}}
+
+</div>
+{{/"systems/scarmark/templates/item/partials/details-tab.hbs"}}

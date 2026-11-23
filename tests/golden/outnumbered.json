@@ -1,0 +1,128 @@
+[
+  {
+    "id": "outnumbered-0",
+    "source": "executed",
+    "input": {
+      "outnumbered": 0
+    },
+    "expected": 0
+  },
+  {
+    "id": "outnumbered-1",
+    "source": "executed",
+    "input": {
+      "outnumbered": 1
+    },
+    "expected": 0
+  },
+  {
+    "id": "outnumbered-2",
+    "source": "executed",
+    "input": {
+      "outnumbered": 2
+    },
+    "expected": 20
+  },
+  {
+    "id": "outnumbered-3",
+    "source": "executed",
+    "input": {
+      "outnumbered": 3
+    },
+    "expected": 30
+  },
+  {
+    "id": "outnumbered-4",
+    "source": "executed",
+    "input": {
+      "outnumbered": 4
+    },
+    "expected": 30
+  },
+  {
+    "id": "outnumbered-10",
+    "source": "executed",
+    "input": {
+      "outnumbered": 10
+    },
+    "expected": 30
+  },
+  {
+    "id": "outnumbered--1",
+    "source": "executed",
+    "input": {
+      "outnumbered": -1
+    },
+    "expected": 0
+  },
+  {
+    "id": "outnumbered-2.5",
+    "source": "executed",
+    "input": {
+      "outnumbered": 2.5
+    },
+    "expected": 0
+  },
+  {
+    "id": "outnumbered-3.5",
+    "source": "executed",
+    "input": {
+      "outnumbered": 3.5
+    },
+    "expected": 30
+  },
+  {
+    "id": "outnumbered-1.9",
+    "source": "executed",
+    "input": {
+      "outnumbered": 1.9
+    },
+    "expected": 0
+  },
+  {
+    "id": "outnumbered-\"2\"",
+    "source": "executed",
+    "input": {
+      "outnumbered": "2"
+    },
+    "expected": 0
+  },
+  {
+    "id": "outnumbered-\"3\"",
+    "source": "executed",
+    "input": {
+      "outnumbered": "3"
+    },
+    "expected": 30
+  },
+  {
+    "id": "outnumbered-null",
+    "source": "executed",
+    "input": {
+      "outnumbered": null
+    },
+    "expected": 0
+  },
+  {
+    "id": "field-missing",
+    "source": "executed",
+    "input": {},
+    "expected": 0
+  },
+  {
+    "id": "no-mods",
+    "source": "executed",
+    "input": {
+      "noMods": true
+    },
+    "expected": 0
+  },
+  {
+    "id": "no-actor",
+    "source": "executed",
+    "input": {
+      "noActor": true
+    },
+    "expected": 0
+  }
+]

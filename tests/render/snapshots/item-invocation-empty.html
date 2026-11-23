@@ -1,0 +1,31 @@
+<!-- part: body -->
+<div class="invocation-body skill-body">
+<header class="item-header skill-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="" />
+<div class="skill-header-main">
+<input class="name-input" type="text" name="name" value="" placeholder="{SCARMARK.NamePlaceholder}" />
+</div>
+</header>
+<hr class="section-divider" />
+<div class="esoteric-fields">
+<div class="field esoteric-select">
+<label>{SCARMARK.Invocation.religion}</label>
+<select name="system.religion">
+<option value="" selected>&mdash;</option>
+</select>
+</div>
+<div class="field esoteric-num">
+<label>{SCARMARK.Invocation.circle}</label>
+<input type="number" step="1" min="1" max="5" name="system.circle" value="1" />
+</div>
+</div>
+<div class="field skill-note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<input type="text" name="system.notes" value="" />
+</div>
+<div class="field skill-description">
+<h3>{SCARMARK.Description}</h3>
+<prose-mirror name="system.description" value="">
+</prose-mirror>
+</div>
+</div>

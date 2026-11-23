@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Design tokens
+   --------------------------------------------------------------------------
+   Non-colour values that repeat across the sheets: fonts, radius, type
+   sizes, gaps, the standard field padding and the two border lines.
+   Defined on the same roots as the palette below, so --sm-line / --sm-rule-accent
+   pick up the active theme's border and accent colours.
+
+   Not a token but worth knowing: --sm-cols is the grid column template of the
+   inventory rows. It is set per section in actor/gear.css (.gear-section,
+   .container-contents, the --charges / --weapon / --armor variants and the
+   Containers section), NOT here. It is undefined on .container-tab-header and
+   on the chest rows, which set their own grid-template-columns instead.
+   Only --smch-* (actor-independent dialogs, dialogs/dialogs.css) lives outside
+   .scarmark on purpose: those dialogs have no --sm-* tokens.
+   ========================================================================== */
+.scarmark,
+.scarmark-card {
+  --sm-font-heading: "Cinzel", serif;
+  --sm-font-body: "Signika", sans-serif;
+  --sm-radius: 3px;
+  /* sm: secondary text (notes, column headers, hints); xs: the smallest labels (field captions, legends). */
+  --sm-fs-sm: 0.85rem;
+  --sm-fs-xs: 0.8rem;
+  /* Compact table-row text (skill rows, inline esoteric fields). */
+  --sm-fs-row: 0.88rem;
+  --sm-gap-sm: 6px;
+  --sm-gap-md: 8px;
+  --sm-gap-lg: 10px;
+  --sm-gap-xs: 5px;
+  --sm-shadow-popup: 0 7px 25px rgb(0 0 0 / 53.33%);
+  --sm-col-item: clamp(130px, 18vw, 180px);
+  --sm-col-qty: 44px;
+  --sm-col-weight: 72px;
+  --sm-col-flag: 42px;
+  --sm-col-capacity: 125px;
+  /* As wide as the row's own icons: the Notes column takes all the rest and stops right before the first icon. The columns before it are fixed, so header and rows still line up. */
+  --sm-col-actions: max-content;
+  /* Standard field padding. Many Details/Skill/Trait/Container inputs and the chat-card buttons use
+     "4px 6px" instead; the two values differ by 1px vertically and are left as they are (no known reason). */
+  --sm-pad-field: 3px 6px;
+  --sm-line: 1px solid var(--sm-border);
+  --sm-rule-accent: 2px solid var(--sm-accent);
+}
+
+/* ==========================================================================
+   Theme palette
+   --------------------------------------------------------------------------
+   Every colour in this file is a --sm-* token. The dark palette is the
+   default (and the fallback when Foundry emits no theme class); the light
+   palette activates whenever Foundry's light theme is in effect.
+
+   Foundry v13+ adds `theme-light` / `theme-dark` to <html> (interface scheme)
+   and to each ApplicationV2 root (applications scheme). We therefore match:
+     - `:where(.theme-light) .scarmark(-card)`  -> a light ANCESTOR (html/body),
+       kept at low specificity via :where() so a per-window override can win;
+     - `.scarmark.theme-light`                  -> the sheet root itself light.
+   `.scarmark.theme-dark` re-asserts the dark palette at higher specificity so
+   a window explicitly kept dark stays dark even while the interface is light.
+   ========================================================================== */
+.scarmark,
+.scarmark-card,
+.scarmark.theme-dark {
+  color-scheme: dark;
+  --sm-bg: #2b2b2e;            /* sheet / card background */
+  --sm-surface: #38383c;      /* inputs, panels, table headers, chips, buttons */
+  --sm-surface-hover: #4a4a50;/* button hover */
+  --sm-track: #4a4a4e;        /* condition bar track */
+  --sm-text: #e8e6e2;         /* primary text */
+  --sm-text-strong: #ffffff;  /* active tab, extra emphasis */
+  --sm-text-muted: #b8b6b2;   /* labels, notes, secondary text */
+  --sm-border: #54545a;       /* default borders */
+  --sm-border-subtle: #48484c;/* list-row separators */
+  --sm-border-faint: #3a3a3e; /* table-cell separators */
+  --sm-accent: #a83e3e;       /* red: dividers, headings, delete, active tab */
+  --sm-gold: #d98f3a;         /* amber: card titles, roll icons, checked box */
+  --sm-on-gold: #1c1b19;      /* checkmark glyph drawn on the gold fill */
+  --sm-danger: #e05555;       /* failure / broken text */
+  --sm-warn: #d9603a;         /* over-capacity, heavy bleeding */
+  --sm-success: #5fbf5f;      /* success text */
+  --sm-info: #5b8ab5;         /* condition bar fill, not-carried icon */
+}
+
+:where(.theme-light) .scarmark,
+:where(.theme-light) .scarmark-card,
+.scarmark.theme-light {
+  color-scheme: light;
+  --sm-bg: #eae2d1;           /* warm parchment */
+  --sm-surface: #f6f1e6;      /* cream cards / inputs (lift above the bg) */
+  --sm-surface-hover: #ede6d5;
+  --sm-track: #cdc4b0;
+  --sm-text: #211d17;         /* near-black, warm */
+  --sm-text-strong: #000000;
+  --sm-text-muted: #6c6455;   /* warm brown-grey */
+  --sm-border: #b9ac90;       /* warm tan, visible on cream */
+  --sm-border-subtle: #cdc2a6;
+  --sm-border-faint: #dcd3bd;
+  --sm-accent: #9c2b2b;       /* deep red */
+  --sm-gold: #9a6212;         /* deep amber, readable as text on cream */
+  --sm-on-gold: #fbf8f1;      /* light checkmark on the amber fill */
+  --sm-danger: #b3271b;
+  --sm-warn: #b8481a;
+  --sm-success: #276b27;
+  --sm-info: #3c6893;
+}

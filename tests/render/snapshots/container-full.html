@@ -1,0 +1,568 @@
+<!-- part: header -->
+<header class="sheet-header">
+<img class="portrait" src="icons/portrait.svg" data-action="editImage" alt="Aldric &lt;the&gt; Bold" />
+<div class="header-main">
+<input class="name-input" type="text" name="name" value="Aldric &lt;the&gt; Bold" placeholder="{SCARMARK.NamePlaceholder}" />
+</div>
+<div class="header-stats">
+<div class="container-max-capacity">
+<label>{SCARMARK.Container.maxCapacity}</label>
+<input type="number" step="1" min="0" name="system.maxCapacity" value="40" />
+</div>
+<div class="container-contents-weight">
+<label>{SCARMARK.Container.contentsWeight}</label>
+<span class="contents-weight-value">12.2</span>
+</div>
+</div>
+</header>
+<!-- part: gear -->
+<div class="tab gear active" data-group="primary" data-tab="gear">
+<table class="gear-summary-table">
+<thead>
+<tr>
+<th>
+</th>
+<th>{SCARMARK.Gear.weapon}</th>
+<th>{SCARMARK.Gear.missile}</th>
+<th>{SCARMARK.Gear.armor}</th>
+<th>{SCARMARK.Gear.miscGear}</th>
+<th>{SCARMARK.Gear.total}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="row-label">{SCARMARK.Gear.weight}</td>
+<td>1.5</td>
+<td>0.5</td>
+<td>8.1</td>
+<td>2.1</td>
+<td class="total-cell">12.2</td>
+</tr>
+</tbody>
+</table>
+<div class="gear-filter">
+<i class="fa-solid fa-magnifying-glass">
+</i>
+<input type="text" data-gear-filter placeholder="{SCARMARK.Gear.filterPlaceholder}" />
+</div>
+<div class="gear-on-person-header">
+<span class="on-person-label">{SCARMARK.Gear.onPerson}</span>
+<span class="capacity-label over">{SCARMARK.Gear.capacityLine}</span>
+</div>
+<div class="gear-section gear-section--charges">
+<div class="gear-section-header">
+<span class="col-name">{SCARMARK.Gear.categoryGear}</span>
+<span class="col-qty">{SCARMARK.Quantity}</span>
+<span class="col-weight">{SCARMARK.Weight}</span>
+<span class="col-notes">{SCARMARK.Trait.notes}</span>
+<span class="col-charges">{SCARMARK.Artifact.class}</span>
+<a class="col-actions add-gear" data-action="addGear">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="gear-list">
+<li class="gear-entry" data-item-id="g1" data-item-name="Rope">
+<span class="col-name">
+<img class="gear-icon" src="icons/g1.svg" alt="" />
+<span class="name-text">Rope</span>
+</span>
+<span class="col-qty">2</span>
+<span class="col-weight">0.125</span>
+<span class="col-notes" title="50 ft">50 ft</span>
+<span class="col-charges">
+</span>
+<span class="col-actions">
+<a class="gear-consume" title="{SCARMARK.Gear.consume}">
+<i class="fa-solid fa-flask">
+</i>
+</a>
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-briefcase">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+<li class="gear-entry not-carried" data-item-id="g2" data-item-name="Lantern &lt;b&gt;">
+<span class="col-name">
+<img class="gear-icon" src="icons/g2.svg" alt="" />
+<span class="name-text">Lantern &lt;b&gt;</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">2</span>
+<span class="col-notes" title="">
+</span>
+<span class="col-charges">2</span>
+<span class="col-actions">
+<a class="gear-use" title="{SCARMARK.Gear.use}">
+<i class="fa-solid fa-hand-sparkles">
+</i>
+</a>
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-box">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+</ol>
+</div>
+<div class="gear-section gear-section--weapon">
+<div class="gear-section-header">
+<span class="col-name">{SCARMARK.Gear.categoryWeapons}</span>
+<span class="col-qty">{SCARMARK.Quantity}</span>
+<span class="col-weight">{SCARMARK.Weight}</span>
+<span class="col-wq">{SCARMARK.Gear.wq}</span>
+<span class="col-notes">{SCARMARK.Trait.notes}</span>
+<span class="col-charges">{SCARMARK.Artifact.class}</span>
+<a class="col-actions add-gear" data-action="addWeapon">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="gear-list">
+<li class="gear-entry" data-item-id="w1" data-item-name="Longsword">
+<span class="col-name">
+<img class="gear-icon" src="icons/w1.svg" alt="" />
+<span class="name-text">Longsword</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">1.5</span>
+<span class="col-wq">12</span>
+<span class="col-notes" title="keen">keen</span>
+<span class="col-charges">
+</span>
+<span class="col-actions">
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-briefcase">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+<li class="gear-entry not-carried" data-item-id="w2" data-item-name="Axe">
+<span class="col-name">
+<img class="gear-icon" src="icons/w2.svg" alt="" />
+<span class="name-text">Axe</span>
+</span>
+<span class="col-qty">3</span>
+<span class="col-weight">-</span>
+<span class="col-wq">8</span>
+<span class="col-notes" title="">
+</span>
+<span class="col-charges">4</span>
+<span class="col-actions">
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-box">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+</ol>
+</div>
+<div class="gear-section">
+<div class="gear-section-header">
+<span class="col-name">{SCARMARK.Gear.categoryMissiles}</span>
+<span class="col-qty">{SCARMARK.Quantity}</span>
+<span class="col-weight">{SCARMARK.Weight}</span>
+<span class="col-notes">{SCARMARK.Trait.notes}</span>
+<a class="col-actions add-gear" data-action="addMissile">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="gear-list">
+<li class="gear-entry" data-item-id="m1" data-item-name="Arrows">
+<span class="col-name">
+<img class="gear-icon" src="icons/m1.svg" alt="" />
+<span class="name-text">Arrows</span>
+</span>
+<span class="col-qty">20</span>
+<span class="col-weight">0.5</span>
+<span class="col-notes" title="bodkin">bodkin</span>
+<span class="col-actions">
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-briefcase">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+</ol>
+</div>
+<div class="gear-section gear-section--charges">
+<div class="gear-section-header">
+<span class="col-name">{SCARMARK.Gear.categoryRunes}</span>
+<span class="col-qty">{SCARMARK.Quantity}</span>
+<span class="col-weight">{SCARMARK.Weight}</span>
+<span class="col-notes">{SCARMARK.Trait.notes}</span>
+<span class="col-charges">{SCARMARK.Artifact.class}</span>
+<a class="col-actions add-gear" data-action="addRune">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="gear-list">
+<li class="gear-entry" data-item-id="r1" data-item-name="Rune of Ash">
+<span class="col-name">
+<img class="gear-icon" src="icons/r1.svg" alt="" />
+<span class="name-text">Rune of Ash</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">0.1</span>
+<span class="col-notes" title="burns">burns</span>
+<span class="col-charges">3</span>
+<span class="col-actions">
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-briefcase">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+</ol>
+</div>
+<div class="gear-section gear-section--armor">
+<div class="gear-section-header">
+<span class="col-name">{SCARMARK.Gear.categoryArmor}</span>
+<span class="col-qty">{SCARMARK.Quantity}</span>
+<span class="col-weight">{SCARMARK.Weight}</span>
+<span class="col-aq">{SCARMARK.Gear.aq}</span>
+<span class="col-layer">{SCARMARK.Gear.layer}</span>
+<span class="col-notes">{SCARMARK.Trait.notes}</span>
+<a class="col-actions add-gear" data-action="addArmor">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="gear-list">
+<li class="gear-entry" data-item-id="a1" data-item-name="Chain shirt">
+<span class="col-name">
+<img class="gear-icon" src="icons/a1.svg" alt="" />
+<span class="name-text">Chain shirt</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">7.25</span>
+<span class="col-aq" title="Original DUR from the compendium: Chain shirt">
+<input class="dur-input" type="number" step="1" min="-1" data-item-field="quality" value="5" />
+<span class="dur-original">/10</span>
+</span>
+<span class="col-layer">4</span>
+<span class="col-notes" title="">
+</span>
+<span class="col-actions">
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-briefcase">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+<li class="gear-entry not-carried" data-item-id="a2" data-item-name="Cap">
+<span class="col-name">
+<img class="gear-icon" src="icons/a2.svg" alt="" />
+<span class="name-text">Cap</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">0.8</span>
+<span class="col-aq" title="not found">
+<input class="dur-input" type="number" step="1" min="-1" data-item-field="quality" value="-1" />
+<span class="dur-original">/-</span>
+</span>
+<span class="col-layer">3</span>
+<span class="col-notes" title="worn">worn</span>
+<span class="col-actions">
+<a class="gear-store" data-action="storeItem" title="{SCARMARK.Gear.store}">
+<i class="fa-solid fa-box-archive">
+</i>
+</a>
+<a class="gear-carry" data-action="toggleCarried" title="{SCARMARK.Gear.carry}">
+<i class="fa-solid fa-box">
+</i>
+</a>
+<a class="gear-edit" data-action="editGear" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a class="gear-delete" data-action="deleteGear" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</li>
+</ol>
+</div>
+<section class="sm-chest-custom" data-sm-chest>
+<div class="gear-section-header">
+<span class="col-name">{SCARMARK.Gear.categoryContainers}</span>
+<span class="col-qty">{SCARMARK.Quantity}</span>
+<span class="col-weight">{SCARMARK.Weight}</span>
+<span class="col-capacity">{SCARMARK.Gear.capacity}</span>
+<span class="col-notes">{SCARMARK.Trait.notes}</span>
+<span class="col-actions">
+<a data-action="addContainer" data-sm-container-action="add" title="{SCARMARK.Container.add}">
+<i class="fa-solid fa-plus">
+</i>
+<span>{SCARMARK.Add}</span>
+</a>
+</span>
+</div>
+<ol class="sm-chest-list gear-list">
+<li class="sm-chest-group">
+<article class="sm-chest-box" data-box-id="c1">
+<div class="sm-chest-row" data-item-id="c1" data-sm-chest-id="c1" data-search="backpack">
+<span class="col-name">
+<img class="gear-icon" alt="" src="icons/c1.svg">
+<span>Backpack</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">1 kg</span>
+<span class="col-capacity">0.4 / 20 kg</span>
+<span class="col-notes" title="">
+</span>
+<span class="col-actions">
+<a data-action="editGear" data-sm-container-action="edit" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a data-action="unpackItem" data-sm-container-action="unpack" title="{SCARMARK.Container.unpackTitle}">
+<i class="fa-solid fa-box-open">
+</i>
+</a>
+<a data-action="deleteGear" data-sm-container-action="delete" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</div>
+<ul class="sm-chest-children">
+<li>
+<div class="sm-chest-row" data-item-id="s1" data-sm-chest-id="s1" data-search="potion red">
+<span class="col-name">
+<img class="gear-icon" alt="" src="icons/s1.svg">
+<span>Potion</span>
+</span>
+<span class="col-qty">2</span>
+<span class="col-weight">0.4 kg</span>
+<span class="col-capacity">-</span>
+<span class="col-notes" title="red">red</span>
+<span class="col-actions">
+<a data-action="editGear" data-sm-container-action="edit" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a data-action="unpackItem" data-sm-container-action="unpack" title="{SCARMARK.Container.unpackTitle}">
+<i class="fa-solid fa-box-open">
+</i>
+</a>
+</span>
+</div>
+</li>
+</ul>
+</article>
+</li>
+<li class="sm-chest-group">
+<article class="sm-chest-box" data-box-id="c2">
+<div class="sm-chest-row" data-item-id="c2" data-sm-chest-id="c2" data-search="pouch small &lt;i&gt;">
+<span class="col-name">
+<img class="gear-icon" alt="" src="icons/c2.svg">
+<span>Pouch</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">0.5 kg</span>
+<span class="col-capacity sm-chest-over">1.5 / 1 kg</span>
+<span class="col-notes" title="small &lt;i&gt;">small &lt;i&gt;</span>
+<span class="col-actions">
+<a data-action="editGear" data-sm-container-action="edit" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a data-action="unpackItem" data-sm-container-action="unpack" title="{SCARMARK.Container.unpackTitle}">
+<i class="fa-solid fa-box-open">
+</i>
+</a>
+<a data-action="deleteGear" data-sm-container-action="delete" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</div>
+<ul class="sm-chest-children">
+<li>
+<div class="sm-chest-row" data-item-id="s2" data-sm-chest-id="s2" data-search="dagger">
+<span class="col-name">
+<img class="gear-icon" alt="" src="icons/s2.svg">
+<span>Dagger</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">1.5 kg</span>
+<span class="col-capacity">-</span>
+<span class="col-notes" title="">
+</span>
+<span class="col-actions">
+<a data-action="editGear" data-sm-container-action="edit" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a data-action="unpackItem" data-sm-container-action="unpack" title="{SCARMARK.Container.unpackTitle}">
+<i class="fa-solid fa-box-open">
+</i>
+</a>
+</span>
+</div>
+</li>
+</ul>
+</article>
+</li>
+<li class="sm-chest-group">
+<article class="sm-chest-box" data-box-id="c3">
+<div class="sm-chest-row" data-item-id="c3" data-sm-chest-id="c3" data-search="chest">
+<span class="col-name">
+<img class="gear-icon" alt="" src="icons/c3.svg">
+<span>Chest</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">2 kg</span>
+<span class="col-capacity">0 / ? kg</span>
+<span class="col-notes" title="">
+</span>
+<span class="col-actions">
+<a data-action="editGear" data-sm-container-action="edit" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a data-action="unpackItem" data-sm-container-action="unpack" title="{SCARMARK.Container.unpackTitle}">
+<i class="fa-solid fa-box-open">
+</i>
+</a>
+<a data-action="deleteGear" data-sm-container-action="delete" title="{SCARMARK.Delete}">
+<i class="fa-solid fa-trash">
+</i>
+</a>
+</span>
+</div>
+<ul class="sm-chest-children">
+</ul>
+</article>
+</li>
+<li class="sm-chest-group">
+<article class="sm-chest-box">
+<p>{SCARMARK.Container.orphans}</p>
+<ul class="sm-chest-children">
+<li>
+<div class="sm-chest-row" data-item-id="o1" data-sm-chest-id="o1" data-search="gem lost">
+<span class="col-name">
+<img class="gear-icon" alt="" src="icons/o1.svg">
+<span>Gem</span>
+</span>
+<span class="col-qty">1</span>
+<span class="col-weight">0.3 kg</span>
+<span class="col-capacity">-</span>
+<span class="col-notes" title="lost">lost</span>
+<span class="col-actions">
+<a data-action="editGear" data-sm-container-action="edit" title="{SCARMARK.Skill.edit}">
+<i class="fa-solid fa-pen-to-square">
+</i>
+</a>
+<a data-action="unpackItem" data-sm-container-action="unpack" title="{SCARMARK.Container.unpackTitle}">
+<i class="fa-solid fa-box-open">
+</i>
+</a>
+</span>
+</div>
+</li>
+</ul>
+</article>
+</li>
+</ol>
+</section>
+</div>
+<!-- part: actions -->
+<div class="tab actions active" data-group="primary" data-tab="actions">
+<div class="actions-panel" data-actions-path="">
+<div class="actions-header">
+<span class="col-action">{SCARMARK.Action.colActions}</span>
+<span class="col-when">{SCARMARK.Action.colWhen}</span>
+<a class="add-action" data-action="createAction">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="actions-list">
+<li class="action-empty">{SCARMARK.Action.none}</li>
+</ol>
+</div>
+</div>

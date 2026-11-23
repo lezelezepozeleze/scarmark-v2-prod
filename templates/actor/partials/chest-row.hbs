@@ -1,0 +1,17 @@
+{{!-- One row of the chest list: a container or an item stored in it. Parameter: row (see view/inventory-view.mjs chestGroups). Reads isOwner from the sheet context. --}}
+<div class="sm-chest-row" data-item-id="{{row.id}}" data-sm-chest-id="{{row.id}}" data-search="{{row.search}}">
+  <span class="col-name"><img class="gear-icon" alt="" src="{{row.img}}"><span>{{row.name}}</span></span>
+  <span class="col-qty">{{row.quantity}}</span>
+  <span class="col-weight">{{row.weight}}</span>
+  <span class="col-capacity{{#if row.over}} sm-chest-over{{/if}}">{{row.capacity}}</span>
+  <span class="col-notes" title="{{row.notes}}">{{row.notes}}</span>
+  <span class="col-actions">
+    <a data-action="editGear" data-sm-container-action="edit" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+    {{#if @root.isOwner}}
+    <a data-action="unpackItem" data-sm-container-action="unpack" title="{{localize 'SCARMARK.Container.unpackTitle'}}"><i class="fa-solid fa-box-open"></i></a>
+    {{#if row.isBox}}
+    <a data-action="deleteGear" data-sm-container-action="delete" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+    {{/if}}
+    {{/if}}
+  </span>
+</div>

@@ -1,0 +1,21 @@
+{{!-- The three attribute selects of a skill or psionic talent (context: attributeOptions, system). --}}
+<div class="skill-attributes">
+  <label>{{localize 'SCARMARK.Skill.attributes'}}</label>
+  <div class="skill-attributes-row">
+    <select name="system.attribute1">
+      {{#each attributeOptions as |attr key|}}
+      <option value="{{key}}" {{#if (eq key ../system.attribute1)}}selected{{/if}}>{{localize attr.label}}</option>
+      {{/each}}
+    </select>
+    <select name="system.attribute2">
+      {{#each attributeOptions as |attr key|}}
+      <option value="{{key}}" {{#if (eq key ../system.attribute2)}}selected{{/if}}>{{localize attr.label}}</option>
+      {{/each}}
+    </select>
+    <select name="system.attribute3">
+      {{#each attributeOptions as |attr key|}}
+      <option value="{{key}}" {{#if (eq key ../system.attribute3)}}selected{{/if}}>{{localize attr.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>

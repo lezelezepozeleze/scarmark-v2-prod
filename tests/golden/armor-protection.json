@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "helper-aq-3-worn",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-aq-1-worn",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 1,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-aq-0-destroyed-excluded",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 0,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-aq-minus-1-natural-included",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": -1,
+          "layer": 0,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 1,
+            "piercing": 1,
+            "fire": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 1,
+      "edged": 1,
+      "piercing": 1,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-two-layers-sum",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        },
+        {
+          "quality": 3,
+          "layer": 4,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 2,
+            "edged": 6,
+            "piercing": 4,
+            "fire": 1
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 6,
+      "edged": 11,
+      "piercing": 7,
+      "fire": 3
+    }
+  },
+  {
+    "id": "helper-mix-destroyed-and-natural",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 0,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        },
+        {
+          "quality": -1,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        },
+        {
+          "quality": 2,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 1,
+            "piercing": 1,
+            "fire": 1
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 5,
+      "edged": 6,
+      "piercing": 4,
+      "fire": 3
+    }
+  },
+  {
+    "id": "helper-packed-in-carried-container",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "container": {
+        "carried": true
+      },
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          },
+          "container": "bag"
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-packed-in-dropped-container",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "container": {
+        "carried": false
+      },
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          },
+          "container": "bag"
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-container-id-not-on-actor-counts",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          },
+          "container": "gone"
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-not-carried",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": false,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-does-not-cover-location",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "chest",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-covers-several-locations",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "chest",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "chest",
+            "belly",
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-legacy-armor-key-skull-covers-head",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "skull"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-legacy-location-type-thorax",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "thorax",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "chest"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-legacy-location-and-armor-keys",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "forearm",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "elbow"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 5,
+      "piercing": 3,
+      "fire": 2
+    }
+  },
+  {
+    "id": "helper-aspect-missing-counts-0",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 4,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-protection-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-locations-empty",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-locations-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-no-armor",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "head",
+      "armor": []
+    },
+    "expected": {
+      "blunt": 0,
+      "edged": 0,
+      "piercing": 0,
+      "fire": 0
+    }
+  },
+  {
+    "id": "helper-creature-location",
+    "source": "executed",
+    "input": {
+      "consumer": "helper",
+      "locationType": "creatureChest",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "creatureChest"
+          ],
+          "protection": {
+            "blunt": 3,
+            "edged": 3,
+            "piercing": 3,
+            "fire": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "blunt": 3,
+      "edged": 3,
+      "piercing": 3,
+      "fire": 0
+    }
+  },
+  {
+    "id": "sheet-aq-3-worn",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-aq-1-worn",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 1,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-aq-0-destroyed-excluded",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 0,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-aq-minus-1-natural-included",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": -1,
+          "layer": 0,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 1,
+            "piercing": 1,
+            "fire": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 1,
+      "e": 1,
+      "p": 1,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-two-layers-sum",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        },
+        {
+          "quality": 3,
+          "layer": 4,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 2,
+            "edged": 6,
+            "piercing": 4,
+            "fire": 1
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 2,
+      "b": 6,
+      "e": 11,
+      "p": 7,
+      "f": 3
+    }
+  },
+  {
+    "id": "sheet-mix-destroyed-and-natural",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 0,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        },
+        {
+          "quality": -1,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        },
+        {
+          "quality": 2,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 1,
+            "piercing": 1,
+            "fire": 1
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 2,
+      "b": 5,
+      "e": 6,
+      "p": 4,
+      "f": 3
+    }
+  },
+  {
+    "id": "sheet-packed-in-carried-container",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "container": {
+        "carried": true
+      },
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          },
+          "container": "bag"
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-packed-in-dropped-container",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "container": {
+        "carried": false
+      },
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          },
+          "container": "bag"
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-container-id-not-on-actor-counts",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          },
+          "container": "gone"
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-not-carried",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": false,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-does-not-cover-location",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "chest",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-covers-several-locations",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "chest",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "chest",
+            "belly",
+            "head"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-legacy-armor-key-skull-covers-head",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "skull"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-legacy-location-type-thorax",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "thorax",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "chest"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-legacy-location-and-armor-keys",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "forearm",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "elbow"
+          ],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 5,
+      "p": 3,
+      "f": 2
+    }
+  },
+  {
+    "id": "sheet-aspect-missing-counts-0",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 4
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 4,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-protection-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "head"
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-locations-empty",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [],
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-locations-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "protection": {
+            "blunt": 4,
+            "edged": 5,
+            "piercing": 3,
+            "fire": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-no-armor",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "head",
+      "armor": []
+    },
+    "expected": {
+      "layers": 0,
+      "b": 0,
+      "e": 0,
+      "p": 0,
+      "f": 0
+    }
+  },
+  {
+    "id": "sheet-creature-location",
+    "source": "executed",
+    "input": {
+      "consumer": "sheet",
+      "locationType": "creatureChest",
+      "armor": [
+        {
+          "quality": 3,
+          "layer": 3,
+          "carried": true,
+          "quantity": 1,
+          "weight": 0,
+          "locations": [
+            "creatureChest"
+          ],
+          "protection": {
+            "blunt": 3,
+            "edged": 3,
+            "piercing": 3,
+            "fire": 0
+          }
+        }
+      ]
+    },
+    "expected": {
+      "layers": 1,
+      "b": 3,
+      "e": 3,
+      "p": 3,
+      "f": 0
+    }
+  }
+]

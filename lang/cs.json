@@ -1,0 +1,96 @@
+{
+  "SCARMARK": {
+    "Section": {
+      "general": "Obecné",
+      "usage": "Použití",
+      "weapon": "Zbraň",
+      "skill": "Dovednost",
+      "magic": "Magie",
+      "missile": "Střela",
+      "armor": "Zbroj",
+      "range": "Dolet a zásah"
+    },
+    "Add": "Přidat",
+    "Condition": "Stav",
+    "D100Test": "D100 test",
+    "Maneuvers": {
+      "entangle": {
+        "description": "Zamotání protivníka sítí, pláštěm či něčím podobným."
+      },
+      "grapple": {
+        "description": "Je potřeba volná ruka a přechod do close-quarters combat.\nPři úspěchu má protivník {skills} ke Combat/Physical/Esoterics, akce pouze Blok/Attack, pokud to úchop dovolí."
+      },
+      "pin": {
+        "description": "Navazuje na Grapple, krátká akce ve stejném kole.\nPorovnání STR × {mult} vs STR × {mult} (-5 až -25 podle velikosti/váhy/zbroje dle GM).\nProtivník má {skills} postih na boj. Melee boj má proti němu {melee}, střelba {missile}."
+      },
+      "push": {
+        "description": "Odstrčení a dočasné rozvázání z boje. Automaticky uspěje proti menším či slabším.\nPorovnání STR testů → odstrčení o 5 ft a dočasné rozvázání boje.\nLze kombinovat s Rapid Attack.\nCS: navíc Stumble test (možný Prone).\nAutomatic Push: krátká akce proti menším/slabším."
+      },
+      "ram": {
+        "description": "Jen při vstupu do boje, je potřeba rozběh ≥ 15 ft. Krátká akce (lze pak útočit).\nSe štítem -10 pro druhou stranu, při úspěchu je obránce sražen."
+      },
+      "trip": {
+        "description": "Útok s vhodnou zbraní (dřevce, falcastrum, sekera, kladivo…) s -10 high/low."
+      }
+    },
+    "Move": "Pohyb",
+    "NamePlaceholder": "Nová postava",
+    "Race": "Rasa",
+    "Tabs": {
+      "combat": "Boj",
+      "esoterics": "Esoterika",
+      "gear": "Vybavení",
+      "profile": "Profil",
+      "skills": "Dovednosti"
+    },
+    "Tactics": {
+      "aimedAttack": {
+        "description": "Umožňuje útočit na konkrétní lokaci s postihem -15."
+      },
+      "aimedFire": {
+        "description": "Při strávení jednoho kola mířením získává postava bonus +20 na další výstřel."
+      },
+      "catchBreath": {
+        "description": "Žádná akce v tahu snižuje Fatigue o 2, při žádných akcích během kola se Fatigue snižuje o 3.\nŽádná akce v tahu → Fatigue -2"
+      },
+      "cover": {
+        "description": "Kryt před střelbou: -10 až -30 pro střelce (úplný kryt = nelze střílet).\nStřelba přes postavu = -20."
+      },
+      "defensiveStance": {
+        "description": "Defenzivní postoj umožňuje při útoku zvolit postih -10 až -25, přičemž se tento bonus přičte k příští obraně.\nSčítá se se štítem a dvěma zbraněmi, nelze použít na útočné typy obrany."
+      },
+      "feint": {
+        "description": "Útok s postihem dle zbraně. Při úspěchu se obrana obránce snižuje na polovinu, při kritickém úspěchu se obránce bránit nemůže.\nPostih podle zbraně: Estoc -5, Sabre/Sword -10, Longsword/Zweihander -15, Kopí -20, ostatní -30.\nCS = žádná obrana | S = obrana na polovinu."
+      },
+      "rapidAttack": {
+        "description": "Dva údery jednou zbraní, každý s postihem -10. Přidává +2 body únavy."
+      },
+      "rapidFire": {
+        "description": "Rychlá střelba lukem. Pro každý výstřel platí postih -20. Kuší nelze."
+      },
+      "twoWeaponCombat": {
+        "description": "Útok oběma rukama. Off-hand má na útok -20. Při obraně dvěma zbraněmi platí modifikátor +10."
+      }
+    },
+    "Target": "Cíl",
+    "TestMultiplier": "Multiplikátor",
+    "Trait": {
+      "newPhysical": "Nový fyzický rys",
+      "newPsyche": "Nový psychický rys",
+      "notes": "Poznámky",
+      "physical": "Fyzické rysy",
+      "psyche": "Psychické rysy"
+    },
+    "Compendium": {
+      "saveTo": "Uložit do kompendia",
+      "title": "Uložit {name} do kompendia",
+      "where": "Uložit do",
+      "save": "Uložit",
+      "newPack": "Nové kompendium: {label}",
+      "noPack": "Není žádné odemčené kompendium světa tohoto druhu, kam by šlo ukládat.",
+      "saved": "{name} uloženo do {pack}.",
+      "ownEffect": "{name} odkazuje na efekt, který existuje jen na tomto předmětu, takže uložená akce ho na jiném předmětu nenajde. Ulož i ten efekt.",
+      "failed": "Nepodařilo se uložit do kompendia: {error}"
+    }
+  }
+}

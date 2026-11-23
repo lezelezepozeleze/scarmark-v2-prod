@@ -1,0 +1,10 @@
+<p><strong>{{actor}}</strong></p>
+<p>{{summary}}</p>
+<div class="form-group">
+  <label>{{localize 'SCARMARK.CapacityUse.useLabel'}}</label>
+  <select name="itemId">
+    {{#each options}}
+    <option value="{{id}}"{{#if selected}} selected{{/if}}>{{label}}</option>
+    {{/each}}
+  </select>
+</div>

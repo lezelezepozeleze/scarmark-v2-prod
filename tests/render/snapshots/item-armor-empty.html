@@ -1,0 +1,149 @@
+<!-- part: header -->
+<header class="sheet-header item-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="" />
+<input class="name-input" type="text" name="name" value="" placeholder="{SCARMARK.NamePlaceholder}" />
+</header>
+<!-- part: details -->
+<div class="tab details" data-group="primary" data-tab="details">
+<div class="sm-item-form">
+<fieldset class="sm-box item-general">
+<legend>{SCARMARK.Section.general}</legend>
+<div class="item-basics has-container">
+<div class="field in-container">
+<label>{SCARMARK.Container.inContainer}</label>
+<select name="system.container">
+<option value="" selected>{SCARMARK.Container.onPerson}</option>
+</select>
+</div>
+<div class="field quantity">
+<label>{SCARMARK.Quantity}</label>
+<input type="number" step="1" name="system.quantity" value="1" />
+</div>
+<div class="field weight">
+<label>{SCARMARK.WeightKg}</label>
+<input type="number" step="any" name="system.weight" value="0" />
+</div>
+<div class="field value">
+<label>{SCARMARK.Value}</label>
+<input type="number" step="any" name="system.value" value="0" />
+</div>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-armor">
+<legend>{SCARMARK.Section.armor}</legend>
+<div class="sm-row-3">
+<div class="field">
+<label>{SCARMARK.Armor.quality}</label>
+<input type="number" step="1" name="system.quality" value="10" />
+</div>
+<div class="field">
+<label>{SCARMARK.Armor.originalQuality}</label>
+<input type="number" step="1" name="system.originalQuality" value="0" />
+</div>
+<div class="field">
+<label>{SCARMARK.Armor.layer}</label>
+<input type="number" min="0" max="5" step="1" name="system.layer" value="1" />
+</div>
+</div>
+</fieldset>
+<fieldset class="armor-section aspect-section">
+<legend>{SCARMARK.Armor.protection}</legend>
+<div class="sm-protection-grid">
+<div class="field">
+<label>{SCARMARK.Aspect.blunt}</label>
+<input type="number" step="1" name="system.protection.blunt" value="0" />
+</div>
+<div class="field">
+<label>{SCARMARK.Aspect.edged}</label>
+<input type="number" step="1" name="system.protection.edged" value="0" />
+</div>
+<div class="field">
+<label>{SCARMARK.Aspect.piercing}</label>
+<input type="number" step="1" name="system.protection.piercing" value="0" />
+</div>
+<div class="field">
+<label>{SCARMARK.Aspect.fire}</label>
+<input type="number" step="1" name="system.protection.fire" value="0" />
+</div>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-locations">
+<legend>{SCARMARK.Armor.locations}</legend>
+<div class="sm-armor-add-row">
+<select class="location-picker">
+<option value="">{SCARMARK.Armor.selectLocation}</option>
+<option value="head:">SCARMARK.ArmorLocation.type.head</option>
+<option value="neck:">SCARMARK.ArmorLocation.type.neck</option>
+<option value="shoulder:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.shoulder&quot;}</option>
+<option value="shoulder:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.shoulder&quot;}</option>
+<option value="arm:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.arm&quot;}</option>
+<option value="arm:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.arm&quot;}</option>
+<option value="hand:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.hand&quot;}</option>
+<option value="hand:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.hand&quot;}</option>
+<option value="chest:">SCARMARK.ArmorLocation.type.chest</option>
+<option value="belly:">SCARMARK.ArmorLocation.type.belly</option>
+<option value="hip:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.hip&quot;}</option>
+<option value="hip:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.hip&quot;}</option>
+<option value="thigh:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.thigh&quot;}</option>
+<option value="thigh:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.thigh&quot;}</option>
+<option value="shin:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.shin&quot;}</option>
+<option value="shin:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.shin&quot;}</option>
+<option value="wing:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.wing&quot;}</option>
+<option value="wing:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.wing&quot;}</option>
+<option value="tentacle:">SCARMARK.ArmorLocation.type.tentacle</option>
+<option value="tail:">SCARMARK.ArmorLocation.type.tail</option>
+<option value="creatureHead:">SCARMARK.ArmorLocation.type.creatureHead</option>
+<option value="creatureNeck:">SCARMARK.ArmorLocation.type.creatureNeck</option>
+<option value="creatureForeLeg:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.creatureForeLeg&quot;}</option>
+<option value="creatureForeLeg:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.creatureForeLeg&quot;}</option>
+<option value="creatureHindLeg:left">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.left&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.creatureHindLeg&quot;}</option>
+<option value="creatureHindLeg:right">SCARMARK.ArmorLocation.sidedLabel{&quot;side&quot;:&quot;SCARMARK.ArmorLocation.sides.right&quot;,&quot;location&quot;:&quot;SCARMARK.ArmorLocation.type.creatureHindLeg&quot;}</option>
+<option value="creatureChest:">SCARMARK.ArmorLocation.type.creatureChest</option>
+<option value="creatureBelly:">SCARMARK.ArmorLocation.type.creatureBelly</option>
+</select>
+<button type="button" class="add-location" data-action="addLocation">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add}</button>
+</div>
+<div class="sm-armor-locations">
+<div class="sm-armor-empty">{SCARMARK.Armor.noLocations}</div>
+</div>
+</fieldset>
+<div class="field sm-armor-notes">
+<label>{SCARMARK.Trait.note}</label>
+<textarea rows="1" name="system.notes">
+</textarea>
+</div>
+</div>
+</div>
+<!-- part: effects -->
+<div class="tab effects" data-group="primary" data-tab="effects">
+<div class="effects-flat">
+<div class="effects-header">
+<span class="col-name">{SCARMARK.Effect.effect}</span>
+<span class="col-duration">{SCARMARK.Effect.duration}</span>
+<span class="col-changes">{SCARMARK.Effect.changes}</span>
+<a class="add-effect" data-action="createEffect">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="effects-list flat">
+<li class="effect-empty">{SCARMARK.Effect.none}</li>
+</ol>
+</div>
+</div>
+<!-- part: actions -->
+<div class="tab actions" data-group="primary" data-tab="actions">
+<div class="actions-panel" data-actions-path="system.actions">
+<div class="actions-header">
+<span class="col-action">{SCARMARK.Action.colActions}</span>
+<span class="col-when">{SCARMARK.Action.colWhen}</span>
+<a class="add-action" data-action="createAction">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="actions-list">
+<li class="action-empty">{SCARMARK.Action.none}</li>
+</ol>
+</div>
+</div>

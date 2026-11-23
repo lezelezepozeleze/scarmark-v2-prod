@@ -1,0 +1,41 @@
+{{#> "systems/scarmark/templates/item/partials/details-tab.hbs"}}
+
+  <div class="sm-item-form">
+
+    {{> "systems/scarmark/templates/item/partials/item-basics.hbs" container=true}}
+
+    <fieldset class="sm-box sm-weapon">
+      <legend>{{localize 'SCARMARK.Section.weapon'}}</legend>
+      <div class="sm-row-3">
+        {{> "systems/scarmark/templates/item/partials/weapon-durability.hbs"}}
+        <div class="field weapon-attack">
+          <label>{{localize 'SCARMARK.Weapon.attack'}}</label>
+          <input type="number" step="1" name="system.attack" value="{{system.attack}}" />
+        </div>
+        <div class="field weapon-defense">
+          <label>{{localize 'SCARMARK.Weapon.defense'}}</label>
+          <input type="number" step="1" name="system.defense" value="{{system.defense}}" />
+        </div>
+      </div>
+      <div class="sm-row-2">
+        <label class="checkbox-label">
+          <input type="checkbox" name="system.isShield" {{#if system.isShield}}checked{{/if}} />
+          {{localize 'SCARMARK.Weapon.isShield'}}
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="system.broken" {{#if system.broken}}checked{{/if}} />
+          {{localize 'SCARMARK.Weapon.broken'}}
+        </label>
+      </div>
+    </fieldset>
+
+    {{> "systems/scarmark/templates/item/partials/aspect-grid.hbs" legend="SCARMARK.Weapon.impact" prefix="system.impact" values=system.impact min=-1}}
+
+    {{> "systems/scarmark/templates/item/partials/skill-row.hbs" skills=weaponSkills label="SCARMARK.Weapon.associatedSkill"}}
+
+    {{> "systems/scarmark/templates/item/partials/artifact-fields.hbs"}}
+
+    {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="note" grow=true}}
+
+  </div>
+{{/"systems/scarmark/templates/item/partials/details-tab.hbs"}}

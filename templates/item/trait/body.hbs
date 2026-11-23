@@ -1,0 +1,25 @@
+<div class="trait-body">
+
+  <header class="item-header trait-header">
+    {{> "systems/scarmark/templates/item/partials/portrait.hbs"}}
+    <div class="trait-header-main">
+      {{> "systems/scarmark/templates/item/partials/name-input.hbs"}}
+      <div class="field trait-type">
+        <label>{{localize 'SCARMARK.Trait.type'}}</label>
+        <select name="system.category">
+          <option value="physical" {{#if (eq system.category "physical")}}selected{{/if}}>{{localize 'SCARMARK.Trait.typePhysical'}}</option>
+          <option value="psyche" {{#if (eq system.category "psyche")}}selected{{/if}}>{{localize 'SCARMARK.Trait.typePsyche'}}</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <div class="field trait-description">
+    <h3>{{localize 'SCARMARK.Description'}}</h3>
+    <prose-mirror name="system.description" value="{{system.description}}"></prose-mirror>
+  </div>
+
+  {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="trait-note"}}
+
+  {{> "systems/scarmark/templates/item/partials/effects-table.hbs" heading='SCARMARK.Tabs.effects'}}
+</div>

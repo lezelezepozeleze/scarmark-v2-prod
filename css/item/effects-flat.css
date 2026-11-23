@@ -1,0 +1,57 @@
+/* Flat Effects list on item sheets. */
+
+/* Must come after the shared heading rules in base/sheet.css (same specificity) to override their margin-bottom. */
+.scarmark .effects-flat h3 {
+  margin-bottom: 8px;
+}
+
+.scarmark .effects-flat {
+  margin-top: 14px;
+}
+
+.scarmark .effects-flat .effects-header,
+.scarmark .effects-flat .effect-entry {
+  display: grid;
+  /* minmax(0, ..): a long stat name must not widen its column, or the header and the rows drift apart. */
+  grid-template-columns: minmax(0, 1.4fr) 90px minmax(0, 1fr) 24px 24px 24px;
+  gap: var(--sm-gap-md);
+  align-items: center;
+}
+
+.scarmark .effects-flat .effects-header {
+  font-weight: 700;
+  border-bottom: var(--sm-line);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.scarmark .effects-flat .effects-header .add-effect {
+  grid-column: span 3;
+  justify-self: end;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.scarmark .effects-flat .col-name {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-sm);
+}
+
+.scarmark .effects-flat .effect-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.scarmark .effects-flat .col-duration,
+.scarmark .effects-flat .col-changes {
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+}
+
+.scarmark .effects-flat .col-changes {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

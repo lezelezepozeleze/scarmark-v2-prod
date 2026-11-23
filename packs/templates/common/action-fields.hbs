@@ -1,0 +1,47 @@
+{{!-- The lines of one action: "when:" with its roll-down, the kind, then what the kind needs (a test, an item and its alteration, an effect, a removal, a macro or a message text) and, for a trigger that asks for a target, "on:". Parameter: row - one row of the view model from prepareActionsPanel (sheets/actions/action-panel.mjs). Used by the Actions panel and by the sheet of an action compendium entry. --}}
+  <div class="action-line">
+    <span class="action-word">{{localize 'SCARMARK.Action.when'}}:</span>
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.when cls="action-when"}}
+  </div>
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.kind cls="action-kind"}}
+  </div>
+  {{#if row.isTest}}
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.test cls="action-test"}}
+  </div>
+  {{/if}}
+  {{#if row.isAlter}}
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.targetItem cls="action-item"}}
+  </div>
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.alteration cls="action-alteration"}}
+  </div>
+  {{/if}}
+  {{#if row.isEffect}}
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.effect cls="action-effect"}}
+  </div>
+  {{/if}}
+  {{#if row.isRemove}}
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.removal cls="action-effect"}}
+  </div>
+  {{/if}}
+  {{#if row.isMacro}}
+  <div class="action-line">
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.macro cls="action-macro"}}
+  </div>
+  {{/if}}
+  {{#if row.isMessage}}
+  <div class="action-line">
+    <input type="text" class="action-message" name="{{row.message.name}}" value="{{row.message.value}}" placeholder="{{localize 'SCARMARK.Action.messagePlaceholder'}}" />
+  </div>
+  {{/if}}
+  {{#if row.showOn}}
+  <div class="action-line">
+    <span class="action-word">{{localize 'SCARMARK.Action.on'}}:</span>
+    {{> "systems/scarmark/templates/common/roll-down.hbs" field=row.on cls="action-on"}}
+  </div>
+  {{/if}}

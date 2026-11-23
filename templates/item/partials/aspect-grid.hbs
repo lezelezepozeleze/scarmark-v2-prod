@@ -1,0 +1,22 @@
+{{!-- Four aspect numbers in one row: blunt, edged, piercing, fire. Parameters: legend - lang key of the title; prefix - the data path of the four numbers (system.protection, system.impact); values - the object at that path; min - the lowest value allowed (optional). --}}
+<fieldset class="armor-section aspect-section">
+  <legend>{{localize legend}}</legend>
+  <div class="sm-protection-grid">
+    <div class="field">
+      <label>{{localize 'SCARMARK.Aspect.blunt'}}</label>
+      <input type="number" step="1"{{#if min}} min="{{min}}"{{/if}} name="{{prefix}}.blunt" value="{{lookup values 'blunt'}}" />
+    </div>
+    <div class="field">
+      <label>{{localize 'SCARMARK.Aspect.edged'}}</label>
+      <input type="number" step="1"{{#if min}} min="{{min}}"{{/if}} name="{{prefix}}.edged" value="{{lookup values 'edged'}}" />
+    </div>
+    <div class="field">
+      <label>{{localize 'SCARMARK.Aspect.piercing'}}</label>
+      <input type="number" step="1"{{#if min}} min="{{min}}"{{/if}} name="{{prefix}}.piercing" value="{{lookup values 'piercing'}}" />
+    </div>
+    <div class="field">
+      <label>{{localize 'SCARMARK.Aspect.fire'}}</label>
+      <input type="number" step="1"{{#if min}} min="{{min}}"{{/if}} name="{{prefix}}.fire" value="{{lookup values 'fire'}}" />
+    </div>
+  </div>
+</fieldset>

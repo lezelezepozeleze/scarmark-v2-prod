@@ -1,0 +1,30 @@
+{{!-- The Stored tab of a container: a header (Item | Qty | Weight | Unpack), then one row per stored item, each on a single line. --}}
+<div class="tab stored{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="stored">
+
+  <div class="gear-section-header stored-header">
+    <span class="col-name">{{localize 'SCARMARK.Container.colItem'}}</span>
+    <span class="col-qty">{{localize 'SCARMARK.Container.colQuantity'}}</span>
+    <span class="col-weight">{{localize 'SCARMARK.Container.colWeight'}}</span>
+    <span class="col-actions">{{localize 'SCARMARK.Container.colUnpack'}}</span>
+  </div>
+
+  <ol class="gear-list stored-list">
+    {{#each storedItems as |item|}}
+    <li class="gear-entry" data-item-id="{{item.id}}">
+      <span class="col-name">
+        <img class="gear-icon" src="{{item.img}}" alt="" />
+        <a class="name-text" data-action="openStored">{{item.name}}</a>
+      </span>
+      <span class="col-qty">{{item.system.quantity}}</span>
+      <span class="col-weight">{{num item.system.totalWeight}}</span>
+      <span class="col-actions">
+        <a data-action="ejectStored" title="{{localize 'SCARMARK.Container.unpack'}}"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+      </span>
+    </li>
+    {{/each}}
+    {{#unless storedItems.length}}
+    <li class="gear-empty">{{localize 'SCARMARK.Container.noStored'}}</li>
+    {{/unless}}
+  </ol>
+
+</div>

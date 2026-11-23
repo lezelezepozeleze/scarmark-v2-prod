@@ -1,0 +1,310 @@
+{
+  "id": "scarmark",
+  "title": "Scarmark",
+  "description": "Vlastní TTRPG systém pro Foundry VTT. Nízko-magický, mechanicky štíhlý, roleplay-first.",
+  "version": "1.1.0-beta",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.369"
+  },
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
+  "relationships": {
+    "recommends": [
+      {
+        "id": "foundryvtt-simple-calendar-reborn",
+        "type": "module",
+        "manifest": "https://github.com/Fireblight-Studios/foundryvtt-simple-calendar/releases/latest/download/module.json",
+        "reason": "Advances in-game time. Many Scarmark Active Effects are timed and only expire when world time moves forward."
+      },
+      {
+        "id": "smalltime",
+        "type": "module",
+        "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json",
+        "reason": "Compact clock for advancing in-game time, so timed Active Effects expire."
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Daniel"
+    }
+  ],
+  "esmodules": [
+    "module/scarmark.mjs"
+  ],
+  "styles": [
+    "css/base/tokens.css",
+    "css/base/sheet.css",
+    "css/base/controls.css",
+    "css/base/tooltips.css",
+    "css/actor/header.css",
+    "css/actor/attributes.css",
+    "css/actor/skills.css",
+    "css/actor/gear.css",
+    "css/actor/container-sheet.css",
+    "css/actor/combat.css",
+    "css/actor/esoterics.css",
+    "css/actor/effects.css",
+    "css/actor/journal.css",
+    "css/item/common.css",
+    "css/item/skill-trait.css",
+    "css/item/effects-flat.css",
+    "css/item/actions.css",
+    "css/item/esoteric.css",
+    "css/item/equipment.css",
+    "css/item/effect-sheet.css",
+    "css/foundry/region-behavior.css",
+    "css/chat/cards.css",
+    "css/dialogs/dialogs.css",
+    "css/foundry/compendium-sidebar.css"
+  ],
+  "languages": [
+    { "lang": "en", "name": "English", "path": "lang/en.json" },
+    { "lang": "cs", "name": "Čeština", "path": "lang/cs.json" }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {},
+      "creature": {},
+      "npc": {},
+      "animal": {},
+      "container": {}
+    },
+    "RegionBehavior": {
+      "step": {}
+    },
+    "Item": {
+      "trait": {},
+      "gear": {},
+      "skill": {},
+      "weapon": {},
+      "missile": {},
+      "armorLocation": {},
+      "armor": {},
+      "container": {},
+      "injury": {},
+      "invocation": {},
+      "spell": {},
+      "psionic": {},
+      "action": {}
+    }
+  },
+  "packs": [
+    {
+      "name": "actors",
+      "label": "Scarmark Actors",
+      "system": "scarmark",
+      "path": "packs/actors",
+      "type": "Actor"
+    },
+    {
+      "name": "merchants",
+      "label": "Scarmark Merchants",
+      "system": "scarmark",
+      "path": "packs/merchants",
+      "type": "Actor"
+    },
+    {
+      "name": "skills",
+      "label": "Skills",
+      "system": "scarmark",
+      "path": "packs/skills",
+      "type": "Item"
+    },
+    {
+      "name": "actions",
+      "label": "Actions",
+      "system": "scarmark",
+      "path": "packs/actions",
+      "type": "Item"
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "system": "scarmark",
+      "path": "packs/weapons",
+      "type": "Item"
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "scarmark",
+      "path": "packs/armor",
+      "type": "Item"
+    },
+    {
+      "name": "armor-locations",
+      "label": "Armor Locations",
+      "system": "scarmark",
+      "path": "packs/armor-locations",
+      "type": "Item"
+    },
+    {
+      "name": "effects",
+      "label": "Effects",
+      "system": "scarmark",
+      "path": "packs/effects",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "armor-alterations",
+      "label": "Armor alterations",
+      "system": "scarmark",
+      "path": "packs/armor-alterations",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "weapon-alterations",
+      "label": "Weapon alterations",
+      "system": "scarmark",
+      "path": "packs/weapon-alterations",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "alcohol-effects",
+      "label": "Alcohol Effects",
+      "system": "scarmark",
+      "path": "packs/alcohol-effects",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "alcohol-hangover",
+      "label": "Alcohol Hangover",
+      "system": "scarmark",
+      "path": "packs/alcohol-hangover",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "poisonings-combat",
+      "label": "Poisonings (Combat)",
+      "system": "scarmark",
+      "path": "packs/poisonings-combat",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "potion-sickness",
+      "label": "Potion Sickness",
+      "system": "scarmark",
+      "path": "packs/potion-sickness",
+      "type": "ActiveEffect"
+    },
+    {
+      "name": "psionic-talents",
+      "label": "Psionic Talents",
+      "system": "scarmark",
+      "path": "packs/psionic-talents",
+      "type": "Item"
+    },
+    {
+      "name": "macros",
+      "label": "Scarmark Macro",
+      "system": "scarmark",
+      "path": "packs/macros",
+      "type": "Macro"
+    },
+    {
+      "name": "tables",
+      "label": "Scarmark Tables",
+      "system": "scarmark",
+      "path": "packs/tables",
+      "type": "RollTable"
+    },
+    {
+      "name": "invocations",
+      "label": "Invocations",
+      "system": "scarmark",
+      "path": "packs/invocations",
+      "type": "Item"
+    },
+    {
+      "name": "arcane",
+      "label": "Arcane",
+      "system": "scarmark",
+      "path": "packs/arcane",
+      "type": "Item"
+    },
+    {
+      "name": "diseases",
+      "label": "Diseases",
+      "system": "scarmark",
+      "path": "packs/diseases",
+      "type": "Item"
+    },
+    {
+      "name": "poisonings",
+      "label": "Poisonings (Severe)",
+      "system": "scarmark",
+      "path": "packs/poisons",
+      "type": "Item"
+    },
+    {
+      "name": "racial-traits",
+      "label": "Racial Traits",
+      "system": "scarmark",
+      "path": "packs/racial-traits",
+      "type": "Item"
+    },
+    {
+      "name": "currencies",
+      "label": "Currencies",
+      "system": "scarmark",
+      "path": "packs/currencies",
+      "type": "Item"
+    },
+    {
+      "name": "valuables",
+      "label": "Valuables",
+      "system": "scarmark",
+      "path": "packs/valuables",
+      "type": "Item"
+    },
+    {
+      "name": "alchemy",
+      "label": "Alchemy",
+      "system": "scarmark",
+      "path": "packs/alchemy",
+      "type": "Item"
+    },
+    {
+      "name": "gear",
+      "label": "Gear",
+      "system": "scarmark",
+      "path": "packs/gear",
+      "type": "Item"
+    },
+    {
+      "name": "gear-funny",
+      "label": "Gear (Funny & Useless)",
+      "system": "scarmark",
+      "path": "packs/gear-funny",
+      "type": "Item"
+    },
+    {
+      "name": "services",
+      "label": "Services",
+      "system": "scarmark",
+      "path": "packs/services",
+      "type": "Item"
+    },
+    {
+      "name": "journal",
+      "label": "Scarmark Journal",
+      "system": "scarmark",
+      "path": "packs/journal",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "scenes",
+      "label": "Scarmark Scenes",
+      "system": "scarmark",
+      "path": "packs/scenes",
+      "type": "Scene"
+    }
+  ],
+  "url": "https://github.com/lezelezepozeleze/scarmark-v2-prod",
+  "manifest": "https://raw.githubusercontent.com/lezelezepozeleze/scarmark-v2-prod/main/system.json",
+  "download": "https://github.com/lezelezepozeleze/scarmark-v2-prod/archive/refs/heads/main.zip"
+}

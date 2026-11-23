@@ -1,0 +1,91 @@
+/* The effect sheet (sheets/effect-sheet.mjs, templates/effect/sheet.hbs): header, the boxes, the grid of the change rows. */
+.scarmark.effect-sheet .effect-sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 10px 10px;
+}
+
+.scarmark .effect-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.scarmark .effect-head input[type="text"] {
+  flex: 1;
+  font-size: 1.15rem;
+}
+
+.scarmark .effect-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: var(--sm-line);
+}
+
+/* A box of the sheet: the same frame as the Combat and Armor sections. */
+.scarmark .effect-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 10px 10px;
+  border: var(--sm-line);
+}
+
+.scarmark .effect-box > legend {
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+.scarmark .effect-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.scarmark .effect-pair > label {
+  display: flex;
+  flex: 1 1 220px;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.scarmark .effect-duration {
+  display: flex;
+  gap: 6px;
+}
+
+.scarmark .effect-duration input {
+  width: 90px;
+}
+
+.scarmark .effect-hint {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* One change per row: stat, how, value, priority, remove. */
+.scarmark .effect-change-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) minmax(0, 1.1fr) minmax(0, 1fr) 72px 24px;
+  align-items: center;
+  gap: 6px;
+}
+
+.scarmark .effect-change-head {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.scarmark .effect-change-delete {
+  text-align: center;
+  cursor: pointer;
+}
+
+.scarmark .effect-add-change {
+  align-self: flex-start;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "scarmark",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "eslint module tests",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "golden": "node --import ./tests/support/foundry-stub.mjs tests/golden/run.mjs",
+    "check:cycles": "node tests/tools/check-cycles.mjs",
+    "render:capture": "node tests/tools/render-snapshot.mjs",
+    "schema:capture": "node --import ./tests/support/foundry-stub.mjs tests/tools/schema-snapshot.mjs --capture"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "handlebars": "^4.7.10"
+  }
+}

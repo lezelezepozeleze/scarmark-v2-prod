@@ -1,0 +1,9 @@
+{{!-- The body of an action compendium entry: the fields of its action ("when:" and the roll-downs), under the header with its icon and name. No tab, Add link, name field, switch or bin: the entry is the action, and its name is the name of the item. The data path comes from actionsPanel.path; a stored entry with more than one action shows each one. --}}
+<div class="actions-panel action-entry-body" data-actions-path="{{actionsPanel.path}}">
+  {{#each actionsPanel.rows as |row index|}}
+  <div class="action-fields" data-index="{{index}}">
+    <input type="hidden" name="{{row.prefix}}.id" value="{{row.id}}" />
+    {{> "systems/scarmark/templates/common/action-fields.hbs" row=row}}
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,22 @@
+{{!-- The "Magic" box of a gear item or weapon: Artifact | Rune | Attuned | Class (context: system, limits). --}}
+<fieldset class="sm-box sm-magic">
+  <legend>{{localize 'SCARMARK.Section.magic'}}</legend>
+  <div class="sm-row-spread">
+    <label class="checkbox-label">
+      <input type="checkbox" name="system.artifact.active" {{#if system.artifact.active}}checked{{/if}} />
+      {{localize 'SCARMARK.Artifact.label'}}
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" name="system.rune" {{#if system.rune}}checked{{/if}} />
+      {{localize 'SCARMARK.Gear.rune'}}
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" name="system.artifact.attuned" {{#if system.artifact.attuned}}checked{{/if}} />
+      {{localize 'SCARMARK.Artifact.attuned'}}
+    </label>
+    <label class="sm-inline-field">
+      {{localize 'SCARMARK.Artifact.class'}}
+      <input type="number" name="system.artifact.class" value="{{system.artifact.class}}" step="1" min="{{limits.artifactClassMin}}" max="{{limits.artifactClassMax}}" />
+    </label>
+  </div>
+</fieldset>

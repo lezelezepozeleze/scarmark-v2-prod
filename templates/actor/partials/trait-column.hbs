@@ -1,0 +1,18 @@
+{{!-- One column of the Profile tab's traits. Parameters: title - lang key, category - the trait category (physical or psyche), traits - the trait items. --}}
+<div class="traits-column">
+  <div class="traits-header">
+    <h3>{{localize title}}</h3>
+    <a class="add-trait" data-action="addTrait" data-category="{{category}}">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+  <ol class="traits-list">
+    {{#each traits as |trait|}}
+    <li class="trait-entry" data-item-id="{{trait.id}}">
+      <a class="trait-name" data-action="editTrait">{{trait.name}}</a>
+      <span class="trait-notes">{{trait.system.notes}}</span>
+      <a class="trait-delete" data-action="deleteTrait" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+    </li>
+    {{/each}}
+  </ol>
+</div>

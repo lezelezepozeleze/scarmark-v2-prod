@@ -1,0 +1,59 @@
+{{#> "systems/scarmark/templates/item/partials/details-tab.hbs"}}
+
+  <div class="sm-item-form">
+
+    {{> "systems/scarmark/templates/item/partials/item-basics.hbs" container=true}}
+
+    <fieldset class="sm-box sm-armor">
+      <legend>{{localize 'SCARMARK.Section.armor'}}</legend>
+      <div class="sm-row-3">
+      <div class="field">
+        <label>{{localize 'SCARMARK.Armor.quality'}}</label>
+        <input type="number" step="1" name="system.quality" value="{{system.quality}}" />
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.Armor.originalQuality'}}</label>
+        <input type="number" step="1" name="system.originalQuality" value="{{system.originalQuality}}" />
+      </div>
+      <div class="field">
+        <label>{{localize 'SCARMARK.Armor.layer'}}</label>
+        <input type="number" min="0" max="{{limits.armorLayerMax}}" step="1" name="system.layer" value="{{system.layer}}" />
+      </div>
+      </div>
+    </fieldset>
+
+    {{> "systems/scarmark/templates/item/partials/aspect-grid.hbs" legend="SCARMARK.Armor.protection" prefix="system.protection" values=system.protection}}
+
+    <fieldset class="sm-box sm-locations">
+      <legend>{{localize 'SCARMARK.Armor.locations'}}</legend>
+      <div class="sm-armor-add-row">
+        <select class="location-picker">
+          <option value="">{{localize 'SCARMARK.Armor.selectLocation'}}</option>
+          {{#each availableCoverage as |opt|}}
+          <option value="{{opt.value}}">{{opt.label}}</option>
+          {{/each}}
+        </select>
+        <button type="button" class="add-location" data-action="addLocation"><i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}</button>
+      </div>
+      <div class="sm-armor-locations">
+        {{#each coverageRows as |loc|}}
+        <div class="sm-armor-location-row" data-index="{{loc.index}}">
+          <span class="sm-armor-location-name">{{loc.label}}</span>
+          <input type="hidden" name="system.coverage.{{loc.index}}.type" value="{{loc.type}}" />
+          <input type="hidden" name="system.coverage.{{loc.index}}.side" value="{{loc.side}}" />
+          <button type="button" class="sm-armor-remove" data-action="removeLocation" title="{{localize 'SCARMARK.Armor.removeLocation'}}" aria-label="{{localize 'SCARMARK.Armor.removeLocation'}}"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        {{/each}}
+        {{#unless coverageRows.length}}
+        <div class="sm-armor-empty">{{localize 'SCARMARK.Armor.noLocations'}}</div>
+        {{/unless}}
+      </div>
+    </fieldset>
+
+    <div class="field sm-armor-notes">
+      <label>{{localize 'SCARMARK.Trait.note'}}</label>
+      <textarea rows="1" name="system.notes">{{system.notes}}</textarea>
+    </div>
+
+  </div>
+{{/"systems/scarmark/templates/item/partials/details-tab.hbs"}}

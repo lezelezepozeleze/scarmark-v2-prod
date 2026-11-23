@@ -1,0 +1,36 @@
+{{!-- The effects of an item: header with the Add link and the list. Parameter: heading - lang key of an optional title above the table. --}}
+<div class="effects-flat">
+  {{#if heading}}
+  <h3>{{localize heading}}</h3>
+  {{/if}}
+  <div class="effects-header">
+    <span class="col-name">{{localize 'SCARMARK.Effect.effect'}}</span>
+    <span class="col-duration">{{localize 'SCARMARK.Effect.duration'}}</span>
+    <span class="col-changes">{{localize 'SCARMARK.Effect.changes'}}</span>
+    <a class="add-effect" data-action="createEffect">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+  <ol class="effects-list flat">
+    {{#each effects as |effect|}}
+    <li class="effect-entry{{#if effect.disabled}} is-disabled{{/if}}" data-effect-id="{{effect.id}}">
+      <span class="col-name">
+        <img class="effect-icon" src="{{effect.img}}" alt="" />
+        <a class="effect-name" data-action="editEffect">{{effect.name}}</a>
+      </span>
+      <span class="col-duration">{{effect.duration.label}}</span>
+      <span class="col-changes">
+        {{lookup @root.effectChanges effect.id}}
+      </span>
+      <a class="effect-toggle" data-action="toggleEffect" title="{{localize 'SCARMARK.Effect.toggle'}}">
+        <i class="fa-solid {{#if effect.disabled}}fa-toggle-off{{else}}fa-toggle-on{{/if}}"></i>
+      </a>
+      <a class="effect-save" data-action="saveEffect" title="{{localize 'SCARMARK.Compendium.saveTo'}}"><i class="fa-solid fa-floppy-disk"></i></a>
+      <a class="effect-delete" data-action="deleteEffect" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+    </li>
+    {{/each}}
+    {{#unless effects.length}}
+    <li class="effect-empty">{{localize 'SCARMARK.Effect.none'}}</li>
+    {{/unless}}
+  </ol>
+</div>

@@ -1,0 +1,428 @@
+/* Actor sheet Gear tab and Containers. */
+
+/* ---------- Gear tab (inventory) ---------- */
+.scarmark .gear-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+}
+
+.scarmark .gear-summary-table th,
+.scarmark .gear-summary-table td {
+  border: var(--sm-line);
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.scarmark .gear-summary-table th {
+  background: var(--sm-surface);
+  font-family: var(--sm-font-heading);
+  font-weight: 700;
+}
+
+.scarmark .gear-summary-table .row-label {
+  font-weight: 700;
+  text-align: left;
+  background: var(--sm-surface);
+}
+
+.scarmark .gear-summary-table .total-cell {
+  font-weight: 700;
+}
+
+.scarmark .gear-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-accent);
+  border-radius: var(--sm-radius);
+  padding: 6px 10px;
+  margin-bottom: 14px;
+}
+
+.scarmark .gear-filter i {
+  color: var(--sm-text-muted);
+}
+
+.scarmark .gear-filter input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--sm-text);
+}
+
+.scarmark .gear-on-person-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: var(--sm-rule-accent);
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.scarmark .on-person-label {
+  font-family: var(--sm-font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.scarmark .capacity-label {
+  font-weight: 700;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .gear-section {
+  margin-bottom: 18px;
+}
+
+/* Column template shared by every inventory row (header and entries). Weapon
+   rows add a WQ and a Class column, Armor rows AQ and Layer, Gear & Runes a
+   Class column; all of them sit before Notes (see the column order below). */
+.scarmark .gear-section,
+.scarmark .container-contents {
+  --sm-cols: var(--sm-col-item) var(--sm-col-qty) var(--sm-col-weight) minmax(0, 1fr) var(--sm-col-actions);
+}
+
+.scarmark .gear-section--charges {
+  --sm-cols: var(--sm-col-item) var(--sm-col-qty) var(--sm-col-weight) var(--sm-col-flag) minmax(0, 1fr) var(--sm-col-actions);
+}
+
+.scarmark .gear-section--weapon {
+  --sm-cols: var(--sm-col-item) var(--sm-col-qty) var(--sm-col-weight) var(--sm-col-flag) var(--sm-col-flag) minmax(0, 1fr) var(--sm-col-actions);
+}
+
+/* Armor: the DUR column holds "current /original" (an input and the original value) on one line, so it is wider than the one-number flag columns. */
+.scarmark .gear-section--armor {
+  --sm-cols: var(--sm-col-item) var(--sm-col-qty) var(--sm-col-weight) 82px var(--sm-col-flag) minmax(0, 1fr) var(--sm-col-actions);
+}
+
+.scarmark .gear-entry .col-aq {
+  white-space: nowrap;
+}
+
+.scarmark .gear-section-header,
+.scarmark .gear-entry {
+  display: grid;
+  grid-template-columns: var(--sm-cols);
+  align-items: center;
+  gap: var(--sm-gap-xs);
+}
+
+.scarmark .gear-section-header > *,
+.scarmark .gear-entry > * {
+  min-width: 0;
+}
+
+/* The template lists Class (charges) after Notes; the grid shows it before. */
+.scarmark .gear-section .col-name {
+  order: 0;
+}
+
+.scarmark .gear-section .col-qty {
+  order: 1;
+}
+
+.scarmark .gear-section .col-weight {
+  order: 2;
+}
+
+.scarmark .gear-section .col-wq,
+.scarmark .gear-section .col-aq,
+.scarmark .gear-section .col-capacity {
+  order: 3;
+}
+
+.scarmark .gear-section .col-layer {
+  order: 4;
+}
+
+.scarmark .gear-section .col-charges {
+  order: 5;
+}
+
+.scarmark .gear-section .col-notes {
+  order: 6;
+}
+
+.scarmark .gear-section .col-actions {
+  order: 7;
+}
+
+.scarmark .gear-section-header .col-wq,
+.scarmark .gear-section-header .col-aq,
+.scarmark .gear-section-header .col-layer,
+.scarmark .gear-section-header .col-charges,
+.scarmark .gear-section-header .col-qty,
+.scarmark .gear-section-header .col-weight,
+.scarmark .gear-section-header .col-capacity,
+.scarmark .stored-header .col-actions {
+  font-weight: 700;
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+  text-align: center;
+}
+
+.scarmark .gear-section-header .col-notes {
+  font-weight: 700;
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .gear-entry .col-wq,
+.scarmark .gear-entry .col-aq,
+.scarmark .gear-entry .col-layer,
+.scarmark .gear-entry .col-charges,
+.scarmark .gear-entry .col-qty,
+.scarmark .gear-entry .col-weight {
+  text-align: center;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .gear-section-header {
+  border-bottom: var(--sm-rule-accent);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.scarmark .gear-section-header .col-name {
+  font-family: var(--sm-font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.scarmark .gear-section .gear-section-header .col-name {
+  overflow: hidden;
+}
+
+.scarmark .gear-section-header .add-gear {
+  cursor: pointer;
+  text-align: right;
+  justify-self: end;
+  font-weight: 400;
+  color: var(--sm-text);
+}
+
+.scarmark .gear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scarmark .gear-entry {
+  padding: 4px 0;
+  /* --sm-surface as row separator, like skills.css and equipment.css (other lists use --sm-border-subtle). Intentional. */
+  border-bottom: 1px solid var(--sm-surface);
+}
+
+.scarmark .gear-entry .col-name {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-sm);
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* The name text is the flex item that shortens with an ellipsis (text-overflow does nothing on the flex container). */
+.scarmark .gear-entry .col-name > .name-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .gear-icon {
+  width: 20px;
+  height: 20px;
+  border: none;
+  flex: 0 0 auto;
+}
+
+.scarmark .gear-entry .col-notes {
+  position: relative;
+  z-index: 0;
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .gear-section-header .col-actions,
+.scarmark .gear-entry .col-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--sm-gap-sm);
+  white-space: nowrap;
+}
+
+.scarmark .gear-entry .gear-carry,
+.scarmark .gear-entry .gear-edit {
+  cursor: pointer;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .gear-entry.not-carried {
+  opacity: 0.5;
+}
+
+.scarmark .gear-entry.not-carried .gear-carry {
+  color: var(--sm-info);
+}
+
+.scarmark .gear-entry .gear-delete {
+  cursor: pointer;
+  color: var(--sm-accent);
+}
+
+.scarmark .gear-empty {
+  color: var(--sm-text-muted);
+  font-size: var(--sm-fs-sm);
+  font-style: italic;
+  padding: 4px 0;
+}
+
+/* The Stored tab of a container (templates/item/container/stored.hbs): Item | Qty | Weight | Unpack, header and rows on the same grid. */
+.scarmark .stored-header,
+.scarmark .stored-list {
+  --sm-cols: minmax(0, 1fr) 76px 72px 64px;
+}
+
+.scarmark .stored-header .col-actions {
+  text-align: right;
+}
+
+.scarmark .stored-list .col-name > .name-text {
+  cursor: pointer;
+}
+
+.scarmark .container-capacity.over,
+.scarmark .sm-over-capacity {
+  color: var(--sm-warn);
+}
+
+.scarmark .container-block {
+  border: var(--sm-line);
+  border-radius: var(--sm-radius);
+  margin-bottom: 10px;
+}
+
+.scarmark .container-block.not-carried {
+  opacity: 0.55;
+}
+
+.scarmark .container-head {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) minmax(90px, max-content) var(--sm-col-actions);
+  align-items: center;
+  gap: var(--sm-gap-xs);
+  padding: 6px 8px;
+  background: var(--sm-surface);
+  border-bottom: var(--sm-line);
+}
+
+.scarmark .container-head > * {
+  min-width: 0;
+}
+
+.scarmark .container-head .gear-icon {
+  width: auto;
+}
+
+.scarmark .container-head .container-name {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .container-head .container-capacity {
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+}
+
+.scarmark .container-head .container-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--sm-gap-sm);
+  white-space: nowrap;
+}
+
+/* Action icons: one muted colour, delete in the accent colour. */
+.scarmark .container-head .container-actions a,
+.scarmark .containers .col-actions a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  cursor: pointer;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .container-head .container-actions a[data-action="deleteGear"],
+.scarmark .containers .col-actions a[data-action="deleteGear"] {
+  color: var(--sm-accent);
+}
+
+.scarmark .container-contents {
+  padding: 4px 8px;
+}
+
+/* The Containers tab header is also a .gear-section-header: this rule must stay after it
+   (same specificity) to turn its grid into a flex row with its own margin. */
+.scarmark .container-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.scarmark .capacity-label.over {
+  color: var(--sm-warn);
+}
+
+/* ---------- Gear tab: containers section (data-sm-new-cont) ---------- */
+/* Historical names: "new-cont" marks the Containers section (templates/actor/partials/container-section.hbs) that replaced the old container rows of the item list; "primary-cont" marks the one section that is shown. The template sets both on the one section. */
+/* Capacity sits between Weight and Notes. */
+.scarmark .gear-section[data-sm-new-cont] {
+  --sm-cols: var(--sm-col-item) var(--sm-col-qty) var(--sm-col-weight) var(--sm-col-capacity) minmax(0, 1fr) var(--sm-col-actions);
+}
+
+.scarmark .gear-entry .col-capacity {
+  text-align: center;
+}
+
+.scarmark .gear-section .col-capacity {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .gear-section[data-sm-new-cont] .col-actions a {
+  color: var(--sm-text-muted);
+}
+
+.scarmark .gear-section[data-sm-new-cont] .col-actions a[data-sm-container-action="delete"] {
+  color: var(--sm-accent);
+}
+
+/* Armor Durability: the current value is typed in the row, the original follows it. */
+.scarmark .gear-entry .col-aq .dur-input {
+  width: 2.6em;
+  height: 1.6em;
+  padding: 0 2px;
+  text-align: right;
+}
+
+.scarmark .gear-entry .col-aq .dur-original {
+  margin-left: 2px;
+}

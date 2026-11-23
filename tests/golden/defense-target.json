@@ -1,0 +1,410 @@
+[
+  {
+    "id": "range-dodge-low-60",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "dodge",
+      "dodgeEsl": 60
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 60,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-dodge-high-60-halved",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 60
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 30,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-high-61-floor",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 61
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 30,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-high-1",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 1
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 0,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-high-0",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 0
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 0,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-no-skill",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "dodge"
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 0,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-velocity-missing",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "defense": "dodge",
+      "dodgeEsl": 60
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 60,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-dodge-high-modifier-after-halving",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 60,
+      "modifier": 10
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 40,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-high-outnumbered-2",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 60,
+      "outnumbered": 2
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 10,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-outnumbered-3-stunned",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "dodge",
+      "dodgeEsl": 70,
+      "outnumbered": 3,
+      "defenseMod": -30
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 10,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-negative-target",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "dodge",
+      "dodgeEsl": 10,
+      "defenseMod": -30
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": -20,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-dodge-low-200-capped",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "dodge",
+      "dodgeEsl": 200
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 95,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-dodge-high-200-capped",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 200
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 95,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-dodge-high-191-halved-under-cap",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 191
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 95,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-block-shield",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "block",
+      "blockWeapon": {
+        "defense": 10,
+        "closeCombatEsl": 40
+      }
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 50,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-block-shield-high-velocity-not-halved",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "block",
+      "blockWeapon": {
+        "defense": 10,
+        "closeCombatEsl": 40
+      }
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 50,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "range-block-no-weapon",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "block",
+      "modifier": 5
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 5,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  },
+  {
+    "id": "range-ignore",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "ignore"
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": null,
+      "attackLevel": "cf",
+      "defenseLevel": null
+    }
+  },
+  {
+    "id": "range-attack-hits-dodge-fails",
+    "source": "executed",
+    "input": {
+      "attack": "range",
+      "asl": 70,
+      "attackRoll": 22,
+      "defenseRoll": 64,
+      "velocity": "low",
+      "defense": "dodge",
+      "dodgeEsl": 30
+    },
+    "expected": {
+      "attackTarget": 70,
+      "defenseTarget": 30,
+      "attackLevel": "ms",
+      "defenseLevel": "mf"
+    }
+  },
+  {
+    "id": "melee-dodge-high-velocity-ignored",
+    "source": "executed",
+    "input": {
+      "attack": "melee",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "high",
+      "defense": "dodge",
+      "dodgeEsl": 60
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 60,
+      "attackLevel": "cf",
+      "defenseLevel": "cs"
+    }
+  },
+  {
+    "id": "melee-dodge-outnumbered-2",
+    "source": "executed",
+    "input": {
+      "attack": "melee",
+      "asl": 40,
+      "attackRoll": 50,
+      "defenseRoll": 50,
+      "velocity": "low",
+      "defense": "dodge",
+      "dodgeEsl": 60,
+      "outnumbered": 2
+    },
+    "expected": {
+      "attackTarget": 40,
+      "defenseTarget": 40,
+      "attackLevel": "cf",
+      "defenseLevel": "cf"
+    }
+  }
+]

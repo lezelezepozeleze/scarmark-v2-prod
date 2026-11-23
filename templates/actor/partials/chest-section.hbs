@@ -1,0 +1,38 @@
+{{!-- The chest list of a Container actor: every container with the items stored in it, and the items whose container is gone (context: chest, isOwner). --}}
+<section class="sm-chest-custom" data-sm-chest>
+  <div class="gear-section-header">
+    <span class="col-name">{{localize 'SCARMARK.Gear.categoryContainers'}}</span>
+    <span class="col-qty">{{localize 'SCARMARK.Quantity'}}</span>
+    <span class="col-weight">{{localize 'SCARMARK.Weight'}}</span>
+    <span class="col-capacity">{{localize 'SCARMARK.Gear.capacity'}}</span>
+    <span class="col-notes">{{localize 'SCARMARK.Trait.notes'}}</span>
+    <span class="col-actions">
+      {{#if @root.isOwner}}
+      <a data-action="addContainer" data-sm-container-action="add" title="{{localize 'SCARMARK.Container.add'}}"><i class="fa-solid fa-plus"></i><span>{{localize 'SCARMARK.Add'}}</span></a>
+      {{/if}}
+    </span>
+  </div>
+  <ol class="sm-chest-list gear-list">
+    {{#each chest.groups as |group|}}
+    <li class="sm-chest-group">
+      <article class="sm-chest-box"{{#if group.box}} data-box-id="{{group.box.id}}"{{/if}}>
+        {{#if group.box}}
+        {{> "systems/scarmark/templates/actor/partials/chest-row.hbs" row=group.box}}
+        {{else}}
+        <p>{{localize 'SCARMARK.Container.orphans'}}</p>
+        {{/if}}
+        <ul class="sm-chest-children">
+          {{#each group.children as |child|}}
+          <li>
+            {{> "systems/scarmark/templates/actor/partials/chest-row.hbs" row=child}}
+          </li>
+          {{/each}}
+        </ul>
+      </article>
+    </li>
+    {{/each}}
+    {{#unless chest.groups.length}}
+    <li class="gear-empty">{{localize 'SCARMARK.Container.noStored'}}</li>
+    {{/unless}}
+  </ol>
+</section>

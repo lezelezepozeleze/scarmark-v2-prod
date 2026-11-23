@@ -1,0 +1,86 @@
+<!-- part: header -->
+<header class="sheet-header item-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="" />
+<input class="name-input" type="text" name="name" value="" placeholder="{SCARMARK.NamePlaceholder}" />
+</header>
+<!-- part: details -->
+<div class="tab details" data-group="primary" data-tab="details">
+<div class="injury-body">
+<div class="gear-row">
+<div class="field injury-wound-level">
+<label>{SCARMARK.Injury.woundLevel}</label>
+<input type="number" step="1" min="0" name="system.woundLevel" value="1" />
+</div>
+<div class="field injury-severity-display">
+<label>{SCARMARK.Injury.severity}</label>
+<span class="derived-value">SCARMARK.Injury.severityLight</span>
+</div>
+<div class="field injury-mend">
+<div class="mend-heading">
+<label title="{SCARMARK.Injury.mendHint}">{SCARMARK.Injury.mend}</label>
+<a data-action="rollMend" title="{SCARMARK.Injury.mendRoll}">
+<i class="fa-solid fa-dice-d20">
+</i>
+</a>
+</div>
+<select name="system.mend" data-dtype="Number">
+<option value="0" selected>MRN</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+</select>
+</div>
+</div>
+<div class="field injury-heavy-bleeding">
+<label class="checkbox-label">
+<input type="checkbox" name="system.heavyBleeding" /> {SCARMARK.Injury.heavyBleedingQ} </label>
+</div>
+<div class="field injury-vital">
+<label class="plain-label">{SCARMARK.Injury.vital}</label>
+<select name="system.vital">
+<option value="">
+</option>
+<option value="out" >{SCARMARK.Injury.vitalOut}</option>
+<option value="dying" >{SCARMARK.Injury.vitalDying}</option>
+</select>
+</div>
+<div class="field note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<input type="text" name="system.notes" value="" />
+</div>
+</div>
+</div>
+<!-- part: effects -->
+<div class="tab effects" data-group="primary" data-tab="effects">
+<div class="effects-flat">
+<div class="effects-header">
+<span class="col-name">{SCARMARK.Effect.effect}</span>
+<span class="col-duration">{SCARMARK.Effect.duration}</span>
+<span class="col-changes">{SCARMARK.Effect.changes}</span>
+<a class="add-effect" data-action="createEffect">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="effects-list flat">
+<li class="effect-empty">{SCARMARK.Effect.none}</li>
+</ol>
+</div>
+</div>
+<!-- part: actions -->
+<div class="tab actions" data-group="primary" data-tab="actions">
+<div class="actions-panel" data-actions-path="system.actions">
+<div class="actions-header">
+<span class="col-action">{SCARMARK.Action.colActions}</span>
+<span class="col-when">{SCARMARK.Action.colWhen}</span>
+<a class="add-action" data-action="createAction">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="actions-list">
+<li class="action-empty">{SCARMARK.Action.none}</li>
+</ol>
+</div>
+</div>

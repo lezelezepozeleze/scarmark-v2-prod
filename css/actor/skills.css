@@ -1,0 +1,144 @@
+/* Actor sheet Skills tab. */
+
+/* ---------- Skills tab ---------- */
+.scarmark .skills-category {
+  margin-bottom: 10px;
+}
+
+/* Fixed, identical column grid across every category (Piety column is
+   always reserved, just left empty when a category doesn't use it) so
+   headers and rows line up perfectly regardless of content. */
+.scarmark .skills-category-header,
+.scarmark .skill-entry {
+  display: grid;
+  grid-template-columns: 1fr 44px 44px 44px 44px 1.3fr 56px;
+  align-items: center;
+  gap: var(--sm-gap-md);
+}
+
+/* Row extras on top of the shared grid above (the header does not get them). The row separator is
+   --sm-surface here (as in gear.css and equipment.css); other lists use --sm-border-subtle. Intentional. */
+.scarmark .skill-entry {
+  padding: 1px 0;
+  border-bottom: 1px solid var(--sm-surface);
+  font-size: var(--sm-fs-row);
+}
+
+.scarmark .skill-entry input[type="number"] {
+  padding: 1px 4px;
+  font-size: var(--sm-fs-row);
+}
+
+.scarmark .skills-category-header {
+  border-bottom: var(--sm-rule-accent);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.scarmark .skills-category-header .col-title {
+  font-family: var(--sm-font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--sm-text);
+}
+
+.scarmark .skills-category-header .col-sb,
+.scarmark .skills-category-header .col-ml,
+.scarmark .skills-category-header .col-eml,
+.scarmark .skills-category-header .col-piety {
+  font-weight: 700;
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+  text-align: center;
+}
+
+.scarmark .skills-category-header .col-notes {
+  font-weight: 700;
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+  text-align: left;
+}
+
+.scarmark .skills-category-header .col-actions.add-skill {
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--sm-text);
+  text-align: right;
+  justify-self: end;
+}
+
+.scarmark .skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scarmark .skill-entry .col-title.skill-name {
+  font-weight: 700;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-sm);
+}
+
+/* The name text is the flex item that shortens with an ellipsis (text-overflow does nothing on the flex container). */
+.scarmark .skill-entry .col-title.skill-name > .name-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .skill-entry .skill-icon {
+  width: 16px;
+  height: 16px;
+  border: none;
+  flex: 0 0 auto;
+}
+
+.scarmark .skill-entry .col-sb,
+.scarmark .skill-entry .col-eml {
+  color: var(--sm-text-muted);
+  text-align: center;
+}
+
+.scarmark .skill-entry .col-ml,
+.scarmark .skill-entry .col-piety input {
+  width: 100%;
+  text-align: center;
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: 2px 4px;
+  box-sizing: border-box;
+}
+
+.scarmark .skill-entry .col-piety {
+  text-align: center;
+}
+
+.scarmark .skill-entry .col-notes {
+  font-size: var(--sm-fs-sm);
+  color: var(--sm-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .skill-entry .col-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sm-gap-lg);
+}
+
+.scarmark .skill-entry .skill-edit {
+  cursor: pointer;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .skill-entry .skill-delete {
+  cursor: pointer;
+  color: var(--sm-accent);
+}

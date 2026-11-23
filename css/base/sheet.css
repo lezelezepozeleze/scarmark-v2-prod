@@ -1,0 +1,114 @@
+/* Sheet shell: root background and text, window content, tabs, dividers, section headings, fieldset boxes, drag markers. */
+
+.scarmark.sheet.actor,
+.scarmark.sheet.item {
+  background: var(--sm-bg);
+  font-family: var(--sm-font-body);
+  color: var(--sm-text);
+}
+
+.scarmark .window-content {
+  background: var(--sm-bg);
+  /* Set text colour on the content too (not only the sheet root): Foundry's
+     themed frame styles `.window-content` directly, so inheritance from the
+     root is not enough to keep our palette from being overridden. */
+  color: var(--sm-text);
+  padding: 10px 14px;
+  overflow: auto;
+}
+
+/* Actor sheets: .window-content is a flex column (every actor tab sits in it), so the Journal tab can fill the height.
+   Its item-sheet counterpart is in item/common.css (".scarmark.sheet.item .window-content"). */
+.scarmark.sheet.actor .window-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* ---------- Tab content visibility ---------- */
+/* overflow:auto here sits next to .window-content's own overflow:auto, so a tall tab can scroll inside the
+   window (nested scroll containers). The Journal tab undoes it with overflow:hidden (actor/journal.css). */
+.scarmark .tab {
+  display: none;
+  overflow: auto;
+}
+
+.scarmark .tab.active {
+  display: block;
+}
+
+/* ---------- Tabs ---------- */
+.scarmark nav.tabs {
+  border-bottom: var(--sm-line);
+  margin-bottom: 10px;
+}
+
+/* Foundry v14 renders each tab as a bare <a> (class "active" on the current one), not <a class="item">. */
+.scarmark nav.tabs a {
+  font-family: var(--sm-font-heading);
+  font-weight: 600;
+  color: var(--sm-text-muted);
+  padding: 4px 10px;
+}
+
+.scarmark nav.tabs a.active {
+  color: var(--sm-text-strong);
+  border-bottom: 3px solid var(--sm-accent);
+}
+
+.scarmark .section-divider {
+  border: none;
+  border-top: 1px solid var(--sm-border);
+  margin: 10px 0;
+}
+
+/* Section headings shared by item bodies and the Special Abilities block.
+   Later h3 rules of equal specificity override these: ".effects-flat h3" (item/effects-flat.css) and
+   ".effects-category h3" / ".traits-header h3" in actor/ (they differ in margin or border on purpose). */
+.scarmark .trait-body h3,
+.scarmark .details h3,
+.scarmark .skill-body h3,
+.scarmark .special-abilities h3 {
+  font-family: var(--sm-font-heading);
+  font-size: 1rem;
+  border-bottom: var(--sm-rule-accent);
+  margin: 0 0 6px 0;
+  padding-bottom: 2px;
+}
+
+/* Scrollbars are hidden on actor and item sheets; wheel and touch scrolling stay. */
+.scarmark.sheet:is(.actor, .item),
+.scarmark.sheet:is(.actor, .item) * {
+  scrollbar-width: none;
+}
+
+/* Fieldset boxes: the Combat tab sections and the Armor / Armor Location sections share one frame.
+   Their legends differ and stay in actor/combat.css and item/equipment.css. */
+.scarmark .combat-section,
+.scarmark .armor-section,
+.scarmark .sm-box,
+.scarmark .armor-loc-section {
+  border: var(--sm-line);
+  border-radius: var(--sm-radius);
+  padding: 6px 12px 12px 12px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Drag markers ---------- */
+/* Line above/below the hovered row marks where a dragged item will land
+   (actor-sheet-base.mjs _onSortItem). Table rows draw it on their cells. */
+.scarmark .sort-drop-before,
+.scarmark tr.sort-drop-before > td {
+  box-shadow: inset 0 2px 0 var(--sm-accent);
+}
+
+.scarmark .sort-drop-after,
+.scarmark tr.sort-drop-after > td {
+  box-shadow: inset 0 -2px 0 var(--sm-accent);
+}
+
+/* Valid drop target while an inventory item is dragged (sheets/inventory-drop.mjs). */
+.scarmark .sm-drop-target {
+  outline: 2px dashed var(--sm-accent);
+  outline-offset: -2px;
+}

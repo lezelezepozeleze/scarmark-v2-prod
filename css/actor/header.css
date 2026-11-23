@@ -1,0 +1,111 @@
+/* Actor sheet header: portrait, name, stats, condition bar, Container header. */
+
+/* ---------- Header ---------- */
+.scarmark .sheet-header {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.scarmark .sheet-header .portrait {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: var(--sm-line);
+  cursor: pointer;
+}
+
+.scarmark .header-main .name-input {
+  font-size: 2rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: var(--sm-text);
+}
+
+.scarmark .header-subtitle input {
+  background: transparent;
+  border: none;
+  color: var(--sm-text-muted);
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.scarmark .header-stats {
+  text-align: right;
+  min-width: 220px;
+}
+
+/* Container actor header: Max Capacity input + derived Contents weight. */
+.scarmark .container-max-capacity,
+.scarmark .container-contents-weight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sm-gap-md);
+  margin-bottom: 6px;
+}
+
+.scarmark .container-max-capacity label,
+.scarmark .container-contents-weight label {
+  font-weight: 700;
+}
+
+.scarmark .container-max-capacity input {
+  width: 70px;
+  text-align: center;
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: 2px 4px;
+}
+
+.scarmark .header-stats .penalties {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  font-weight: 700;
+}
+
+.scarmark .header-stats .condition {
+  margin-top: 4px;
+}
+
+.scarmark .bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--sm-track);
+  border: var(--sm-line);
+  margin-top: 2px;
+}
+
+.scarmark .bar-fill {
+  height: 100%;
+  background: var(--sm-info);
+}
+
+.scarmark .header-stats .move {
+  margin-top: 6px;
+}
+
+.scarmark .header-stats .move-value {
+  display: inline-block;
+  min-width: 34px;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: var(--sm-line);
+}
+
+/* Condition bar colour by band (applyDerivedCombat: ok / wounded / critical / out / dying). */
+.scarmark .condition--wounded .bar-fill {
+  background: var(--sm-gold);
+}
+
+.scarmark .condition--critical .bar-fill,
+.scarmark .condition--out .bar-fill,
+.scarmark .condition--dying .bar-fill {
+  background: var(--sm-danger);
+}

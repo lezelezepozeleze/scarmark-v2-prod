@@ -1,0 +1,52 @@
+<div class="tab gear{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="gear">
+
+  <table class="gear-summary-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>{{localize 'SCARMARK.Gear.weapon'}}</th>
+        <th>{{localize 'SCARMARK.Gear.missile'}}</th>
+        <th>{{localize 'SCARMARK.Gear.armor'}}</th>
+        <th>{{localize 'SCARMARK.Gear.miscGear'}}</th>
+        <th>{{localize 'SCARMARK.Gear.total'}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">{{localize 'SCARMARK.Gear.weight'}}</td>
+        <td>{{round1 gearSummary.weapon}}</td>
+        <td>{{round1 gearSummary.missile}}</td>
+        <td>{{round1 gearSummary.armor}}</td>
+        <td>{{round1 gearSummary.miscGear}}</td>
+        <td class="total-cell">{{round1 gearSummary.total}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="gear-filter">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" data-gear-filter placeholder="{{localize 'SCARMARK.Gear.filterPlaceholder'}}" />
+  </div>
+
+  <div class="gear-on-person-header">
+    <span class="on-person-label">{{localize 'SCARMARK.Gear.onPerson'}}</span>
+    <span class="capacity-label{{#if system.load.overMax}} over{{/if}}">{{localize 'SCARMARK.Gear.capacityLine' total=(round1 gearSummary.total) capacity=(round1 gearSummary.capacity) pct=system.load.pct}}</span>
+  </div>
+
+  {{> "systems/scarmark/templates/actor/partials/gear-section.hbs" title="SCARMARK.Gear.categoryGear" cls="gear-section--charges" add="addGear" items=gearItems charges=true consume=true}}
+
+  {{> "systems/scarmark/templates/actor/partials/gear-section.hbs" title="SCARMARK.Gear.categoryWeapons" cls="gear-section--weapon" add="addWeapon" items=weaponItems wq=true charges=true}}
+
+  {{> "systems/scarmark/templates/actor/partials/gear-section.hbs" title="SCARMARK.Gear.categoryMissiles" add="addMissile" items=missileItems}}
+
+  {{> "systems/scarmark/templates/actor/partials/gear-section.hbs" title="SCARMARK.Gear.categoryRunes" cls="gear-section--charges" add="addRune" items=runeItems charges=true}}
+
+  {{> "systems/scarmark/templates/actor/partials/gear-section.hbs" title="SCARMARK.Gear.categoryArmor" cls="gear-section--armor" add="addArmor" items=armorItems aq=true}}
+
+  {{#if isChest}}
+  {{> "systems/scarmark/templates/actor/partials/chest-section.hbs"}}
+  {{else}}
+  {{> "systems/scarmark/templates/actor/partials/container-section.hbs"}}
+  {{/if}}
+
+</div>

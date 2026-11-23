@@ -1,0 +1,217 @@
+/* Floating tooltip with the item details shown on gear rows (module/helpers/item-tooltip.mjs builds it from view/item-tooltip.mjs). */
+
+.scarmark.sm-item-tooltip {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  /* Above every Foundry application window (their z-index rises with each focus) and the canvas HUD, so a tooltip is never hidden. */
+  z-index: 100000;
+  box-sizing: border-box;
+  max-width: 85vw;
+  background: var(--sm-bg);
+  color: var(--sm-text);
+  border: 1px solid var(--sm-accent);
+  box-shadow: var(--sm-shadow-popup);
+  /* The tooltip sits on a bare .scarmark root, outside .sheet, so the body font has to be named here. */
+  font: 13px/1.45 var(--sm-font-body);
+}
+
+.sm-item-tooltip {
+  width: 330px;
+  max-height: 75vh;
+  overflow: hidden;
+  padding: 10px 12px;
+  border-radius: 7px;
+}
+
+/* Header: icon, name over type, quantity on the right. */
+.sm-item-tooltip .head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--sm-accent);
+}
+
+.sm-item-tooltip .head .icon {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.sm-item-tooltip .head .names {
+  flex: 1;
+  min-width: 0;
+}
+
+.sm-item-tooltip h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: 700 15px/1.2 var(--sm-font-heading);
+  overflow-wrap: anywhere;
+}
+
+.sm-item-tooltip .subtitle {
+  color: var(--sm-text-muted);
+  font-size: 12px;
+}
+
+.sm-item-tooltip .qty {
+  flex: none;
+  font-weight: 700;
+  color: var(--sm-gold);
+}
+
+/* Badges: only the states worth a glance. */
+.sm-item-tooltip .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.sm-item-tooltip .badge {
+  padding: 0 7px;
+  border: 1px solid var(--sm-border);
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sm-text-muted);
+}
+
+.sm-item-tooltip .badge.gold { color: var(--sm-gold); border-color: var(--sm-gold); }
+.sm-item-tooltip .badge.danger { color: var(--sm-danger); border-color: var(--sm-danger); }
+.sm-item-tooltip .badge.info { color: var(--sm-info); border-color: var(--sm-info); }
+.sm-item-tooltip .badge.plain { color: var(--sm-text); }
+
+/* Sections, a thin line between them. */
+.sm-item-tooltip .section {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--sm-border);
+}
+
+.sm-item-tooltip .head + .section,
+.sm-item-tooltip .badges + .section {
+  border-top: none;
+  padding-top: 0;
+}
+
+.sm-item-tooltip .k {
+  color: var(--sm-text-muted);
+  font-size: 11px;
+}
+
+.sm-item-tooltip .facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+
+.sm-item-tooltip .fact {
+  display: flex;
+  flex-direction: column;
+}
+
+.sm-item-tooltip .fact .v {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tables: aspects (Blunt, Edge, ...) and range bands. */
+.sm-item-tooltip .table {
+  display: grid;
+  grid-template-columns: auto repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 2px 8px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.sm-item-tooltip .table .col-head {
+  color: var(--sm-text-muted);
+  font-size: 11px;
+}
+
+.sm-item-tooltip .table .row-label {
+  text-align: left;
+  color: var(--sm-text-muted);
+  font-size: 11px;
+}
+
+.sm-item-tooltip .table .cell {
+  font-weight: 700;
+}
+
+.sm-item-tooltip .table .cell.dim {
+  color: var(--sm-text-muted);
+  font-weight: 400;
+}
+
+/* Bars: durability of armor, how full a container is. */
+.sm-item-tooltip .bar-line,
+.sm-item-tooltip .list-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sm-item-tooltip .bar-line .v {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sm-item-tooltip .track {
+  height: 5px;
+  margin-top: 4px;
+  background: var(--sm-surface);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.sm-item-tooltip .fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.sm-item-tooltip .fill.ok { background: var(--sm-success); }
+.sm-item-tooltip .fill.warn { background: var(--sm-warn); }
+.sm-item-tooltip .fill.danger { background: var(--sm-danger); }
+.sm-item-tooltip .bar-line .v.warn { color: var(--sm-warn); }
+.sm-item-tooltip .bar-line .v.danger { color: var(--sm-danger); }
+
+.sm-item-tooltip .list .name {
+  overflow-wrap: anywhere;
+}
+
+.sm-item-tooltip .list .v {
+  color: var(--sm-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sm-item-tooltip .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sm-item-tooltip .text .v {
+  overflow-wrap: anywhere;
+}
+
+/* Notes: muted italics, at most four lines. */
+.sm-item-tooltip .notes {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--sm-border);
+  color: var(--sm-text-muted);
+  font-style: italic;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}

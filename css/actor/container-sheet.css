@@ -1,0 +1,175 @@
+/* Container actor sheet: the chest list (section.sm-chest-custom) listing every container and its contents.
+   Historical names: "chest" is the Container actor itself (templates/actor/partials/chest-section.hbs); "custom"
+   means it is its own list with its own column grid, not the .gear-section rows of the Gear tab (it reuses
+   the .gear-section-header and .col-* classes but sets its own columns, so --sm-cols is not used here).
+   data-sm-container-action is the action attribute of its icons (add, edit, unpack, delete). data-sm-chest-hidden is not set by
+   any template now; the last rule of this file keeps it (and [hidden]) working as a hide switch. */
+
+.scarmark .sm-chest-custom {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 12px 0 18px;
+}
+
+.scarmark .sm-chest-custom .sm-chest-children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scarmark .sm-chest-custom .sm-chest-group {
+  list-style: none;
+  margin: 0 0 7px;
+  padding: 0;
+}
+
+.scarmark .sm-chest-custom .sm-chest-row {
+  border-bottom: 1px solid var(--sm-border-subtle);
+}
+
+.scarmark .sm-chest-custom .sm-chest-box > .sm-chest-row {
+  font-weight: bold;
+  background: var(--sm-surface);
+}
+
+.scarmark .sm-chest-custom .sm-chest-children .col-name {
+  padding-left: 16px;
+}
+
+.scarmark .sm-chest-custom .col-name {
+  gap: 7px;
+}
+
+.scarmark .sm-chest-custom .gear-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  object-fit: contain;
+  border: 0;
+}
+
+.scarmark .sm-chest-custom [data-sm-container-action="add"] {
+  gap: var(--sm-gap-md);
+}
+
+.scarmark .sm-chest-custom > .gear-section-header,
+.scarmark .sm-chest-custom .sm-chest-row {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 2.2fr)
+    minmax(0, 0.72fr)
+    minmax(0, 0.88fr)
+    minmax(0, 1.08fr)
+    minmax(0, 1.3fr)
+    118px;
+  grid-template-areas: "name quantity weight capacity notes actions";
+  gap: 7px 9px;
+  align-items: center;
+  justify-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.scarmark .sm-chest-custom > .gear-section-header {
+  font-weight: bold;
+  border-bottom: var(--sm-rule-accent);
+  padding: 0 0 4px;
+  margin-bottom: 4px;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > * {
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > .col-name {
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  overflow: hidden;
+}
+
+.scarmark .sm-chest-custom > .gear-section-header :is(.col-qty, .col-weight, .col-capacity, .col-notes) {
+  font-size: var(--sm-fs-sm);
+  font-weight: 700;
+  color: var(--sm-text-muted);
+}
+
+.scarmark .sm-chest-custom > .gear-section-header .col-notes {
+  text-align: left;
+}
+
+.scarmark .sm-chest-custom > .gear-section-header [data-sm-container-action="add"] {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.scarmark .sm-chest-custom .col-name > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > .col-qty {
+  grid-area: quantity;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > .col-weight {
+  grid-area: weight;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > .col-capacity {
+  grid-area: capacity;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > .col-notes {
+  grid-area: notes;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scarmark .sm-chest-custom :is(.gear-section-header, .sm-chest-row) > .col-actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  white-space: nowrap;
+}
+
+.scarmark .sm-chest-custom .col-actions [data-sm-container-action] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: auto;
+  color: var(--sm-text);
+}
+
+.scarmark .sm-chest-custom .col-actions [data-sm-container-action="delete"] {
+  color: var(--sm-accent);
+}
+
+.scarmark .sm-chest-custom .sm-chest-over {
+  color: var(--sm-warn);
+}
+
+/* Last, so hiding wins over the display rules above. */
+.scarmark .sm-chest-custom [hidden] {
+  display: none;
+}

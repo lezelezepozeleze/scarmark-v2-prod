@@ -1,0 +1,101 @@
+<!-- part: header -->
+<header class="sheet-header item-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="Item &lt;name&gt;" />
+<input class="name-input" type="text" name="name" value="Item &lt;name&gt;" placeholder="{SCARMARK.NamePlaceholder}" />
+</header>
+<!-- part: details -->
+<div class="tab details active" data-group="primary" data-tab="details">
+<div class="sm-item-form">
+<fieldset class="sm-box item-general">
+<legend>{SCARMARK.Section.general}</legend>
+<div class="item-basics has-container">
+<div class="field in-container">
+<label>{SCARMARK.Container.inContainer}</label>
+<select name="system.container">
+<option value="" >{SCARMARK.Container.onPerson}</option>
+<option value="box" >Backpack</option>
+</select>
+</div>
+<div class="field quantity">
+<label>{SCARMARK.Quantity}</label>
+<input type="number" step="1" name="system.quantity" value="2" />
+</div>
+<div class="field weight">
+<label>{SCARMARK.WeightKg}</label>
+<input type="number" step="any" name="system.weight" value="1" />
+</div>
+<div class="field value">
+<label>{SCARMARK.Value}</label>
+<input type="number" step="any" name="system.value" value="1" />
+</div>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-usage">
+<legend>{SCARMARK.Section.usage}</legend>
+<div class="sm-row-spread">
+<label class="checkbox-label sm-icon-toggle" data-tooltip="{SCARMARK.Gear.consumable}" aria-label="{SCARMARK.Gear.consumable}">
+<input type="checkbox" name="system.consumable" checked />
+<i class="fa-solid fa-flask" aria-hidden="true">
+</i>
+</label>
+<label class="sm-inline-field"> {SCARMARK.Gear.toxicity} <input type="number" step="1" min="0" name="system.toxicity" value="1" />
+</label>
+<label class="checkbox-label sm-icon-toggle" data-tooltip="{SCARMARK.Gear.usable}" aria-label="{SCARMARK.Gear.usable}">
+<input type="checkbox" name="system.usable" checked />
+<i class="fa-solid fa-hand" aria-hidden="true">
+</i>
+</label>
+<label class="checkbox-label">
+<input type="checkbox" name="system.usedUp" checked /> {SCARMARK.Gear.usedUp} </label>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-magic">
+<legend>{SCARMARK.Section.magic}</legend>
+<div class="sm-row-spread">
+<label class="checkbox-label">
+<input type="checkbox" name="system.artifact.active" checked /> {SCARMARK.Artifact.label} </label>
+<label class="checkbox-label">
+<input type="checkbox" name="system.rune" checked /> {SCARMARK.Gear.rune} </label>
+<label class="checkbox-label">
+<input type="checkbox" name="system.artifact.attuned" checked /> {SCARMARK.Artifact.attuned} </label>
+<label class="sm-inline-field"> {SCARMARK.Artifact.class} <input type="number" name="system.artifact.class" value="2" step="1" min="1" max="5" />
+</label>
+</div>
+</fieldset>
+<div class="field note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<textarea rows="1" name="system.notes">&lt;b&gt;text&lt;/b&gt;</textarea>
+</div>
+</div>
+</div>
+<!-- part: effects -->
+<div class="tab effects active" data-group="primary" data-tab="effects">
+<div class="effects-flat">
+<div class="effects-header">
+<span class="col-name">{SCARMARK.Effect.effect}</span>
+<span class="col-duration">{SCARMARK.Effect.duration}</span>
+<span class="col-changes">{SCARMARK.Effect.changes}</span>
+<a class="add-effect" data-action="createEffect">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="effects-list flat">
+<li class="effect-empty">{SCARMARK.Effect.none}</li>
+</ol>
+</div>
+</div>
+<!-- part: actions -->
+<div class="tab actions active" data-group="primary" data-tab="actions">
+<div class="actions-panel" data-actions-path="system.actions">
+<div class="actions-header">
+<span class="col-action">{SCARMARK.Action.colActions}</span>
+<span class="col-when">{SCARMARK.Action.colWhen}</span>
+<a class="add-action" data-action="createAction">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="actions-list">
+<li class="action-empty">{SCARMARK.Action.none}</li>
+</ol>
+</div>
+</div>

@@ -1,0 +1,23 @@
+{{!--
+  The shell of a data table on the Combat and Esoterics tabs. Called as a partial block:
+    {{#> "systems/scarmark/templates/actor/partials/table.hbs" rows=list colspan=7}}
+      {{#*inline "head"}}<th>...</th>{{/inline}}
+      <tr>...</tr> (the rows)
+    {{/"systems/scarmark/templates/actor/partials/table.hbs"}}
+  Parameters (hash): rows - the list the rows come from (an empty list shows the "none" row); colspan - the number of columns.
+--}}
+<div class="combat-table-wrap">
+  <table class="combat-table">
+    <thead>
+      <tr>
+        {{> head}}
+      </tr>
+    </thead>
+    <tbody>
+      {{> @partial-block}}
+      {{#unless rows.length}}
+      <tr><td colspan="{{colspan}}" class="empty">{{localize 'SCARMARK.None'}}</td></tr>
+      {{/unless}}
+    </tbody>
+  </table>
+</div>

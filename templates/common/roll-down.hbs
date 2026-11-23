@@ -1,0 +1,13 @@
+{{!-- A roll-down of the Actions panel. Parameters: field - { name, options } (the blank option is the first of the options) or, when field.grouped, { name, blankSelected, groups: [{ label, options }] }; cls - the class of the select. --}}
+<select class="{{cls}}" name="{{field.name}}">
+  {{#if field.grouped}}
+  <option value=""{{#if field.blankSelected}} selected{{/if}}></option>
+  {{#each field.groups}}
+  <optgroup label="{{label}}">
+    {{#each options}}<option value="{{value}}"{{#if selected}} selected{{/if}}>{{label}}</option>{{/each}}
+  </optgroup>
+  {{/each}}
+  {{else}}
+  {{#each field.options}}<option value="{{value}}"{{#if selected}} selected{{/if}}>{{label}}</option>{{/each}}
+  {{/if}}
+</select>

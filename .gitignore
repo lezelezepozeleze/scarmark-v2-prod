@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+# Foundry's LevelDB lock and info logs (the numbered .log files and MANIFEST hold the data and are kept)
+packs/**/LOCK
+packs/**/LOG
+packs/**/LOG.old

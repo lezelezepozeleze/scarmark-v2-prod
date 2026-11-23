@@ -1,0 +1,347 @@
+/* Gear, Weapon, Armor, Armor Location, Missile, Container and Injury item sheets. */
+
+/* ---------- Gear details ---------- */
+.scarmark .gear-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.scarmark .gear-row .field {
+  flex: 1;
+  text-align: center;
+}
+
+/* Field recipe shared by the Gear row, the Missile range grid and the Armor editor. */
+.scarmark .gear-row .field input,
+.scarmark .missile-range-grid input,
+.scarmark .sm-item-form :is(input:not([type="checkbox"]), select, textarea) {
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: var(--sm-pad-field);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ---------- Injury ---------- */
+.scarmark .injury-body .derived-value {
+  display: inline-block;
+  padding: var(--sm-pad-field);
+  font-weight: 700;
+}
+
+.scarmark .injury-body .injury-heavy-bleeding {
+  margin: 12px 0;
+}
+
+/* ---------- Container ---------- */
+.scarmark .field.in-container {
+  max-width: 260px;
+  margin-bottom: 12px;
+}
+
+/* The In Container select gets the Details field recipe from item/common.css. */
+
+/* ---------- Armor ---------- */
+/* The .armor-section / .armor-loc-section frame is shared with the Combat sections: see "Fieldset boxes" in base/sheet.css. */
+.scarmark .armor-section > legend,
+.scarmark .armor-loc-section > legend,
+.scarmark .sm-box > legend {
+  padding: 0 6px;
+  font-size: var(--sm-fs-xs);
+  font-weight: 700;
+  color: var(--sm-text-muted);
+}
+
+/* Armor Properties: basic fields, protection, and the covered locations as rows. */
+.scarmark .sm-item-form {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px 0;
+}
+
+.scarmark .sm-item-form .field {
+  min-width: 0;
+  text-align: center;
+}
+
+.scarmark .sm-item-form .field > label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* Recipe: see the shared field rule at the top of this file; these are the extras. Checkboxes are excluded: they keep the 16px box from base/controls.css. */
+.scarmark .sm-item-form :is(input:not([type="checkbox"]), select, textarea) {
+  min-width: 0;
+  border-radius: var(--sm-radius);
+}
+
+/* The first row of every storable item: always one row, never wrapped (a container: Quantity | Weight | Value | Capacity). */
+.scarmark .item-basics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.scarmark .item-basics.has-container {
+  grid-template-columns: 1.35fr repeat(3, minmax(0, 1fr));
+}
+
+.scarmark .sm-item-form .field {
+  margin: 0;
+}
+
+.scarmark .sm-item-form .field.in-container {
+  max-width: none;
+}
+
+.scarmark .sm-row-3,
+.scarmark .sm-row-2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.scarmark .sm-row-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Checkbox rows with a number (Usage, Magic): content-sized items with the same blank space between them and around them. */
+.scarmark .sm-row-spread {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+/* Label | number pair (the Magic box of a missile): content-sized columns. */
+.scarmark .sm-row-2.sm-row-auto {
+  grid-template-columns: 1fr auto;
+}
+
+/* Rows of checkboxes (Usage, Magic, Shield | Broken): centred in their columns, like the field labels above them. */
+.scarmark .sm-row-2:has(> .checkbox-label),
+.scarmark .sm-row-2.sm-row-auto {
+  align-items: center;
+}
+
+.scarmark .sm-row-2 > .checkbox-label {
+  justify-content: center;
+}
+
+/* One title font: box legends, field labels and checkbox labels share family, size and weight. */
+.scarmark .sm-item-form legend {
+  padding: 0 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.scarmark .sm-item-form .field > label {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Boxes: rows inside keep an even rhythm. */
+.scarmark .sm-box > :not(legend) + :not(legend) {
+  margin-top: 12px;
+}
+
+.scarmark .sm-item-form .sm-inline-field input {
+  width: 48px;
+  flex: none;
+}
+
+/* Class is always one digit. */
+.scarmark .sm-item-form .sm-magic .sm-inline-field input {
+  width: 40px;
+}
+
+/* A toggle shown as an icon (Consumable, Usable); its name shows on hover. */
+.scarmark .sm-icon-toggle {
+  font-size: 1.15rem;
+}
+
+/* The General box (every storable item, a container too): one font for the labels and the numbers. */
+.scarmark .item-general :is(label, input, select) {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.scarmark .sm-item-form .field.note input[type="text"] {
+  text-align: left;
+}
+
+/* The Note of an item is a box that grows with its text: one line when it is empty or short, as many lines as it needs when not. */
+.scarmark .sm-item-form .field.note textarea,
+.scarmark .sm-armor-notes textarea {
+  field-sizing: content;
+  min-height: 0;
+  resize: none;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.scarmark .sm-item-form input:disabled {
+  cursor: not-allowed;
+}
+
+.scarmark .sm-item-form :is(.armor-section, .sm-box) {
+  min-width: 0;
+  margin: 0;
+}
+
+.scarmark .sm-protection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sm-gap-md);
+}
+
+.scarmark .sm-armor-add-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-lg);
+}
+
+.scarmark .sm-armor-add-row select {
+  flex: 1;
+  text-align: left;
+}
+
+.scarmark .sm-armor-add-row button {
+  width: auto;
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  border-radius: var(--sm-radius);
+  color: var(--sm-text);
+  padding: var(--sm-pad-field);
+}
+
+.scarmark .sm-armor-add-row button:hover {
+  background: var(--sm-surface-hover);
+}
+
+/* The covered locations: one rounded card per location, name on the left, a quiet trash icon on the right. */
+.scarmark .sm-armor-locations {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm-gap-sm);
+}
+
+.scarmark .sm-armor-locations:has(.sm-armor-location-row),
+.scarmark .sm-armor-locations:has(.sm-armor-empty) {
+  margin-top: 12px;
+}
+
+.scarmark .sm-armor-location-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--sm-gap-lg);
+  align-items: center;
+  padding: 4px 6px 4px 12px;
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-border-subtle);
+  border-left: 3px solid var(--sm-accent);
+  border-radius: var(--sm-radius);
+}
+
+.scarmark .sm-armor-location-row:hover {
+  border-color: var(--sm-border);
+  border-left-color: var(--sm-gold);
+}
+
+.scarmark .sm-armor-location-name {
+  font-weight: 700;
+}
+
+.scarmark .sm-armor-remove {
+  width: 28px;
+  min-width: 28px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--sm-text-muted);
+  cursor: pointer;
+}
+
+.scarmark .sm-armor-remove:hover {
+  color: var(--sm-accent);
+}
+
+.scarmark .sm-armor-empty {
+  color: var(--sm-text-muted);
+  font-size: var(--sm-fs-sm);
+  font-style: italic;
+  text-align: center;
+  padding: 8px 2px;
+}
+
+/* ---------- Armor Location ---------- */
+.scarmark .armor-location-body .field:is(.armor-loc-type, .armor-loc-side) {
+  max-width: 260px;
+  margin-bottom: 12px;
+}
+
+.scarmark .armor-loc-risks {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.scarmark .injury-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sm-gap-md);
+}
+
+.scarmark .injury-grid .field {
+  text-align: center;
+}
+
+.scarmark .injury-grid .field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.scarmark .injury-grid select {
+  width: 100%;
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: 3px 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ---------- Missile range/impact grid ---------- */
+.scarmark .missile-range-grid {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  gap: var(--sm-gap-sm) var(--sm-gap-md);
+  align-items: center;
+  margin: 4px 0 12px 0;
+}
+
+.scarmark .missile-range-grid .grid-head {
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--sm-fs-sm);
+}
+
+.scarmark .missile-range-grid .grid-label {
+  font-weight: 700;
+  padding-right: 8px;
+  text-align: right;
+}
+

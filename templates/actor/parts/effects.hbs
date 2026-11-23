@@ -1,0 +1,32 @@
+<div class="tab effects{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="effects">
+
+  <div class="effects-header">
+    <a class="add-effect" data-action="createEffect">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+
+  {{#each effectCategories as |list category|}}
+  <div class="effects-category">
+    <h3>{{localize (concat "SCARMARK.Effect.category." category)}}</h3>
+    <ol class="effects-list">
+      {{#each list as |effect|}}
+      <li class="effect-entry{{#if effect.disabled}} is-disabled{{/if}}" data-effect-id="{{effect.id}}">
+        <img class="effect-icon" src="{{effect.img}}" alt="" />
+        <a class="effect-name" data-action="editEffect">{{effect.name}}</a>
+        <span class="effect-source">{{#if (eq effect.parent.documentName "Item")}}{{effect.parent.name}}{{else}}{{effect.sourceName}}{{/if}}</span>
+        <a class="effect-toggle" title="{{localize 'SCARMARK.Effect.toggle'}}">
+          <i class="fa-solid {{#if effect.disabled}}fa-toggle-off{{else}}fa-toggle-on{{/if}}"></i>
+        </a>
+        <a class="effect-save" title="{{localize 'SCARMARK.Compendium.saveTo'}}"><i class="fa-solid fa-floppy-disk"></i></a>
+        <a class="effect-delete" title="{{localize 'SCARMARK.Effect.delete'}}"><i class="fa-solid fa-trash"></i></a>
+      </li>
+      {{/each}}
+      {{#unless list.length}}
+      <li class="effect-empty">{{localize 'SCARMARK.Effect.none'}}</li>
+      {{/unless}}
+    </ol>
+  </div>
+  {{/each}}
+
+</div>

@@ -1,0 +1,99 @@
+/* The Actions panel (templates/common/actions-panel.hbs). Not item-specific: it styles the panel wherever it is placed. */
+
+.scarmark .actions-panel {
+  margin-top: 14px;
+}
+
+.scarmark .actions-panel .actions-header {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: var(--sm-line);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.scarmark .actions-panel .add-action {
+  cursor: pointer;
+}
+
+.scarmark .actions-panel .actions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* The body of an action compendium entry (templates/item/parts/action-entry.hbs): the lines of its action with no head, Add link or bin. */
+.scarmark .actions-panel .action-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm-gap-sm);
+  padding: 6px 0;
+}
+
+.scarmark .actions-panel .action-fields + .action-fields {
+  border-top: var(--sm-line);
+}
+
+/* One row per action, like an effect: the name, then the switch and the bin on the right. A row drags out as a copy of its action. */
+.scarmark .actions-panel .action-entry {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+  padding: 4px 0;
+  border-bottom: var(--sm-line);
+  cursor: grab;
+}
+
+.scarmark .actions-panel .action-label {
+  flex: 1 1 0;
+  min-width: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* The panel while an action or an Action entry is dragged over it. */
+.scarmark .actions-panel.sm-drop-target {
+  outline: 2px dashed var(--sm-accent);
+  outline-offset: 2px;
+}
+
+.scarmark .actions-panel .action-name {
+  flex: 1 1 0;
+  min-width: 0;
+  font-weight: 700;
+}
+
+.scarmark .actions-panel .action-line {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-gap-md);
+}
+
+.scarmark .actions-panel .action-line select,
+.scarmark .actions-panel .action-line input[type="text"] {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.scarmark .actions-panel .action-word {
+  font-weight: 700;
+  min-width: 3.2em;
+}
+
+.scarmark .actions-panel .action-toggle {
+  cursor: pointer;
+}
+
+/* A switched-off action stays in the list but looks inactive; the switch and the bin stay readable. */
+.scarmark .actions-panel .action-off .action-label {
+  opacity: 0.5;
+}
+
+.scarmark .actions-panel .action-delete {
+  cursor: pointer;
+  color: var(--sm-accent);
+}
+
+.scarmark .actions-panel .action-empty {
+  color: var(--sm-text-muted);
+}

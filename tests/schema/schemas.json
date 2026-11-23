@@ -1,0 +1,3194 @@
+{
+  "actor.character": {
+    "attributes": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "str": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "sta": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "dex": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "agl": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "wil": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "per": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "pre": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "int": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "spi": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "resources": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "fatigue": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "condition": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 1
+              }
+            }
+          }
+        },
+        "move": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            }
+          }
+        },
+        "spiritCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "willCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        }
+      }
+    },
+    "race": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "dob": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "month": {
+          "type": "StringField",
+          "options": {
+            "required": true,
+            "initial": "",
+            "blank": true,
+            "choices": [
+              "jan",
+              "feb",
+              "mar",
+              "apr",
+              "may",
+              "jun",
+              "jul",
+              "aug",
+              "sep",
+              "oct",
+              "nov",
+              "dec"
+            ]
+          }
+        },
+        "day": {
+          "type": "StringField",
+          "options": {
+            "required": true,
+            "initial": "",
+            "blank": true
+          }
+        },
+        "year": {
+          "type": "StringField",
+          "options": {
+            "required": true,
+            "initial": "",
+            "blank": true
+          }
+        }
+      }
+    },
+    "birthplace": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "personality": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true,
+        "choices": [
+          "",
+          "lawAbiding",
+          "practical",
+          "opportunistic",
+          "corruptible",
+          "vicious"
+        ]
+      }
+    },
+    "specialization": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "journal": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "actor.creature": {
+    "attributes": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "str": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "sta": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "dex": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "agl": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "wil": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "per": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "int": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "spi": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "resources": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "fatigue": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "condition": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 1
+              }
+            }
+          }
+        },
+        "move": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            }
+          }
+        },
+        "spiritCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "willCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        }
+      }
+    },
+    "species": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "specialAbilities": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "actor.npc": {
+    "attributes": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "str": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "sta": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "dex": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "agl": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "wil": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "per": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "pre": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "int": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "spi": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "resources": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "fatigue": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "condition": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 1
+              }
+            }
+          }
+        },
+        "move": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            }
+          }
+        },
+        "spiritCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "willCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        }
+      }
+    },
+    "race": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "specialization": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "actor.animal": {
+    "attributes": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "str": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "sta": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "dex": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "agl": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "wil": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "per": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "int": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        },
+        "spi": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "base": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 8,
+                "min": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "resources": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "fatigue": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "condition": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 100,
+                "min": 1
+              }
+            }
+          }
+        },
+        "move": {
+          "type": "SchemaField",
+          "options": {},
+          "fields": {
+            "value": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            },
+            "max": {
+              "type": "NumberField",
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 0
+              }
+            }
+          }
+        },
+        "spiritCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "willCapacity": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        }
+      }
+    },
+    "species": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "specialAbilities": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "actor.container": {
+    "maxCapacity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.trait": {
+    "category": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "physical",
+        "choices": [
+          "physical",
+          "psyche"
+        ]
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "item.skill": {
+    "category": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "skill",
+        "choices": [
+          "skill",
+          "combat",
+          "esoterics"
+        ]
+      }
+    },
+    "esotericKind": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true,
+        "choices": [
+          "",
+          "arcane",
+          "religion"
+        ]
+      }
+    },
+    "attribute1": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "str",
+        "choices": [
+          "str",
+          "sta",
+          "dex",
+          "agl",
+          "wil",
+          "per",
+          "pre",
+          "int",
+          "spi"
+        ]
+      }
+    },
+    "attribute2": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "str",
+        "choices": [
+          "str",
+          "sta",
+          "dex",
+          "agl",
+          "wil",
+          "per",
+          "pre",
+          "int",
+          "spi"
+        ]
+      }
+    },
+    "attribute3": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "str",
+        "choices": [
+          "str",
+          "sta",
+          "dex",
+          "agl",
+          "wil",
+          "per",
+          "pre",
+          "int",
+          "spi"
+        ]
+      }
+    },
+    "sunsignBonuses": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": []
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "sunsign": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true,
+              "choices": [
+                "capricornus",
+                "aquarius",
+                "pisces",
+                "aries",
+                "taurus",
+                "gemini",
+                "cancer",
+                "leo",
+                "virgo",
+                "libra",
+                "scorpius",
+                "sagittarius",
+                ""
+              ]
+            }
+          },
+          "bonus": {
+            "type": "NumberField",
+            "options": {
+              "required": true,
+              "integer": true,
+              "initial": 1
+            }
+          }
+        }
+      }
+    },
+    "level": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "faithPoints": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "item.gear": {
+    "weight": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "value": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "quantity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "carried": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": true
+      }
+    },
+    "container": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "consumable": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "usable": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "usedUp": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "toxicity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "min": 0,
+        "initial": 0
+      }
+    },
+    "rune": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "artifact": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "active": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        },
+        "attuned": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        },
+        "class": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 1,
+            "min": 1,
+            "max": 5
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.weapon": {
+    "quantity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "weight": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "value": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "carried": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": true
+      }
+    },
+    "container": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "quality": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 10,
+        "min": 0,
+        "max": 16
+      }
+    },
+    "isShield": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "broken": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "attack": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0
+      }
+    },
+    "defense": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0
+      }
+    },
+    "specialization": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0
+      }
+    },
+    "impact": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "blunt": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": -1
+          }
+        },
+        "edged": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": -1
+          }
+        },
+        "piercing": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": -1
+          }
+        },
+        "fire": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": -1
+          }
+        }
+      }
+    },
+    "associatedSkill": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "close",
+        "choices": [
+          "close",
+          "ranged",
+          "unarmed",
+          "arcane"
+        ]
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "rune": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "artifact": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "active": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        },
+        "attuned": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        },
+        "class": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 1,
+            "min": 1,
+            "max": 5
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.missile": {
+    "quantity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "weight": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "value": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "carried": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": true
+      }
+    },
+    "container": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "quality": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 10,
+        "min": 0,
+        "max": 16
+      }
+    },
+    "velocity": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "high",
+        "choices": [
+          "low",
+          "high"
+        ]
+      }
+    },
+    "aspect": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "piercing",
+        "choices": [
+          "blunt",
+          "edged",
+          "piercing",
+          "fire"
+        ]
+      }
+    },
+    "associatedSkill": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "ranged",
+        "choices": [
+          "close",
+          "ranged",
+          "unarmed",
+          "arcane"
+        ]
+      }
+    },
+    "specialization": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0
+      }
+    },
+    "range": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "short": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "medium": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "long": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "extreme": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        }
+      }
+    },
+    "impact": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "short": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "medium": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "long": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "extreme": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        }
+      }
+    },
+    "magic": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "spellClass": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 1,
+        "max": 6
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.armorLocation": {
+    "locationType": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "head"
+      }
+    },
+    "side": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true,
+        "choices": [
+          "",
+          "left",
+          "right"
+        ]
+      }
+    },
+    "aim": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "high": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 300,
+            "min": 0
+          }
+        },
+        "medium": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 100,
+            "min": 0
+          }
+        },
+        "low": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        }
+      }
+    },
+    "injury": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "t1": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 1,
+            "min": 0,
+            "max": 5
+          }
+        },
+        "t5": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 2,
+            "min": 0,
+            "max": 5
+          }
+        },
+        "t9": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 3,
+            "min": 0,
+            "max": 5
+          }
+        },
+        "t13": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 4,
+            "min": 0,
+            "max": 5
+          }
+        },
+        "t17": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 5,
+            "min": 0,
+            "max": 5
+          }
+        }
+      }
+    },
+    "risk": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "fumble": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        },
+        "stumble": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        },
+        "amputate": {
+          "type": "BooleanField",
+          "options": {
+            "required": true,
+            "initial": false
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "item.armor": {
+    "quantity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "weight": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "value": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "carried": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": true
+      }
+    },
+    "container": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "quality": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 10
+      }
+    },
+    "originalQuality": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0
+      }
+    },
+    "layer": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0,
+        "max": 5
+      }
+    },
+    "protection": {
+      "type": "SchemaField",
+      "options": {},
+      "fields": {
+        "blunt": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "edged": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "piercing": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "fire": {
+          "type": "NumberField",
+          "options": {
+            "required": true,
+            "integer": true,
+            "initial": 0
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "ArrayField",
+      "options": {
+        "initial": []
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "type": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "blank": false
+            }
+          },
+          "side": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true,
+              "choices": [
+                "",
+                "left",
+                "right"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.container": {
+    "quantity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "weight": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "value": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "maxCapacity": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "carried": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": true
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.injury": {
+    "woundLevel": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 0
+      }
+    },
+    "mend": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0,
+        "min": 0,
+        "max": 6
+      }
+    },
+    "heavyBleeding": {
+      "type": "BooleanField",
+      "options": {
+        "required": true,
+        "initial": false
+      }
+    },
+    "vital": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true,
+        "choices": [
+          "",
+          "out",
+          "dying"
+        ]
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "item.invocation": {
+    "religion": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "circle": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 1,
+        "max": 5
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "item.spell": {
+    "magicType": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "level": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 1,
+        "min": 1,
+        "max": 6
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "item.psionic": {
+    "attribute1": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "spi",
+        "choices": [
+          "str",
+          "sta",
+          "dex",
+          "agl",
+          "wil",
+          "per",
+          "pre",
+          "int",
+          "spi"
+        ]
+      }
+    },
+    "attribute2": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "spi",
+        "choices": [
+          "str",
+          "sta",
+          "dex",
+          "agl",
+          "wil",
+          "per",
+          "pre",
+          "int",
+          "spi"
+        ]
+      }
+    },
+    "attribute3": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "wil",
+        "choices": [
+          "str",
+          "sta",
+          "dex",
+          "agl",
+          "wil",
+          "per",
+          "pre",
+          "int",
+          "spi"
+        ]
+      }
+    },
+    "sunsignBonuses": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": []
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "sunsign": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true,
+              "choices": [
+                "capricornus",
+                "aquarius",
+                "pisces",
+                "aries",
+                "taurus",
+                "gemini",
+                "cancer",
+                "leo",
+                "virgo",
+                "libra",
+                "scorpius",
+                "sagittarius",
+                ""
+              ]
+            }
+          },
+          "bonus": {
+            "type": "NumberField",
+            "options": {
+              "required": true,
+              "integer": true,
+              "initial": 1
+            }
+          }
+        }
+      }
+    },
+    "level": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "fatigue": {
+      "type": "NumberField",
+      "options": {
+        "required": true,
+        "integer": true,
+        "initial": 0,
+        "min": 0
+      }
+    },
+    "notes": {
+      "type": "StringField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "description": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    },
+    "misfire": {
+      "type": "HTMLField",
+      "options": {
+        "required": true,
+        "initial": "",
+        "blank": true
+      }
+    }
+  },
+  "item.action": {
+    "actions": {
+      "type": "ArrayField",
+      "options": {
+        "required": true,
+        "initial": "[function]"
+      },
+      "element": {
+        "type": "SchemaField",
+        "options": {},
+        "fields": {
+          "id": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "name": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "disabled": {
+            "type": "BooleanField",
+            "options": {
+              "required": true,
+              "initial": false
+            }
+          },
+          "kind": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "effect",
+              "blank": true
+            }
+          },
+          "test": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "alteration": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "message": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "effect": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "macro": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "on": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "targetItem": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          },
+          "when": {
+            "type": "StringField",
+            "options": {
+              "required": true,
+              "initial": "",
+              "blank": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

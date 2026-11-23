@@ -1,0 +1,102 @@
+{{!-- The effect sheet (sheets/effect-sheet.mjs). Context: view/effect-sheet-view.mjs buildEffectSheet. Every field is named after the effect data it saves; the choices that are not data (kind, repair) are turned into flags by the sheet's _processFormData. --}}
+<section class="effect-sheet-body">
+
+  <header class="effect-head">
+    <a class="effect-icon" data-action="editImage" role="button" tabindex="0" title="{{localize 'SCARMARK.Effect.changeIcon'}}"><img src="{{img}}" alt="" /></a>
+    <input type="text" name="name" value="{{name}}" placeholder="{{localize 'SCARMARK.Effect.namePlaceholder'}}" />
+    <label class="checkbox-label"><input type="checkbox" name="disabled" {{#if disabled}}checked{{/if}} /> {{localize 'SCARMARK.Effect.disabled'}}</label>
+  </header>
+
+  {{!-- 1. What is it about, and how does it work. --}}
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Effect.about'}}</legend>
+    <div class="effect-pair">
+      <label>
+        <span>{{localize 'SCARMARK.Effect.aboutLabel'}}</span>
+        <select name="{{flagPrefix}}effectType">{{#each typeOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      </label>
+      <label>
+        <span>{{localize 'SCARMARK.Effect.kindLabel'}}</span>
+        <select name="{{flagPrefix}}kind">{{#each kindOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      </label>
+    </div>
+    <p class="effect-hint">{{kindHint}}</p>
+  </fieldset>
+
+  {{!-- 2. The changes: stat, how, value, priority. --}}
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Effect.changes'}}</legend>
+    {{#if hasRows}}
+    <div class="effect-change-row effect-change-head">
+      <span>{{localize 'SCARMARK.Effect.colStat'}}</span>
+      <span>{{localize 'SCARMARK.Effect.colDo'}}</span>
+      <span>{{localize 'SCARMARK.Effect.colValue'}}</span>
+      <span>{{localize 'SCARMARK.Effect.colPriority'}}</span>
+      <span></span>
+    </div>
+    {{/if}}
+    {{#each rows}}
+    <div class="effect-change-row">
+      <select name="system.changes.{{index}}.key">
+        <option value="">{{localize 'SCARMARK.Effect.pickStat'}}</option>
+        {{#each keyGroups}}<optgroup label="{{label}}">{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</optgroup>{{/each}}
+      </select>
+      <select name="system.changes.{{index}}.type">{{#each typeOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      <input type="text" name="system.changes.{{index}}.value" value="{{value}}" />
+      <input type="number" step="1" name="system.changes.{{index}}.priority" value="{{priority}}" placeholder="{{priorityHint}}" />
+      <input type="hidden" name="system.changes.{{index}}.phase" value="{{phase}}" />
+      <a class="effect-change-delete" data-action="deleteChange" data-index="{{index}}" role="button" tabindex="0" title="{{localize 'SCARMARK.Effect.deleteChange'}}"><i class="fa-solid fa-trash"></i></a>
+    </div>
+    {{/each}}
+    <button type="button" class="effect-add-change" data-action="addChange"><i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Effect.addChange'}}</button>
+  </fieldset>
+
+  {{!-- 3. How long it lasts, who gets it, and only one at a time (ongoing effects only). --}}
+  {{#if showDuration}}
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Effect.lasts'}}</legend>
+    <div class="effect-pair">
+      <label>
+        <span>{{localize 'SCARMARK.Effect.duration'}}</span>
+        <span class="effect-duration">
+          <input type="number" min="0" step="1" name="duration.value" value="{{durationValue}}" placeholder="{{localize 'SCARMARK.Effect.noLimit'}}" />
+          <select name="duration.units">{{#each unitOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+        </span>
+      </label>
+    </div>
+    {{#if showUnique}}<label class="checkbox-label"><input type="checkbox" name="{{flagPrefix}}unique" {{#if unique}}checked{{/if}} /> {{localize 'SCARMARK.Effect.unique'}}</label>{{/if}}
+    {{#if showTransfer}}<label class="checkbox-label"><input type="checkbox" name="transfer" {{#if transfer}}checked{{/if}} /> {{localize 'SCARMARK.Effect.transfer'}}</label>{{/if}}
+  </fieldset>
+  {{/if}}
+
+  {{!-- 4. Armor or weapon, immediate: repair instead of the changes. --}}
+  {{#if showRepair}}
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Effect.repairBox'}}</legend>
+    <label class="checkbox-label"><input type="checkbox" name="repair" {{#if repair}}checked{{/if}} /> {{localize 'SCARMARK.Effect.repair'}}</label>
+  </fieldset>
+  {{/if}}
+
+  {{!-- 5. Weapon, ongoing: poison on the blade. --}}
+  {{#if showOnHit}}
+  <fieldset class="effect-box">
+    <legend>{{localize 'SCARMARK.Effect.onHitBox'}}</legend>
+    <label class="checkbox-label"><input type="checkbox" name="{{flagPrefix}}onHit" {{#if onHit}}checked{{/if}} /> {{localize 'SCARMARK.Effect.onHit'}}</label>
+    <div class="effect-pair">
+      <label>
+        <span>{{localize 'SCARMARK.Effect.onHitTest'}}</span>
+        <select name="{{flagPrefix}}onHitTest">{{#each onHitTests}}<optgroup label="{{label}}">{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</optgroup>{{/each}}</select>
+      </label>
+      <label>
+        <span>{{localize 'SCARMARK.Effect.onHitEffect'}}</span>
+        <select name="{{flagPrefix}}onHitEffect">{{#each onHitEffects}}<optgroup label="{{label}}">{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</optgroup>{{/each}}</select>
+      </label>
+      <label>
+        <span>{{localize 'SCARMARK.Effect.charges'}}</span>
+        <input type="number" min="1" step="1" name="{{flagPrefix}}charges" value="{{charges}}" placeholder="{{localize 'SCARMARK.Effect.noLimit'}}" />
+      </label>
+    </div>
+  </fieldset>
+  {{/if}}
+
+</section>

@@ -1,0 +1,45 @@
+<div class="tab skills{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="skills">
+
+  {{#each skillCategories as |cat|}}
+  <div class="skills-category">
+    <div class="skills-category-header">
+      <span class="col-title">{{localize cat.fullLabel}}</span>
+      <span class="col-sb">{{localize 'SCARMARK.Skills.sb'}}</span>
+      <span class="col-ml">{{localize 'SCARMARK.Skills.ml'}}</span>
+      <span class="col-eml">{{localize 'SCARMARK.Skills.eml'}}</span>
+      <span class="col-piety">{{#if cat.piety}}{{localize 'SCARMARK.Skills.piety'}}{{/if}}</span>
+      <span class="col-notes">{{localize 'SCARMARK.Skills.notes'}}</span>
+      <a class="col-actions add-skill" data-action="addSkill" data-category="{{cat.key}}">
+        <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+      </a>
+    </div>
+
+    <ol class="skills-list">
+      {{#each cat.skills as |skill|}}
+      <li class="skill-entry" data-item-id="{{skill.id}}">
+        <a class="col-title skill-name" data-action="rollSkill" title="{{localize 'SCARMARK.D100Test'}}">
+          <img class="skill-icon" src="{{skill.img}}" alt="" />
+          <span class="name-text">{{skill.name}}</span>
+        </a>
+        <span class="col-sb">{{skill.system.sb}}</span>
+        <input class="col-ml" type="number" data-skill-field="level" value="{{skill.system.level}}" aria-label="{{localize 'SCARMARK.FieldOf' field=(localize 'SCARMARK.Skills.ml') name=skill.name}}" />
+        <span class="col-eml">{{skill.system.esl}}</span>
+        <span class="col-piety">
+          {{#if (eq skill.system.esotericKind "religion")}}
+          <input type="number" data-skill-field="faithPoints" value="{{skill.system.faithPoints}}" aria-label="{{localize 'SCARMARK.FieldOf' field=(localize 'SCARMARK.Skills.piety') name=skill.name}}" />
+          {{/if}}
+        </span>
+        <span class="col-notes">{{skill.system.notes}}</span>
+        <span class="col-actions">
+          <a class="skill-edit" data-action="editSkill" title="{{localize 'SCARMARK.Skill.edit'}}">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+          <a class="skill-delete" data-action="deleteSkill" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </span>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+  {{/each}}
+
+</div>

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "target--20",
+    "source": "executed",
+    "input": {
+      "target": -20
+    },
+    "expected": -20
+  },
+  {
+    "id": "target--1",
+    "source": "executed",
+    "input": {
+      "target": -1
+    },
+    "expected": -1
+  },
+  {
+    "id": "target-0",
+    "source": "executed",
+    "input": {
+      "target": 0
+    },
+    "expected": 0
+  },
+  {
+    "id": "target-1",
+    "source": "executed",
+    "input": {
+      "target": 1
+    },
+    "expected": 1
+  },
+  {
+    "id": "target-50",
+    "source": "executed",
+    "input": {
+      "target": 50
+    },
+    "expected": 50
+  },
+  {
+    "id": "target-94",
+    "source": "executed",
+    "input": {
+      "target": 94
+    },
+    "expected": 94
+  },
+  {
+    "id": "target-95",
+    "source": "executed",
+    "input": {
+      "target": 95
+    },
+    "expected": 95
+  },
+  {
+    "id": "target-96",
+    "source": "executed",
+    "input": {
+      "target": 96
+    },
+    "expected": 95
+  },
+  {
+    "id": "target-100",
+    "source": "executed",
+    "input": {
+      "target": 100
+    },
+    "expected": 95
+  },
+  {
+    "id": "target-150",
+    "source": "executed",
+    "input": {
+      "target": 150
+    },
+    "expected": 95
+  },
+  {
+    "id": "target-94.5",
+    "source": "executed",
+    "input": {
+      "target": 94.5
+    },
+    "expected": 94.5
+  },
+  {
+    "id": "target-95.5",
+    "source": "executed",
+    "input": {
+      "target": 95.5
+    },
+    "expected": 95
+  }
+]

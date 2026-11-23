@@ -1,0 +1,8 @@
+{{!-- A titled block of the Esoterics tab with an Add link. Partial block; parameters: title - lang key of the title, add - data-action of the Add link. --}}
+<div class="esoteric-section">
+  <div class="esoteric-section-title">
+    <span>{{localize title}}</span>
+    <a data-action="{{add}}"><i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}</a>
+  </div>
+  {{> @partial-block}}
+</div>

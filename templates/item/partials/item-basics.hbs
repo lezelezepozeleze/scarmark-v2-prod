@@ -1,0 +1,14 @@
+{{!-- The first row of every storable item, in a "General" box: In container | Quantity | Weight | Value (a container: Quantity | Weight | Value | Capacity). Parameters: container - show the In container selector first; capacity - show the Capacity field last. --}}
+<fieldset class="sm-box item-general">
+  <legend>{{localize 'SCARMARK.Section.general'}}</legend>
+  <div class="item-basics{{#if container}} has-container{{/if}}">
+    {{#if container}}{{> "systems/scarmark/templates/item/partials/container-select.hbs"}}{{/if}}
+    {{> "systems/scarmark/templates/item/partials/quantity-weight-value.hbs"}}
+    {{#if capacity}}
+    <div class="field max-capacity">
+      <label>{{localize 'SCARMARK.Container.maxCapacity'}}</label>
+      <input type="number" step="0.1" min="0" name="system.maxCapacity" value="{{system.maxCapacity}}" />
+    </div>
+    {{/if}}
+  </div>
+</fieldset>

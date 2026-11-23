@@ -1,0 +1,7 @@
+/* The sheet of a region behavior (sheets/region-behavior-sheet.mjs, templates/region/behavior.hbs): the body stacks the header and the boxes; the header and the boxes look like the effect sheet's (css/item/effect-sheet.css). */
+.scarmark.region-behavior-sheet .region-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 10px 10px;
+}

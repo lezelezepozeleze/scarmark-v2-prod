@@ -1,0 +1,60 @@
+<div class="skill-body">
+
+  <header class="item-header skill-header">
+    {{> "systems/scarmark/templates/item/partials/portrait.hbs"}}
+    <div class="skill-header-main">
+      {{> "systems/scarmark/templates/item/partials/name-input.hbs"}}
+      <div class="skill-header-row">
+        <div class="field skill-category">
+          <label>{{localize 'SCARMARK.Skill.category'}}</label>
+          <select name="system.category">
+            <option value="skill" {{#if (eq system.category "skill")}}selected{{/if}}>{{localize 'SCARMARK.Skill.categorySkill'}}</option>
+            <option value="combat" {{#if (eq system.category "combat")}}selected{{/if}}>{{localize 'SCARMARK.Skill.categoryCombat'}}</option>
+            <option value="esoterics" {{#if (eq system.category "esoterics")}}selected{{/if}}>{{localize 'SCARMARK.Skill.categoryEsoterics'}}</option>
+          </select>
+        </div>
+        {{#if (eq system.category "esoterics")}}
+        <div class="field skill-category">
+          <label>{{localize 'SCARMARK.Skill.esotericKind'}}</label>
+          <select name="system.esotericKind">
+            <option value="" {{#if (eq system.esotericKind "")}}selected{{/if}}>&mdash;</option>
+            <option value="arcane" {{#if (eq system.esotericKind "arcane")}}selected{{/if}}>{{localize 'SCARMARK.Skill.kindArcane'}}</option>
+            <option value="religion" {{#if (eq system.esotericKind "religion")}}selected{{/if}}>{{localize 'SCARMARK.Skill.kindReligion'}}</option>
+          </select>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+
+  <hr class="section-divider" />
+
+  <div class="skill-levels">
+    <div class="skill-level-box">
+      <label>{{localize 'SCARMARK.Skill.sbFull'}}</label>
+      <div class="skill-level-value">{{system.sb}}</div>
+    </div>
+    <div class="skill-level-box">
+      <label>{{localize 'SCARMARK.Skill.slFull'}}</label>
+      <input type="number" step="1" name="system.level" value="{{system.level}}" />
+    </div>
+    {{#if (eq system.esotericKind "religion")}}
+    <div class="skill-level-box">
+      <label>{{localize 'SCARMARK.Skill.fpFull'}}</label>
+      <input type="number" step="1" name="system.faithPoints" value="{{system.faithPoints}}" />
+    </div>
+    {{/if}}
+  </div>
+
+  {{> "systems/scarmark/templates/item/partials/skill-attributes.hbs"}}
+
+  {{> "systems/scarmark/templates/item/partials/sunsign-bonuses.hbs"}}
+
+  {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="skill-note"}}
+
+  <div class="field skill-description">
+    <h3>{{localize 'SCARMARK.Description'}}</h3>
+    <prose-mirror name="system.description" value="{{system.description}}"></prose-mirror>
+  </div>
+
+</div>

@@ -1,0 +1,72 @@
+{{#> "systems/scarmark/templates/item/partials/details-tab.hbs"}}
+
+  <div class="sm-item-form">
+
+    {{> "systems/scarmark/templates/item/partials/item-basics.hbs" container=true}}
+
+    <fieldset class="sm-box sm-missile">
+      <legend>{{localize 'SCARMARK.Section.missile'}}</legend>
+      <div class="sm-row-3">
+      <div class="field missile-velocity">
+        <label>{{localize 'SCARMARK.Missile.velocity'}}</label>
+        <select name="system.velocity">
+          {{#each missileVelocities as |label key|}}
+          <option value="{{key}}" {{#if (eq ../system.velocity key)}}selected{{/if}}>{{localize label}}</option>
+          {{/each}}
+        </select>
+      </div>
+      {{> "systems/scarmark/templates/item/partials/weapon-durability.hbs"}}
+      <div class="field missile-aspect">
+        <label>{{localize 'SCARMARK.Missile.aspect'}}</label>
+        <select name="system.aspect">
+          {{#each damageAspects as |label key|}}
+          <option value="{{key}}" {{#if (eq ../system.aspect key)}}selected{{/if}}>{{localize label}}</option>
+          {{/each}}
+        </select>
+      </div>
+      </div>
+    </fieldset>
+
+    {{> "systems/scarmark/templates/item/partials/skill-row.hbs" skills=missileSkills label="SCARMARK.Missile.associatedSkill"}}
+
+    <fieldset class="sm-box sm-range">
+    <legend>{{localize 'SCARMARK.Section.range'}}</legend>
+    <div class="missile-range-grid">
+      <span class="grid-corner"></span>
+      <span class="grid-head">{{localize 'SCARMARK.Missile.short'}}</span>
+      <span class="grid-head">{{localize 'SCARMARK.Missile.medium'}}</span>
+      <span class="grid-head">{{localize 'SCARMARK.Missile.long'}}</span>
+      <span class="grid-head">{{localize 'SCARMARK.Missile.extreme'}}</span>
+
+      <span class="grid-label">{{localize 'SCARMARK.Missile.range'}}</span>
+      <input type="number" step="1" name="system.range.short" value="{{system.range.short}}" />
+      <input type="number" step="1" name="system.range.medium" value="{{system.range.medium}}" />
+      <input type="number" step="1" name="system.range.long" value="{{system.range.long}}" />
+      <input type="number" step="1" name="system.range.extreme" value="{{system.range.extreme}}" />
+
+      <span class="grid-label">{{localize 'SCARMARK.Missile.impact'}}</span>
+      <input type="number" step="1" name="system.impact.short" value="{{system.impact.short}}" />
+      <input type="number" step="1" name="system.impact.medium" value="{{system.impact.medium}}" />
+      <input type="number" step="1" name="system.impact.long" value="{{system.impact.long}}" />
+      <input type="number" step="1" name="system.impact.extreme" value="{{system.impact.extreme}}" />
+    </div>
+    </fieldset>
+
+    <fieldset class="sm-box sm-magic">
+      <legend>{{localize 'SCARMARK.Section.magic'}}</legend>
+      <div class="sm-row-2 sm-row-auto">
+      <label class="checkbox-label">
+        <input type="checkbox" name="system.magic" {{#if system.magic}}checked{{/if}} />
+        {{localize 'SCARMARK.Missile.magic'}}
+      </label>
+      <label class="sm-inline-field">
+        {{localize 'SCARMARK.Artifact.class'}}
+        <input type="number" name="system.spellClass" value="{{system.spellClass}}" step="1" min="{{limits.esotericMin}}" max="{{limits.spellClassMax}}" />
+      </label>
+      </div>
+    </fieldset>
+
+    {{> "systems/scarmark/templates/item/partials/notes-field.hbs" cls="note" grow=true}}
+
+  </div>
+{{/"systems/scarmark/templates/item/partials/details-tab.hbs"}}

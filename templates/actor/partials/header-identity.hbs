@@ -1,0 +1,11 @@
+{{!-- Portrait, name and optional subtitle: the left part of every actor sheet header (context: document, subtitleField). --}}
+<img class="portrait" src="{{document.img}}" data-action="editImage" alt="{{document.name}}" />
+
+<div class="header-main">
+  <input class="name-input" type="text" name="name" value="{{document.name}}" placeholder="{{localize 'SCARMARK.NamePlaceholder'}}" />
+  {{#if subtitleField}}
+  <div class="header-subtitle">
+    <input type="text" name="{{subtitleField.name}}" value="{{subtitleField.value}}" placeholder="{{localize subtitleField.label}}" />
+  </div>
+  {{/if}}
+</div>

@@ -1,0 +1,142 @@
+<!-- part: header -->
+<header class="sheet-header item-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="" />
+<input class="name-input" type="text" name="name" value="" placeholder="{SCARMARK.NamePlaceholder}" />
+</header>
+<!-- part: details -->
+<div class="tab details" data-group="primary" data-tab="details">
+<div class="sm-item-form">
+<fieldset class="sm-box item-general">
+<legend>{SCARMARK.Section.general}</legend>
+<div class="item-basics has-container">
+<div class="field in-container">
+<label>{SCARMARK.Container.inContainer}</label>
+<select name="system.container">
+<option value="" selected>{SCARMARK.Container.onPerson}</option>
+</select>
+</div>
+<div class="field quantity">
+<label>{SCARMARK.Quantity}</label>
+<input type="number" step="1" name="system.quantity" value="1" />
+</div>
+<div class="field weight">
+<label>{SCARMARK.WeightKg}</label>
+<input type="number" step="any" name="system.weight" value="0" />
+</div>
+<div class="field value">
+<label>{SCARMARK.Value}</label>
+<input type="number" step="any" name="system.value" value="0" />
+</div>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-missile">
+<legend>{SCARMARK.Section.missile}</legend>
+<div class="sm-row-3">
+<div class="field missile-velocity">
+<label>{SCARMARK.Missile.velocity}</label>
+<select name="system.velocity">
+<option value="low" >{SCARMARK.Missile.velocityLow}</option>
+<option value="high" selected>{SCARMARK.Missile.velocityHigh}</option>
+</select>
+</div>
+<div class="field weapon-quality">
+<label>{SCARMARK.Weapon.quality}</label>
+<input type="number" step="1" min="0" max="16" name="system.quality" value="10" />
+</div>
+<div class="field missile-aspect">
+<label>{SCARMARK.Missile.aspect}</label>
+<select name="system.aspect">
+<option value="blunt" >{SCARMARK.Aspect.blunt}</option>
+<option value="edged" >{SCARMARK.Aspect.edged}</option>
+<option value="piercing" selected>{SCARMARK.Aspect.piercing}</option>
+<option value="fire" >{SCARMARK.Aspect.fire}</option>
+</select>
+</div>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-skill">
+<legend>{SCARMARK.Section.skill}</legend>
+<div class="sm-row-2">
+<div class="field weapon-skill">
+<label>{SCARMARK.Missile.associatedSkill}</label>
+<select name="system.associatedSkill">
+<option value="close" >{SCARMARK.CombatSkill.close}</option>
+<option value="ranged" selected>{SCARMARK.CombatSkill.ranged}</option>
+<option value="unarmed" >{SCARMARK.CombatSkill.unarmed}</option>
+<option value="arcane" >{SCARMARK.CombatSkill.arcane}</option>
+</select>
+</div>
+<div class="field weapon-specialization">
+<label>{SCARMARK.Weapon.specialization}</label>
+<input type="number" step="1" name="system.specialization" value="0" />
+</div>
+</div>
+</fieldset>
+<fieldset class="sm-box sm-range">
+<legend>{SCARMARK.Section.range}</legend>
+<div class="missile-range-grid">
+<span class="grid-corner">
+</span>
+<span class="grid-head">{SCARMARK.Missile.short}</span>
+<span class="grid-head">{SCARMARK.Missile.medium}</span>
+<span class="grid-head">{SCARMARK.Missile.long}</span>
+<span class="grid-head">{SCARMARK.Missile.extreme}</span>
+<span class="grid-label">{SCARMARK.Missile.range}</span>
+<input type="number" step="1" name="system.range.short" value="0" />
+<input type="number" step="1" name="system.range.medium" value="0" />
+<input type="number" step="1" name="system.range.long" value="0" />
+<input type="number" step="1" name="system.range.extreme" value="0" />
+<span class="grid-label">{SCARMARK.Missile.impact}</span>
+<input type="number" step="1" name="system.impact.short" value="0" />
+<input type="number" step="1" name="system.impact.medium" value="0" />
+<input type="number" step="1" name="system.impact.long" value="0" />
+<input type="number" step="1" name="system.impact.extreme" value="0" />
+</div>
+</fieldset>
+<fieldset class="sm-box sm-magic">
+<legend>{SCARMARK.Section.magic}</legend>
+<div class="sm-row-2 sm-row-auto">
+<label class="checkbox-label">
+<input type="checkbox" name="system.magic" /> {SCARMARK.Missile.magic} </label>
+<label class="sm-inline-field"> {SCARMARK.Artifact.class} <input type="number" name="system.spellClass" value="1" step="1" min="1" max="6" />
+</label>
+</div>
+</fieldset>
+<div class="field note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<textarea rows="1" name="system.notes">
+</textarea>
+</div>
+</div>
+</div>
+<!-- part: effects -->
+<div class="tab effects" data-group="primary" data-tab="effects">
+<div class="effects-flat">
+<div class="effects-header">
+<span class="col-name">{SCARMARK.Effect.effect}</span>
+<span class="col-duration">{SCARMARK.Effect.duration}</span>
+<span class="col-changes">{SCARMARK.Effect.changes}</span>
+<a class="add-effect" data-action="createEffect">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="effects-list flat">
+<li class="effect-empty">{SCARMARK.Effect.none}</li>
+</ol>
+</div>
+</div>
+<!-- part: actions -->
+<div class="tab actions" data-group="primary" data-tab="actions">
+<div class="actions-panel" data-actions-path="system.actions">
+<div class="actions-header">
+<span class="col-action">{SCARMARK.Action.colActions}</span>
+<span class="col-when">{SCARMARK.Action.colWhen}</span>
+<a class="add-action" data-action="createAction">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="actions-list">
+<li class="action-empty">{SCARMARK.Action.none}</li>
+</ol>
+</div>
+</div>

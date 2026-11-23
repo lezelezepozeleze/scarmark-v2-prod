@@ -1,0 +1,119 @@
+/* Dialogs opened by Scarmark. They live outside .scarmark, so the --sm-* tokens do not exist here; colours come from core variables or the local ones below. */
+
+/* ---------- Combat helper (attack picker) ---------- */
+.smch {
+  --smch-hover: rgb(120 150 210 / 20%);
+  --smch-divider: rgb(127 127 127 / 18%);
+  --smch-chip: rgb(127 127 127 / 13%);
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  max-height: calc(100vh - 155px);
+  overflow: auto;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.smch .smch-group {
+  min-width: 0;
+  padding-right: 7px;
+  border-right: 1px solid var(--smch-divider);
+}
+
+.smch .smch-group:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.smch .smch-group h3 {
+  margin: 0 0 5px;
+  padding: 4px 3px;
+  border-bottom: 1px solid var(--color-border-light-2);
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.smch .smch-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  min-width: 0;
+  min-height: 28px;
+  margin: 0;
+  padding: 2px 3px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.smch .smch-item:is(:hover, :focus, :focus-visible) {
+  background: var(--smch-hover);
+}
+
+/* Keyboard navigation (helpers/dialog-keyboard.mjs) needs a clear focus ring; the tint alone is too faint. */
+.smch .smch-item:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+
+.smch .smch-item img {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border: 0;
+}
+
+.smch .smch-name {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.smch .smch-aspects {
+  flex: none;
+  margin-left: 1px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: var(--smch-chip);
+  font-size: 10px;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.smch .smch-aspects:empty {
+  display: none;
+}
+
+.smch .smch-stored {
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+
+/* ---------- Tactics window and its button in the combat helper header ---------- */
+.sm-tactics summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.sm-tactics p {
+  margin: 2px 0 8px 14px;
+  white-space: pre-line;
+}
+
+.sm-tactics-open {
+  flex: none;
+  width: auto;
+  padding: 0 6px;
+  font-size: 12px;
+}

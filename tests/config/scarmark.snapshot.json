@@ -1,0 +1,1584 @@
+{
+  "attributes": {
+    "str": {
+      "label": "SCARMARK.Attribute.str",
+      "row": 1
+    },
+    "sta": {
+      "label": "SCARMARK.Attribute.sta",
+      "row": 1
+    },
+    "dex": {
+      "label": "SCARMARK.Attribute.dex",
+      "row": 1
+    },
+    "agl": {
+      "label": "SCARMARK.Attribute.agl",
+      "row": 1
+    },
+    "wil": {
+      "label": "SCARMARK.Attribute.wil",
+      "row": 1
+    },
+    "per": {
+      "label": "SCARMARK.Attribute.per",
+      "row": 2
+    },
+    "pre": {
+      "label": "SCARMARK.Attribute.pre",
+      "row": 2
+    },
+    "int": {
+      "label": "SCARMARK.Attribute.int",
+      "row": 2
+    },
+    "spi": {
+      "label": "SCARMARK.Attribute.spi",
+      "row": 2
+    }
+  },
+  "characterOnlyAttributes": [
+    "pre"
+  ],
+  "characterAttributeKeys": [
+    "str",
+    "sta",
+    "dex",
+    "agl",
+    "wil",
+    "per",
+    "pre",
+    "int",
+    "spi"
+  ],
+  "creatureAttributeKeys": [
+    "str",
+    "sta",
+    "dex",
+    "agl",
+    "wil",
+    "per",
+    "int",
+    "spi"
+  ],
+  "legacyAttributeMap": {
+    "eye": "per",
+    "hrg": "per",
+    "sml": "per",
+    "voi": "pre",
+    "com": "pre",
+    "aur": "spi"
+  },
+  "SKILL_PENALTY_PER_POINT": 5,
+  "FATIGUE_STEP": 2,
+  "LOAD_STEP": 0.2,
+  "LOAD_MAX_STEPS": 5,
+  "LOAD_MAX_FACTOR": 2,
+  "WOUND_ATTRIBUTES": [
+    "dex",
+    "agl"
+  ],
+  "CONDITION_BANDS": [
+    {
+      "max": 0.25,
+      "penalty": 2,
+      "key": "critical"
+    },
+    {
+      "max": 0.5,
+      "penalty": 1,
+      "key": "wounded"
+    }
+  ],
+  "SHOCK_THRESHOLD": 0.25,
+  "ESL_CAP": 95,
+  "personalities": {
+    "lawAbiding": "SCARMARK.Personality.lawAbiding",
+    "practical": "SCARMARK.Personality.practical",
+    "opportunistic": "SCARMARK.Personality.opportunistic",
+    "corruptible": "SCARMARK.Personality.corruptible",
+    "vicious": "SCARMARK.Personality.vicious"
+  },
+  "sunsigns": {
+    "capricornus": "SCARMARK.Sunsign.capricornus",
+    "aquarius": "SCARMARK.Sunsign.aquarius",
+    "pisces": "SCARMARK.Sunsign.pisces",
+    "aries": "SCARMARK.Sunsign.aries",
+    "taurus": "SCARMARK.Sunsign.taurus",
+    "gemini": "SCARMARK.Sunsign.gemini",
+    "cancer": "SCARMARK.Sunsign.cancer",
+    "leo": "SCARMARK.Sunsign.leo",
+    "virgo": "SCARMARK.Sunsign.virgo",
+    "libra": "SCARMARK.Sunsign.libra",
+    "scorpius": "SCARMARK.Sunsign.scorpius",
+    "sagittarius": "SCARMARK.Sunsign.sagittarius"
+  },
+  "months": {
+    "jan": {
+      "label": "SCARMARK.Month.jan",
+      "sunsign": "capricornus"
+    },
+    "feb": {
+      "label": "SCARMARK.Month.feb",
+      "sunsign": "aquarius"
+    },
+    "mar": {
+      "label": "SCARMARK.Month.mar",
+      "sunsign": "pisces"
+    },
+    "apr": {
+      "label": "SCARMARK.Month.apr",
+      "sunsign": "aries"
+    },
+    "may": {
+      "label": "SCARMARK.Month.may",
+      "sunsign": "taurus"
+    },
+    "jun": {
+      "label": "SCARMARK.Month.jun",
+      "sunsign": "gemini"
+    },
+    "jul": {
+      "label": "SCARMARK.Month.jul",
+      "sunsign": "cancer"
+    },
+    "aug": {
+      "label": "SCARMARK.Month.aug",
+      "sunsign": "leo"
+    },
+    "sep": {
+      "label": "SCARMARK.Month.sep",
+      "sunsign": "virgo"
+    },
+    "oct": {
+      "label": "SCARMARK.Month.oct",
+      "sunsign": "libra"
+    },
+    "nov": {
+      "label": "SCARMARK.Month.nov",
+      "sunsign": "scorpius"
+    },
+    "dec": {
+      "label": "SCARMARK.Month.dec",
+      "sunsign": "sagittarius"
+    }
+  },
+  "traitCategories": {
+    "physical": "SCARMARK.Trait.physical",
+    "psyche": "SCARMARK.Trait.psyche"
+  },
+  "skillCategories": [
+    "skill",
+    "combat",
+    "esoterics"
+  ],
+  "damageAspects": {
+    "blunt": "SCARMARK.Aspect.blunt",
+    "edged": "SCARMARK.Aspect.edged",
+    "piercing": "SCARMARK.Aspect.piercing",
+    "fire": "SCARMARK.Aspect.fire"
+  },
+  "combatSkills": {
+    "close": "SCARMARK.CombatSkill.close",
+    "ranged": "SCARMARK.CombatSkill.ranged",
+    "unarmed": "SCARMARK.CombatSkill.unarmed",
+    "arcane": "SCARMARK.CombatSkill.arcane"
+  },
+  "weaponSkills": {
+    "close": "SCARMARK.CombatSkill.close",
+    "unarmed": "SCARMARK.CombatSkill.unarmed"
+  },
+  "missileSkills": {
+    "close": "SCARMARK.CombatSkill.close",
+    "ranged": "SCARMARK.CombatSkill.ranged",
+    "unarmed": "SCARMARK.CombatSkill.unarmed",
+    "arcane": "SCARMARK.CombatSkill.arcane"
+  },
+  "effectKeys": {
+    "system.mods.meleeAttack": "Melee Attack (all melee ASL)",
+    "system.mods.meleeDefense": "Melee Defense (all melee DSL)",
+    "system.mods.missileAttack": "Missile Attack (all missile ASL)",
+    "system.mods.incomingMelee": "Melee attacks AGAINST this actor (attacker ASL; Prone +20 / Pinned +30)",
+    "system.mods.incomingMissile": "Missile attacks AGAINST this actor (attacker ASL; Prone/Pinned −)",
+    "system.mods.skills.skill": "Skills (general category) EML",
+    "system.mods.skills.combat": "Combat skills EML",
+    "system.mods.skills.esoterics": "Esoterics skills (Arcane, Religion) EML",
+    "system.mods.skills.psionic": "Psionic talents EML",
+    "system.mods.injury": "Wound Level / WL (simulated wound; lowers Condition)",
+    "system.mods.endurance": "Endurance",
+    "system.mods.outnumbered": "Outnumbered (# of attackers; 2 = defense −20, 3+ = −30)",
+    "system.mods.defense": "Defense (all Block / Dodge / Riposte / Counterattack rolls; Stunned −30)",
+    "system.mods.impact": "Impact (+N to Close / Unarmed Combat damage strikes)",
+    "system.resources.fatigue": "Fatigue (base)"
+  },
+  "missileVelocities": {
+    "low": "SCARMARK.Missile.velocityLow",
+    "high": "SCARMARK.Missile.velocityHigh"
+  },
+  "vitalWounds": {
+    "head": {
+      "4": "out",
+      "5": "dying"
+    },
+    "neck": {
+      "4": "out",
+      "5": "dying"
+    },
+    "chest": {
+      "4": "out",
+      "5": "dying"
+    },
+    "belly": {
+      "4": "out",
+      "5": "dying"
+    }
+  },
+  "vitalStates": {
+    "out": "SCARMARK.Injury.vitalOut",
+    "dying": "SCARMARK.Injury.vitalDying"
+  },
+  "woundLevels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "mendRateMax": 6,
+  "mendRates": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "injurySeverities": {
+    "light": "SCARMARK.Injury.severityLight",
+    "heavy": "SCARMARK.Injury.severityHeavy",
+    "severe": "SCARMARK.Injury.severitySevere",
+    "dire": "SCARMARK.Injury.severityDire",
+    "mortal": "SCARMARK.Injury.severityMortal"
+  },
+  "injuryTypes": {
+    "blunt": {
+      "1": {
+        "name": "Bruise",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "2": {
+        "name": "Contusion",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "3": {
+        "name": "Fracture",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "4": {
+        "name": "Crush",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "5": {
+        "name": "Mortal Crush",
+        "heavyBleeding": false,
+        "amputation": false
+      }
+    },
+    "edged": {
+      "1": {
+        "name": "Light Cut",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "2": {
+        "name": "Heavy Cut",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "3": {
+        "name": "Severe Cut",
+        "heavyBleeding": true,
+        "amputation": false
+      },
+      "4": {
+        "name": "Dire Cut",
+        "heavyBleeding": true,
+        "amputation": true
+      },
+      "5": {
+        "name": "Mortal Cut",
+        "heavyBleeding": true,
+        "amputation": true
+      }
+    },
+    "piercing": {
+      "1": {
+        "name": "Light Stab",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "2": {
+        "name": "Heavy Stab",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "3": {
+        "name": "Severe Stab",
+        "heavyBleeding": true,
+        "amputation": false
+      },
+      "4": {
+        "name": "Dire Stab",
+        "heavyBleeding": true,
+        "amputation": false
+      },
+      "5": {
+        "name": "Mortal Stab",
+        "heavyBleeding": true,
+        "amputation": false
+      }
+    },
+    "fire": {
+      "1": {
+        "name": "Light Burn",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "2": {
+        "name": "Heavy Burn",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "3": {
+        "name": "Severe Burn",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "4": {
+        "name": "Dire Burn",
+        "heavyBleeding": false,
+        "amputation": false
+      },
+      "5": {
+        "name": "Mortal Burn",
+        "heavyBleeding": false,
+        "amputation": false
+      }
+    }
+  },
+  "STUN_WOUND_LEVELS": [
+    2,
+    3
+  ],
+  "STUN_TARGET": 50,
+  "STUNNED_DURATION": {
+    "value": 1,
+    "units": "rounds",
+    "expiry": "turnStart"
+  },
+  "armorLocations": {
+    "head": {
+      "label": "SCARMARK.ArmorLocation.type.head",
+      "aim": {
+        "high": 300,
+        "medium": 100,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": false
+      }
+    },
+    "neck": {
+      "label": "SCARMARK.ArmorLocation.type.neck",
+      "aim": {
+        "high": 120,
+        "medium": 40,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": true
+      }
+    },
+    "shoulder": {
+      "label": "SCARMARK.ArmorLocation.type.shoulder",
+      "aim": {
+        "high": 300,
+        "medium": 100,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": true,
+        "stumble": false,
+        "amputate": false
+      }
+    },
+    "arm": {
+      "label": "SCARMARK.ArmorLocation.type.arm",
+      "aim": {
+        "high": 360,
+        "medium": 120,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": true,
+        "stumble": false,
+        "amputate": true
+      }
+    },
+    "hand": {
+      "label": "SCARMARK.ArmorLocation.type.hand",
+      "aim": {
+        "high": 180,
+        "medium": 60,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": true,
+        "stumble": false,
+        "amputate": true
+      }
+    },
+    "chest": {
+      "label": "SCARMARK.ArmorLocation.type.chest",
+      "aim": {
+        "high": 160,
+        "medium": 160,
+        "low": 160
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": false
+      }
+    },
+    "belly": {
+      "label": "SCARMARK.ArmorLocation.type.belly",
+      "aim": {
+        "high": 120,
+        "medium": 120,
+        "low": 120
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": false
+      }
+    },
+    "hip": {
+      "label": "SCARMARK.ArmorLocation.type.hip",
+      "aim": {
+        "high": 0,
+        "medium": 60,
+        "low": 180
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": true,
+        "amputate": false
+      }
+    },
+    "thigh": {
+      "label": "SCARMARK.ArmorLocation.type.thigh",
+      "aim": {
+        "high": 0,
+        "medium": 120,
+        "low": 360
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": true,
+        "amputate": true
+      }
+    },
+    "shin": {
+      "label": "SCARMARK.ArmorLocation.type.shin",
+      "aim": {
+        "high": 0,
+        "medium": 120,
+        "low": 360
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": true,
+        "amputate": true
+      }
+    },
+    "wing": {
+      "label": "SCARMARK.ArmorLocation.type.wing",
+      "aim": {
+        "high": 60,
+        "medium": 20,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": true,
+        "stumble": false,
+        "amputate": true
+      }
+    },
+    "tentacle": {
+      "label": "SCARMARK.ArmorLocation.type.tentacle",
+      "aim": {
+        "high": 60,
+        "medium": 20,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": true,
+        "stumble": false,
+        "amputate": true
+      }
+    },
+    "tail": {
+      "label": "SCARMARK.ArmorLocation.type.tail",
+      "aim": {
+        "high": 0,
+        "medium": 20,
+        "low": 60
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": true,
+        "amputate": true
+      }
+    },
+    "creatureHead": {
+      "label": "SCARMARK.ArmorLocation.type.creatureHead",
+      "aim": {
+        "high": 390,
+        "medium": 130,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": false
+      }
+    },
+    "creatureNeck": {
+      "label": "SCARMARK.ArmorLocation.type.creatureNeck",
+      "aim": {
+        "high": 270,
+        "medium": 90,
+        "low": 0
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": true
+      }
+    },
+    "creatureForeLeg": {
+      "label": "SCARMARK.ArmorLocation.type.creatureForeLeg",
+      "aim": {
+        "high": 0,
+        "medium": 80,
+        "low": 240
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": true,
+        "amputate": true
+      }
+    },
+    "creatureHindLeg": {
+      "label": "SCARMARK.ArmorLocation.type.creatureHindLeg",
+      "aim": {
+        "high": 0,
+        "medium": 80,
+        "low": 240
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 1,
+        "t9": 2,
+        "t13": 3,
+        "t17": 4
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": true,
+        "amputate": true
+      }
+    },
+    "creatureChest": {
+      "label": "SCARMARK.ArmorLocation.type.creatureChest",
+      "aim": {
+        "high": 250,
+        "medium": 250,
+        "low": 250
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": false
+      }
+    },
+    "creatureBelly": {
+      "label": "SCARMARK.ArmorLocation.type.creatureBelly",
+      "aim": {
+        "high": 250,
+        "medium": 250,
+        "low": 250
+      },
+      "injury": {
+        "t1": 1,
+        "t5": 2,
+        "t9": 3,
+        "t13": 4,
+        "t17": 5
+      },
+      "risk": {
+        "fumble": false,
+        "stumble": false,
+        "amputate": false
+      }
+    }
+  },
+  "legacyLocationMap": {
+    "skull": "head",
+    "face": "head",
+    "upperArm": "arm",
+    "elbow": "arm",
+    "forearm": "arm",
+    "thorax": "chest",
+    "abdomen": "belly",
+    "groin": "belly",
+    "knee": "shin",
+    "calf": "shin",
+    "foot": "shin",
+    "creatureThorax": "creatureChest",
+    "creatureAbdomen": "creatureBelly"
+  },
+  "fumbleTestLocations": {
+    "hand": 1,
+    "arm": 3
+  },
+  "stumbleTestLocations": {
+    "thigh": 1,
+    "shin": 1
+  },
+  "armorPiercingNames": {
+    "regex": "bodkin",
+    "flags": "i"
+  },
+  "__fn": {
+    "keys": [
+      "CONDITION_BANDS",
+      "ESL_CAP",
+      "FATIGUE_STEP",
+      "LOAD_MAX_FACTOR",
+      "LOAD_MAX_STEPS",
+      "LOAD_STEP",
+      "SHOCK_THRESHOLD",
+      "SKILL_PENALTY_PER_POINT",
+      "STUNNED_DURATION",
+      "STUN_TARGET",
+      "STUN_WOUND_LEVELS",
+      "WOUND_ATTRIBUTES",
+      "armorLocations",
+      "armorPiercingNames",
+      "attributes",
+      "characterAttributeKeys",
+      "characterOnlyAttributes",
+      "combatSkills",
+      "covers",
+      "creatureAttributeKeys",
+      "damageAspects",
+      "effectKeys",
+      "fumbleTestLocations",
+      "injuryFor",
+      "injurySeverities",
+      "injuryTypes",
+      "legacyAttributeMap",
+      "legacyLocationMap",
+      "locationKey",
+      "mendLabel",
+      "mendRateMax",
+      "mendRates",
+      "missileSkills",
+      "missileVelocities",
+      "months",
+      "personalities",
+      "rangedBlockShields",
+      "severityKey",
+      "skillCategories",
+      "spellLevelPenalty",
+      "stumbleTestLocations",
+      "stunProtectionBonus",
+      "sunsigns",
+      "traitCategories",
+      "vitalStates",
+      "vitalWoundFor",
+      "vitalWounds",
+      "weaponSkills",
+      "weightUnitsPerKg",
+      "woundLevels"
+    ],
+    "vitalWoundFor": [
+      [
+        "head",
+        0,
+        ""
+      ],
+      [
+        "head",
+        3,
+        ""
+      ],
+      [
+        "head",
+        4,
+        "out"
+      ],
+      [
+        "head",
+        5,
+        "dying"
+      ],
+      [
+        "head",
+        6,
+        "dying"
+      ],
+      [
+        "neck",
+        0,
+        ""
+      ],
+      [
+        "neck",
+        3,
+        ""
+      ],
+      [
+        "neck",
+        4,
+        "out"
+      ],
+      [
+        "neck",
+        5,
+        "dying"
+      ],
+      [
+        "neck",
+        6,
+        "dying"
+      ],
+      [
+        "chest",
+        0,
+        ""
+      ],
+      [
+        "chest",
+        3,
+        ""
+      ],
+      [
+        "chest",
+        4,
+        "out"
+      ],
+      [
+        "chest",
+        5,
+        "dying"
+      ],
+      [
+        "chest",
+        6,
+        "dying"
+      ],
+      [
+        "belly",
+        0,
+        ""
+      ],
+      [
+        "belly",
+        3,
+        ""
+      ],
+      [
+        "belly",
+        4,
+        "out"
+      ],
+      [
+        "belly",
+        5,
+        "dying"
+      ],
+      [
+        "belly",
+        6,
+        "dying"
+      ],
+      [
+        "arm",
+        0,
+        ""
+      ],
+      [
+        "arm",
+        3,
+        ""
+      ],
+      [
+        "arm",
+        4,
+        ""
+      ],
+      [
+        "arm",
+        5,
+        ""
+      ],
+      [
+        "arm",
+        6,
+        ""
+      ],
+      [
+        "skull",
+        0,
+        ""
+      ],
+      [
+        "skull",
+        3,
+        ""
+      ],
+      [
+        "skull",
+        4,
+        "out"
+      ],
+      [
+        "skull",
+        5,
+        "dying"
+      ],
+      [
+        "skull",
+        6,
+        "dying"
+      ],
+      [
+        "thorax",
+        0,
+        ""
+      ],
+      [
+        "thorax",
+        3,
+        ""
+      ],
+      [
+        "thorax",
+        4,
+        "out"
+      ],
+      [
+        "thorax",
+        5,
+        "dying"
+      ],
+      [
+        "thorax",
+        6,
+        "dying"
+      ],
+      [
+        "creatureThorax",
+        0,
+        ""
+      ],
+      [
+        "creatureThorax",
+        3,
+        ""
+      ],
+      [
+        "creatureThorax",
+        4,
+        ""
+      ],
+      [
+        "creatureThorax",
+        5,
+        ""
+      ],
+      [
+        "creatureThorax",
+        6,
+        ""
+      ],
+      [
+        "nope",
+        0,
+        ""
+      ],
+      [
+        "nope",
+        3,
+        ""
+      ],
+      [
+        "nope",
+        4,
+        ""
+      ],
+      [
+        "nope",
+        5,
+        ""
+      ],
+      [
+        "nope",
+        6,
+        ""
+      ]
+    ],
+    "severityKey": [
+      "light",
+      "light",
+      "light",
+      "heavy",
+      "severe",
+      "dire",
+      "mortal",
+      "mortal"
+    ],
+    "injuryFor": [
+      [
+        "blunt",
+        0,
+        {
+          "name": "Bruise",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "blunt",
+        1,
+        {
+          "name": "Bruise",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "blunt",
+        3,
+        {
+          "name": "Fracture",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "blunt",
+        5,
+        {
+          "name": "Mortal Crush",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "blunt",
+        7,
+        {
+          "name": "Mortal Crush",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "edged",
+        0,
+        {
+          "name": "Light Cut",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "edged",
+        1,
+        {
+          "name": "Light Cut",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "edged",
+        3,
+        {
+          "name": "Severe Cut",
+          "heavyBleeding": true,
+          "amputation": false
+        }
+      ],
+      [
+        "edged",
+        5,
+        {
+          "name": "Mortal Cut",
+          "heavyBleeding": true,
+          "amputation": true
+        }
+      ],
+      [
+        "edged",
+        7,
+        {
+          "name": "Mortal Cut",
+          "heavyBleeding": true,
+          "amputation": true
+        }
+      ],
+      [
+        "piercing",
+        0,
+        {
+          "name": "Light Stab",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "piercing",
+        1,
+        {
+          "name": "Light Stab",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "piercing",
+        3,
+        {
+          "name": "Severe Stab",
+          "heavyBleeding": true,
+          "amputation": false
+        }
+      ],
+      [
+        "piercing",
+        5,
+        {
+          "name": "Mortal Stab",
+          "heavyBleeding": true,
+          "amputation": false
+        }
+      ],
+      [
+        "piercing",
+        7,
+        {
+          "name": "Mortal Stab",
+          "heavyBleeding": true,
+          "amputation": false
+        }
+      ],
+      [
+        "fire",
+        0,
+        {
+          "name": "Light Burn",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "fire",
+        1,
+        {
+          "name": "Light Burn",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "fire",
+        3,
+        {
+          "name": "Severe Burn",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "fire",
+        5,
+        {
+          "name": "Mortal Burn",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "fire",
+        7,
+        {
+          "name": "Mortal Burn",
+          "heavyBleeding": false,
+          "amputation": false
+        }
+      ],
+      [
+        "x",
+        0,
+        null
+      ],
+      [
+        "x",
+        1,
+        null
+      ],
+      [
+        "x",
+        3,
+        null
+      ],
+      [
+        "x",
+        5,
+        null
+      ],
+      [
+        "x",
+        7,
+        null
+      ]
+    ],
+    "mendLabel": [
+      "MRN",
+      "1",
+      "6",
+      "3",
+      "MRN",
+      "MRN"
+    ],
+    "locationKey": [
+      "head",
+      "neck",
+      "chest",
+      "belly",
+      "arm",
+      "head",
+      "chest",
+      "creatureChest",
+      "nope"
+    ],
+    "covers": [
+      [
+        "head",
+        "head",
+        true
+      ],
+      [
+        "head",
+        "arm",
+        false
+      ],
+      [
+        "head",
+        "chest",
+        false
+      ],
+      [
+        "head",
+        "belly",
+        false
+      ],
+      [
+        "head",
+        "shin",
+        false
+      ],
+      [
+        "neck",
+        "head",
+        false
+      ],
+      [
+        "neck",
+        "arm",
+        false
+      ],
+      [
+        "neck",
+        "chest",
+        false
+      ],
+      [
+        "neck",
+        "belly",
+        false
+      ],
+      [
+        "neck",
+        "shin",
+        false
+      ],
+      [
+        "chest",
+        "head",
+        false
+      ],
+      [
+        "chest",
+        "arm",
+        false
+      ],
+      [
+        "chest",
+        "chest",
+        true
+      ],
+      [
+        "chest",
+        "belly",
+        false
+      ],
+      [
+        "chest",
+        "shin",
+        false
+      ],
+      [
+        "belly",
+        "head",
+        false
+      ],
+      [
+        "belly",
+        "arm",
+        false
+      ],
+      [
+        "belly",
+        "chest",
+        false
+      ],
+      [
+        "belly",
+        "belly",
+        true
+      ],
+      [
+        "belly",
+        "shin",
+        false
+      ],
+      [
+        "arm",
+        "head",
+        false
+      ],
+      [
+        "arm",
+        "arm",
+        true
+      ],
+      [
+        "arm",
+        "chest",
+        false
+      ],
+      [
+        "arm",
+        "belly",
+        false
+      ],
+      [
+        "arm",
+        "shin",
+        false
+      ],
+      [
+        "skull",
+        "head",
+        true
+      ],
+      [
+        "skull",
+        "arm",
+        false
+      ],
+      [
+        "skull",
+        "chest",
+        false
+      ],
+      [
+        "skull",
+        "belly",
+        false
+      ],
+      [
+        "skull",
+        "shin",
+        false
+      ],
+      [
+        "thorax",
+        "head",
+        false
+      ],
+      [
+        "thorax",
+        "arm",
+        false
+      ],
+      [
+        "thorax",
+        "chest",
+        true
+      ],
+      [
+        "thorax",
+        "belly",
+        false
+      ],
+      [
+        "thorax",
+        "shin",
+        false
+      ],
+      [
+        "creatureThorax",
+        "head",
+        false
+      ],
+      [
+        "creatureThorax",
+        "arm",
+        false
+      ],
+      [
+        "creatureThorax",
+        "chest",
+        false
+      ],
+      [
+        "creatureThorax",
+        "belly",
+        false
+      ],
+      [
+        "creatureThorax",
+        "shin",
+        false
+      ],
+      [
+        "nope",
+        "head",
+        false
+      ],
+      [
+        "nope",
+        "arm",
+        false
+      ],
+      [
+        "nope",
+        "chest",
+        false
+      ],
+      [
+        "nope",
+        "belly",
+        false
+      ],
+      [
+        "nope",
+        "shin",
+        false
+      ],
+      [
+        null,
+        "head",
+        false
+      ]
+    ],
+    "stun": [
+      0,
+      0,
+      0,
+      10,
+      10,
+      10,
+      20,
+      20
+    ],
+    "spell": [
+      0,
+      0,
+      0,
+      5,
+      25,
+      10,
+      30
+    ],
+    "shields": [
+      [
+        "Round Shield",
+        "Kite Shield",
+        "Heater Shield",
+        "Pavise",
+        "Buckler"
+      ],
+      [
+        "Round Shield",
+        "Kite Shield",
+        "Heater Shield",
+        "Pavise"
+      ],
+      [
+        "Round Shield",
+        "Kite Shield",
+        "Heater Shield",
+        "Pavise"
+      ]
+    ],
+    "weightUnitsPerKg": 2
+  }
+}

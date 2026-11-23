@@ -1,0 +1,10 @@
+{
+  "name": "Rest",
+  "type": "script",
+  "scope": "global",
+  "img": "icons/svg/sleep.svg",
+  "command": "/**\n * Scarmark â€” Rest\n * HOW TO USE: paste this entire file into a Script macro, select one or more\n * tokens you own (works for linked and unlinked tokens) and Execute.\n * Sets the stored Fatigue of every selected token to 0 and posts one chat\n * line. It does not touch Will/Spirit Capacity (use Recharge for those), wounds\n * or game time; confirm at the table that the rest actually took place.\n */\n(async () => {\n  const tokens = (canvas.tokens?.controlled ?? []).filter(t => t.actor?.isOwner);\n  if (!tokens.length) return ui.notifications.warn(\"Select at least one token you own.\");\n  const lines = [];\n  for (const token of tokens) {\n    const actor = token.actor;\n    const before = actor._source?.system?.resources?.fatigue ?? 0;\n    await actor.update({ \"system.resources.fatigue\": 0 });\n    lines.push(`${foundry.utils.escapeHTML(token.name)}: Fatigue ${before} &rarr; 0`);\n  }\n  await ChatMessage.create({\n    speaker: ChatMessage.getSpeaker(),\n    content: `<div class=\"scarmark-card\"><strong>Rest</strong><p>${lines.join(\"<br>\")}</p></div>`\n  });\n})();\n",
+  "ownership": {
+    "default": 0
+  }
+}

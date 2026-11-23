@@ -1,0 +1,884 @@
+[
+  {
+    "id": "skill-normal",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 30
+    },
+    "expected": {
+      "sb": 12,
+      "esl": 30
+    }
+  },
+  {
+    "id": "skill-round-up",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "dex": {
+          "base": 13
+        },
+        "agl": {
+          "base": 13
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 10
+    },
+    "expected": {
+      "sb": 13,
+      "esl": 10
+    }
+  },
+  {
+    "id": "skill-round-down",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "dex": {
+          "base": 12
+        },
+        "agl": {
+          "base": 13
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 10
+    },
+    "expected": {
+      "sb": 12,
+      "esl": 10
+    }
+  },
+  {
+    "id": "skill-same-attribute-thrice",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "int",
+        "int",
+        "int"
+      ],
+      "level": 45
+    },
+    "expected": {
+      "sb": 15,
+      "esl": 45
+    }
+  },
+  {
+    "id": "skill-missing-attribute-counts-0",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "pre"
+      ],
+      "level": 20
+    },
+    "expected": {
+      "sb": 9,
+      "esl": 20
+    }
+  },
+  {
+    "id": "skill-attribute-without-base",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "dex": {},
+        "agl": {
+          "base": 10
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 20
+    },
+    "expected": {
+      "sb": 7,
+      "esl": 20
+    }
+  },
+  {
+    "id": "skill-all-zero",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 0
+        },
+        "dex": {
+          "base": 0
+        },
+        "agl": {
+          "base": 0
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 0
+    },
+    "expected": {
+      "sb": 0,
+      "esl": 0
+    }
+  },
+  {
+    "id": "skill-high-values",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 30
+        },
+        "dex": {
+          "base": 29
+        },
+        "agl": {
+          "base": 31
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 120
+    },
+    "expected": {
+      "sb": 30,
+      "esl": 120
+    }
+  },
+  {
+    "id": "skill-level-1",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "wil",
+        "per",
+        "spi"
+      ],
+      "level": 1
+    },
+    "expected": {
+      "sb": 10,
+      "esl": 1
+    }
+  },
+  {
+    "id": "skill-negative-level",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "wil",
+        "per",
+        "spi"
+      ],
+      "level": -5
+    },
+    "expected": {
+      "sb": 10,
+      "esl": 0
+    }
+  },
+  {
+    "id": "skill-missing-level",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "wil",
+        "per",
+        "spi"
+      ]
+    },
+    "expected": {
+      "sb": 10,
+      "esl": "NaN"
+    }
+  },
+  {
+    "id": "skill-not-embedded",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": null,
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 25
+    },
+    "expected": {
+      "sb": 0,
+      "esl": 25
+    }
+  },
+  {
+    "id": "skill-negative-attribute",
+    "source": "executed",
+    "input": {
+      "itemType": "skill",
+      "attributes": {
+        "str": {
+          "base": -3
+        },
+        "dex": {
+          "base": 6
+        },
+        "agl": {
+          "base": 6
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 5
+    },
+    "expected": {
+      "sb": 3,
+      "esl": 5
+    }
+  },
+  {
+    "id": "psionic-normal",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 30
+    },
+    "expected": {
+      "sb": 12,
+      "esl": 30
+    }
+  },
+  {
+    "id": "psionic-round-up",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "dex": {
+          "base": 13
+        },
+        "agl": {
+          "base": 13
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 10
+    },
+    "expected": {
+      "sb": 13,
+      "esl": 10
+    }
+  },
+  {
+    "id": "psionic-round-down",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "dex": {
+          "base": 12
+        },
+        "agl": {
+          "base": 13
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 10
+    },
+    "expected": {
+      "sb": 12,
+      "esl": 10
+    }
+  },
+  {
+    "id": "psionic-same-attribute-thrice",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "int",
+        "int",
+        "int"
+      ],
+      "level": 45
+    },
+    "expected": {
+      "sb": 15,
+      "esl": 45
+    }
+  },
+  {
+    "id": "psionic-missing-attribute-counts-0",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "pre"
+      ],
+      "level": 20
+    },
+    "expected": {
+      "sb": 9,
+      "esl": 20
+    }
+  },
+  {
+    "id": "psionic-attribute-without-base",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "dex": {},
+        "agl": {
+          "base": 10
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 20
+    },
+    "expected": {
+      "sb": 7,
+      "esl": 20
+    }
+  },
+  {
+    "id": "psionic-all-zero",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 0
+        },
+        "dex": {
+          "base": 0
+        },
+        "agl": {
+          "base": 0
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 0
+    },
+    "expected": {
+      "sb": 0,
+      "esl": 0
+    }
+  },
+  {
+    "id": "psionic-high-values",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 30
+        },
+        "dex": {
+          "base": 29
+        },
+        "agl": {
+          "base": 31
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 120
+    },
+    "expected": {
+      "sb": 30,
+      "esl": 120
+    }
+  },
+  {
+    "id": "psionic-level-1",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "wil",
+        "per",
+        "spi"
+      ],
+      "level": 1
+    },
+    "expected": {
+      "sb": 10,
+      "esl": 1
+    }
+  },
+  {
+    "id": "psionic-negative-level",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "wil",
+        "per",
+        "spi"
+      ],
+      "level": -5
+    },
+    "expected": {
+      "sb": 10,
+      "esl": 0
+    }
+  },
+  {
+    "id": "psionic-missing-level",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": 12
+        },
+        "sta": {
+          "base": 11
+        },
+        "dex": {
+          "base": 14
+        },
+        "agl": {
+          "base": 10
+        },
+        "wil": {
+          "base": 13
+        },
+        "per": {
+          "base": 9
+        },
+        "pre": {
+          "base": 8
+        },
+        "int": {
+          "base": 15
+        },
+        "spi": {
+          "base": 7
+        }
+      },
+      "skillAttributes": [
+        "wil",
+        "per",
+        "spi"
+      ]
+    },
+    "expected": {
+      "sb": 10,
+      "esl": "NaN"
+    }
+  },
+  {
+    "id": "psionic-not-embedded",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": null,
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 25
+    },
+    "expected": {
+      "sb": 0,
+      "esl": 25
+    }
+  },
+  {
+    "id": "psionic-negative-attribute",
+    "source": "executed",
+    "input": {
+      "itemType": "psionic",
+      "attributes": {
+        "str": {
+          "base": -3
+        },
+        "dex": {
+          "base": 6
+        },
+        "agl": {
+          "base": 6
+        }
+      },
+      "skillAttributes": [
+        "str",
+        "dex",
+        "agl"
+      ],
+      "level": 5
+    },
+    "expected": {
+      "sb": 3,
+      "esl": 5
+    }
+  }
+]

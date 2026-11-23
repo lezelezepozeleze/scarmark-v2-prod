@@ -1,0 +1,1109 @@
+[
+  {
+    "id": "spellRoll-esl-60-level-1",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 1
+    },
+    "expected": {
+      "target": 60
+    }
+  },
+  {
+    "id": "spellRoll-esl-60-level-2",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 2
+    },
+    "expected": {
+      "target": 55
+    }
+  },
+  {
+    "id": "spellRoll-esl-60-level-3",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 3
+    },
+    "expected": {
+      "target": 50
+    }
+  },
+  {
+    "id": "spellRoll-esl-60-level-4",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 4
+    },
+    "expected": {
+      "target": 45
+    }
+  },
+  {
+    "id": "spellRoll-esl-60-level-5",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 5
+    },
+    "expected": {
+      "target": 40
+    }
+  },
+  {
+    "id": "spellRoll-esl-60-level-6",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 6
+    },
+    "expected": {
+      "target": 35
+    }
+  },
+  {
+    "id": "spellRoll-level-0",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 0
+    },
+    "expected": {
+      "target": 60
+    }
+  },
+  {
+    "id": "spellRoll-level-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana"
+    },
+    "expected": {
+      "target": 60
+    }
+  },
+  {
+    "id": "spellRoll-esl-120-level-1-above-cap",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 120
+      },
+      "magicType": "Arcana",
+      "level": 1
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "spellRoll-esl-100-level-2",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 100
+      },
+      "magicType": "Arcana",
+      "level": 2
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "spellRoll-esl-10-level-6-floor-0",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 10
+      },
+      "magicType": "Arcana",
+      "level": 6
+    },
+    "expected": {
+      "target": 0
+    }
+  },
+  {
+    "id": "spellRoll-esl-0-level-1",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 0
+      },
+      "magicType": "Arcana",
+      "level": 1
+    },
+    "expected": {
+      "target": 0
+    }
+  },
+  {
+    "id": "spellRoll-name-case-insensitive",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 55
+      },
+      "magicType": "  arcana ",
+      "level": 2
+    },
+    "expected": {
+      "target": 50
+    }
+  },
+  {
+    "id": "spellRoll-only-skill-of-category-used",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 55
+      },
+      "magicType": "Other School",
+      "level": 2
+    },
+    "expected": {
+      "target": 50
+    }
+  },
+  {
+    "id": "spellRoll-no-skill",
+    "source": "executed",
+    "input": {
+      "consumer": "spellRoll",
+      "skill": null,
+      "magicType": "Arcana",
+      "level": 2
+    },
+    "expected": {
+      "target": null
+    }
+  },
+  {
+    "id": "spellSheet-esl-60-level-1",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 1
+    },
+    "expected": {
+      "esl": 60
+    }
+  },
+  {
+    "id": "spellSheet-esl-60-level-2",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 2
+    },
+    "expected": {
+      "esl": 55
+    }
+  },
+  {
+    "id": "spellSheet-esl-60-level-3",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 3
+    },
+    "expected": {
+      "esl": 50
+    }
+  },
+  {
+    "id": "spellSheet-esl-60-level-4",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 4
+    },
+    "expected": {
+      "esl": 45
+    }
+  },
+  {
+    "id": "spellSheet-esl-60-level-5",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 5
+    },
+    "expected": {
+      "esl": 40
+    }
+  },
+  {
+    "id": "spellSheet-esl-60-level-6",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 6
+    },
+    "expected": {
+      "esl": 35
+    }
+  },
+  {
+    "id": "spellSheet-level-0",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana",
+      "level": 0
+    },
+    "expected": {
+      "esl": 60
+    }
+  },
+  {
+    "id": "spellSheet-level-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 60
+      },
+      "magicType": "Arcana"
+    },
+    "expected": {
+      "esl": 60
+    }
+  },
+  {
+    "id": "spellSheet-esl-120-level-1-above-cap",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 120
+      },
+      "magicType": "Arcana",
+      "level": 1
+    },
+    "expected": {
+      "esl": 120
+    }
+  },
+  {
+    "id": "spellSheet-esl-100-level-2",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 100
+      },
+      "magicType": "Arcana",
+      "level": 2
+    },
+    "expected": {
+      "esl": 95
+    }
+  },
+  {
+    "id": "spellSheet-esl-10-level-6-floor-0",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 10
+      },
+      "magicType": "Arcana",
+      "level": 6
+    },
+    "expected": {
+      "esl": 0
+    }
+  },
+  {
+    "id": "spellSheet-esl-0-level-1",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 0
+      },
+      "magicType": "Arcana",
+      "level": 1
+    },
+    "expected": {
+      "esl": 0
+    }
+  },
+  {
+    "id": "spellSheet-name-case-insensitive",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 55
+      },
+      "magicType": "  arcana ",
+      "level": 2
+    },
+    "expected": {
+      "esl": 50
+    }
+  },
+  {
+    "id": "spellSheet-only-skill-of-category-used",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": {
+        "name": "Arcana",
+        "category": "magic",
+        "esl": 55
+      },
+      "magicType": "Other School",
+      "level": 2
+    },
+    "expected": {
+      "esl": 50
+    }
+  },
+  {
+    "id": "spellSheet-no-skill",
+    "source": "executed",
+    "input": {
+      "consumer": "spellSheet",
+      "skill": null,
+      "magicType": "Arcana",
+      "level": 2
+    },
+    "expected": {
+      "esl": 0
+    }
+  },
+  {
+    "id": "invocationRoll-esl-60-circle-1",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "target": 55
+    }
+  },
+  {
+    "id": "invocationRoll-esl-60-circle-2",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 2
+    },
+    "expected": {
+      "target": 50
+    }
+  },
+  {
+    "id": "invocationRoll-esl-60-circle-3",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 3
+    },
+    "expected": {
+      "target": 45
+    }
+  },
+  {
+    "id": "invocationRoll-esl-60-circle-4",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 4
+    },
+    "expected": {
+      "target": 40
+    }
+  },
+  {
+    "id": "invocationRoll-esl-60-circle-5",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 5
+    },
+    "expected": {
+      "target": 35
+    }
+  },
+  {
+    "id": "invocationRoll-circle-0",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 0
+    },
+    "expected": {
+      "target": 60
+    }
+  },
+  {
+    "id": "invocationRoll-esl-110-circle-1-above-cap",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 110
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "invocationRoll-esl-100-circle-1",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 100
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "invocationRoll-esl-3-circle-1-floor-0",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 3
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "target": 0
+    }
+  },
+  {
+    "id": "invocationRoll-all-invocation-only-skill",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 45
+      },
+      "religion": "All",
+      "circle": 2
+    },
+    "expected": {
+      "target": 35
+    }
+  },
+  {
+    "id": "invocationRoll-no-skill",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationRoll",
+      "skill": null,
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "target": null
+    }
+  },
+  {
+    "id": "invocationSheet-esl-60-circle-1",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "esl": 55
+    }
+  },
+  {
+    "id": "invocationSheet-esl-60-circle-2",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 2
+    },
+    "expected": {
+      "esl": 50
+    }
+  },
+  {
+    "id": "invocationSheet-esl-60-circle-3",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 3
+    },
+    "expected": {
+      "esl": 45
+    }
+  },
+  {
+    "id": "invocationSheet-esl-60-circle-4",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 4
+    },
+    "expected": {
+      "esl": 40
+    }
+  },
+  {
+    "id": "invocationSheet-esl-60-circle-5",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 5
+    },
+    "expected": {
+      "esl": 35
+    }
+  },
+  {
+    "id": "invocationSheet-circle-0",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 60
+      },
+      "religion": "Solar Faith",
+      "circle": 0
+    },
+    "expected": {
+      "esl": 60
+    }
+  },
+  {
+    "id": "invocationSheet-esl-110-circle-1-above-cap",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 110
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "esl": 105
+    }
+  },
+  {
+    "id": "invocationSheet-esl-100-circle-1",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 100
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "esl": 95
+    }
+  },
+  {
+    "id": "invocationSheet-esl-3-circle-1-floor-0",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 3
+      },
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "esl": 0
+    }
+  },
+  {
+    "id": "invocationSheet-all-invocation-only-skill",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": {
+        "name": "Solar Faith",
+        "category": "religion",
+        "esl": 45
+      },
+      "religion": "All",
+      "circle": 2
+    },
+    "expected": {
+      "esl": 35
+    }
+  },
+  {
+    "id": "invocationSheet-no-skill",
+    "source": "executed",
+    "input": {
+      "consumer": "invocationSheet",
+      "skill": null,
+      "religion": "Solar Faith",
+      "circle": 1
+    },
+    "expected": {
+      "esl": 0
+    }
+  },
+  {
+    "id": "shockRoll-pct-100",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 100
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "shockRoll-pct-60",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 60
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "shockRoll-pct-48",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 48
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "shockRoll-pct-47",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 47
+    },
+    "expected": {
+      "target": 94
+    }
+  },
+  {
+    "id": "shockRoll-pct-25",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 25
+    },
+    "expected": {
+      "target": 50
+    }
+  },
+  {
+    "id": "shockRoll-pct-24",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 24
+    },
+    "expected": {
+      "target": 48
+    }
+  },
+  {
+    "id": "shockRoll-pct-10",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 10
+    },
+    "expected": {
+      "target": 20
+    }
+  },
+  {
+    "id": "shockRoll-pct-1",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 1
+    },
+    "expected": {
+      "target": 2
+    }
+  },
+  {
+    "id": "shockRoll-pct-0",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": 0
+    },
+    "expected": {
+      "target": 0
+    }
+  },
+  {
+    "id": "shockRoll-pct--5",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll",
+      "conditionPct": -5
+    },
+    "expected": {
+      "target": 0
+    }
+  },
+  {
+    "id": "shockRoll-condition-missing",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRoll"
+    },
+    "expected": {
+      "target": 95
+    }
+  },
+  {
+    "id": "shockRequest-pct-25",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 25,
+      "conditionValue": 3
+    },
+    "expected": {
+      "request": {
+        "pct": 25,
+        "target": 50
+      }
+    }
+  },
+  {
+    "id": "shockRequest-pct-24",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 24,
+      "conditionValue": 3
+    },
+    "expected": {
+      "request": {
+        "pct": 24,
+        "target": 48
+      }
+    }
+  },
+  {
+    "id": "shockRequest-pct-10",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 10,
+      "conditionValue": 1
+    },
+    "expected": {
+      "request": {
+        "pct": 10,
+        "target": 20
+      }
+    }
+  },
+  {
+    "id": "shockRequest-pct-1",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 1,
+      "conditionValue": 1
+    },
+    "expected": {
+      "request": {
+        "pct": 1,
+        "target": 2
+      }
+    }
+  },
+  {
+    "id": "shockRequest-pct-26",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 26,
+      "conditionValue": 4
+    },
+    "expected": {
+      "request": null
+    }
+  },
+  {
+    "id": "shockRequest-pct-50",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 50,
+      "conditionValue": 6
+    },
+    "expected": {
+      "request": null
+    }
+  },
+  {
+    "id": "shockRequest-pct-100",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 100,
+      "conditionValue": 12
+    },
+    "expected": {
+      "request": null
+    }
+  },
+  {
+    "id": "shockRequest-condition-0-no-request",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 0,
+      "conditionValue": 0
+    },
+    "expected": {
+      "request": null
+    }
+  },
+  {
+    "id": "shockRequest-not-new-wound",
+    "source": "executed",
+    "input": {
+      "consumer": "shockRequest",
+      "conditionPct": 10,
+      "conditionValue": 1,
+      "newWound": false
+    },
+    "expected": {
+      "request": null
+    }
+  }
+]

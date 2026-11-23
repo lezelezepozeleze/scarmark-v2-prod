@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Compendium sidebar: plain rows instead of banner images
+   --------------------------------------------------------------------------
+   Core draws every compendium as a 70px banner picture (one per document
+   type) with white text on top, which is hard to read. Scarmark hides the
+   banner for ALL packs (system, world and module) and shows a compact row
+   like a Journal entry: type icon + name on the left, lock / ownership icons
+   and the source package on the right.
+   The sidebar is outside any .scarmark root, so the --sm-* tokens don't
+   exist here; the colours come from core's theme-aware sidebar variables and
+   follow the light / dark interface theme.
+   ========================================================================== */
+.compendium-sidebar .directory-item.compendium {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: auto;
+  padding-inline: 8px;
+  color: var(--color-text-primary);
+}
+
+.compendium-sidebar .directory-item.compendium.locked {
+  color: var(--color-text-secondary);
+}
+
+.compendium-sidebar .directory-item.compendium:hover {
+  color: var(--color-text-emphatic);
+}
+
+/* Core darkens the banner with an ::after overlay; keep the pseudo-element
+   (core reuses it for the context-menu outline) but drop the shading. */
+.compendium-sidebar .directory-item.compendium::after,
+.compendium-sidebar .directory-item.compendium:hover::after {
+  background: none;
+}
+
+.compendium-sidebar .directory-item.compendium .compendium-banner {
+  display: none;
+}
+
+.compendium-sidebar .directory-item.compendium .compendium-name {
+  position: static;
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-start;
+  padding: 0;
+  line-height: var(--sidebar-header-height);
+}
+
+.compendium-sidebar .directory-item.compendium .compendium-name i {
+  flex: 0 0 1.25em;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.compendium-sidebar .directory-item.compendium .compendium-name strong {
+  font-size: inherit;
+  text-shadow: none;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compendium-sidebar .directory-item.compendium .status-icons {
+  position: static;
+  padding: 0;
+  text-shadow: none;
+  color: var(--color-text-secondary);
+}
+
+.compendium-sidebar .directory-item.compendium .compendium-footer {
+  position: static;
+  flex: none;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  white-space: nowrap;
+  color: var(--color-text-subtle);
+}

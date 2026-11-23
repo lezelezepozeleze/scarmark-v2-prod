@@ -1,0 +1,2052 @@
+[
+  {
+    "id": "scarmark.alchemy/8frROlRXEJL1Pxse/Whiplash (20)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.alchemy",
+      "document": {
+        "_id": "8frROlRXEJL1Pxse",
+        "effects": [
+          {
+            "_id": "qn4RcMvJmU3aMYxi",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": "turnStart",
+              "units": "seconds",
+              "value": 10800
+            },
+            "name": "Whiplash (20)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.injury",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -2
+                },
+                {
+                  "key": "system.resources.fatigue",
+                  "phase": "initial",
+                  "priority": 50,
+                  "type": "override",
+                  "value": 0
+                }
+              ]
+            },
+            "transfer": false,
+            "type": "base"
+          }
+        ],
+        "name": "Whiplash (20)",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": true,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 30,
+          "weight": 0.1
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.1,
+        "totalValue": 30
+      }
+    }
+  },
+  {
+    "id": "scarmark.alchemy/h5TzuwRLK549RIcQ/Arcane Draught I (15)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.alchemy",
+      "document": {
+        "_id": "h5TzuwRLK549RIcQ",
+        "effects": [
+          {
+            "_id": "TJdfJZsKrhwVMPgX",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": "turnStart",
+              "units": "seconds",
+              "value": 3600
+            },
+            "name": "Arcane Draught I (15)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -15
+                },
+                {
+                  "key": "system.attributes.spi.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 2
+                }
+              ]
+            },
+            "transfer": false,
+            "type": "base"
+          }
+        ],
+        "name": "Arcane Draught I (15)",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": true,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 70,
+          "weight": 0.25
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.25,
+        "totalValue": 70
+      }
+    }
+  },
+  {
+    "id": "scarmark.alchemy/qFv1T0ciSY57zutV/Antidote I",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.alchemy",
+      "document": {
+        "_id": "qFv1T0ciSY57zutV",
+        "effects": [
+          {
+            "_id": "vdbXvsFH5B6HIfHS",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": "turnStart",
+              "units": "seconds",
+              "value": 3600
+            },
+            "name": "Antidote I",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 50,
+                  "type": "override",
+                  "value": 50
+                }
+              ]
+            },
+            "transfer": false,
+            "type": "base"
+          }
+        ],
+        "name": "Antidote I",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": true,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 80,
+          "weight": 0.25
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.25,
+        "totalValue": 80
+      }
+    }
+  },
+  {
+    "id": "scarmark.alchemy/sjjoUYZ2ewNAZ6of/Tobacco (luxury)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.alchemy",
+      "document": {
+        "_id": "sjjoUYZ2ewNAZ6of",
+        "effects": [
+          {
+            "_id": "nPoioBFMXzyeq99u",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": "turnStart",
+              "units": "seconds",
+              "value": 7200
+            },
+            "name": "Tobacco (luxury)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.attributes.int.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 1
+                },
+                {
+                  "key": "system.attributes.wil.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 1
+                }
+              ]
+            },
+            "transfer": false,
+            "type": "base"
+          }
+        ],
+        "name": "Tobacco (luxury)",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": true,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 45,
+          "weight": 0
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 45
+      }
+    }
+  },
+  {
+    "id": "scarmark.alchemy/vhnpzvZf0u9s2SjW/Berserker’s Fury I (15)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.alchemy",
+      "document": {
+        "_id": "vhnpzvZf0u9s2SjW",
+        "effects": [
+          {
+            "_id": "9xc731Cw1SRbt4wV",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": "turnStart",
+              "units": "seconds",
+              "value": 3600
+            },
+            "name": "Berserker’s Fury I (15)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -15
+                },
+                {
+                  "key": "system.mods.meleeDefense",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -10
+                },
+                {
+                  "key": "system.attributes.str.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 2
+                },
+                {
+                  "key": "system.mods.impact",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 1
+                }
+              ]
+            },
+            "transfer": false,
+            "type": "base"
+          }
+        ],
+        "name": "Berserker’s Fury I (15)",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": true,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 100,
+          "weight": 0.25
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.25,
+        "totalValue": 100
+      }
+    }
+  },
+  {
+    "id": "scarmark.arcane/LgV4w5nCHNoAFaDs/1 Firebolt I",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.arcane",
+      "document": {
+        "_id": "LgV4w5nCHNoAFaDs",
+        "effects": [],
+        "name": "1 Firebolt I",
+        "system": {
+          "level": 1,
+          "magicType": ""
+        },
+        "type": "spell"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.arcane/RAL9LTelb2NmfU8D/Blood Magic",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.arcane",
+      "document": {
+        "_id": "RAL9LTelb2NmfU8D",
+        "effects": [],
+        "name": "Blood Magic",
+        "system": {
+          "attribute1": "int",
+          "attribute2": "spi",
+          "attribute3": "wil",
+          "category": "magic",
+          "faithPoints": 0,
+          "level": 0,
+          "sunsignBonuses": [
+            {
+              "bonus": 2,
+              "sunsign": "scorpius"
+            },
+            {
+              "bonus": 2,
+              "sunsign": "aries"
+            },
+            {
+              "bonus": 1,
+              "sunsign": "taurus"
+            }
+          ]
+        },
+        "type": "skill"
+      }
+    },
+    "expected": {
+      "derived": {
+        "category": "esoterics",
+        "esotericKind": "arcane",
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.arcane/dUjsCaKFShjc4qRL/Fireball I",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.arcane",
+      "document": {
+        "_id": "dUjsCaKFShjc4qRL",
+        "effects": [],
+        "name": "Fireball I",
+        "system": {
+          "aspect": "fire",
+          "associatedSkill": "arcane",
+          "carried": true,
+          "container": "",
+          "impact": {
+            "extreme": 4,
+            "long": 5,
+            "medium": 6,
+            "short": 7
+          },
+          "magic": true,
+          "quality": 10,
+          "quantity": 1,
+          "range": {
+            "extreme": 12,
+            "long": 8,
+            "medium": 5,
+            "short": 3
+          },
+          "specialization": 0,
+          "spellClass": 4,
+          "value": 0,
+          "velocity": "low",
+          "weight": 0
+        },
+        "type": "missile"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.arcane/lL1zZYKkS8mM3xPd/Rend",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.arcane",
+      "document": {
+        "_id": "lL1zZYKkS8mM3xPd",
+        "effects": [],
+        "name": "Rend",
+        "system": {
+          "aspect": "edged",
+          "associatedSkill": "arcane",
+          "carried": true,
+          "container": "",
+          "impact": {
+            "extreme": 5,
+            "long": 6,
+            "medium": 7,
+            "short": 8
+          },
+          "magic": true,
+          "quality": 10,
+          "quantity": 1,
+          "range": {
+            "extreme": 16,
+            "long": 10,
+            "medium": 6,
+            "short": 3
+          },
+          "specialization": 0,
+          "spellClass": 4,
+          "value": 0,
+          "velocity": "high",
+          "weight": 0
+        },
+        "type": "missile"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.arcane/mrGpz9ANAQuiW3x5/5 Insertion",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.arcane",
+      "document": {
+        "_id": "mrGpz9ANAQuiW3x5",
+        "effects": [],
+        "name": "5 Insertion",
+        "system": {
+          "level": 5,
+          "magicType": ""
+        },
+        "type": "spell"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.armor/96FTG0wgE9CmODCv/Cloth Cap",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor",
+      "document": {
+        "_id": "96FTG0wgE9CmODCv",
+        "effects": [],
+        "name": "Cloth Cap",
+        "system": {
+          "carried": true,
+          "container": "",
+          "layer": 1,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 1,
+            "fire": 1,
+            "piercing": 1
+          },
+          "quality": 2,
+          "quantity": 1,
+          "value": 40,
+          "weight": 0.095
+        },
+        "type": "armor"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.095,
+        "totalValue": 40
+      }
+    }
+  },
+  {
+    "id": "scarmark.armor/Eh6R3BS0i04cw7RY/Plate Helmet",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor",
+      "document": {
+        "_id": "Eh6R3BS0i04cw7RY",
+        "effects": [
+          {
+            "_id": "wbqSrIQaDKfVqcSg",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Helmet: Perception −1",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.attributes.per.base",
+                  "phase": "initial",
+                  "type": "add",
+                  "value": -1
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Plate Helmet",
+        "system": {
+          "carried": true,
+          "container": "",
+          "layer": 5,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 3,
+            "edged": 5,
+            "fire": 2,
+            "piercing": 3
+          },
+          "quality": 12,
+          "quantity": 1,
+          "value": 900,
+          "weight": 1.3
+        },
+        "type": "armor"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 1.3,
+        "totalValue": 900
+      }
+    }
+  },
+  {
+    "id": "scarmark.armor/NyJOkr9I6OSMTy6P/Thick Skin",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor",
+      "document": {
+        "_id": "NyJOkr9I6OSMTy6P",
+        "effects": [],
+        "name": "Thick Skin",
+        "system": {
+          "carried": true,
+          "container": "",
+          "layer": 0,
+          "locations": [
+            "head",
+            "neck",
+            "shoulder",
+            "arm",
+            "hand",
+            "chest",
+            "belly",
+            "hip",
+            "thigh",
+            "shin",
+            "creatureBelly",
+            "creatureHead",
+            "creatureForeLeg",
+            "creatureHindLeg",
+            "creatureNeck",
+            "creatureChest",
+            "wing",
+            "tail",
+            "tentacle"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 2,
+            "fire": 2,
+            "piercing": 1
+          },
+          "quality": -1,
+          "quantity": 1,
+          "value": 0,
+          "weight": 0
+        },
+        "type": "armor"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.armor/R7i6mI5v3CUat5Et/Padded Cap",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor",
+      "document": {
+        "_id": "R7i6mI5v3CUat5Et",
+        "effects": [],
+        "name": "Padded Cap",
+        "system": {
+          "carried": true,
+          "container": "",
+          "layer": 2,
+          "locations": [
+            "head"
+          ],
+          "protection": {
+            "blunt": 2,
+            "edged": 2,
+            "fire": 2,
+            "piercing": 1
+          },
+          "quality": 3,
+          "quantity": 1,
+          "value": 80,
+          "weight": 0.235
+        },
+        "type": "armor"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.235,
+        "totalValue": 80
+      }
+    }
+  },
+  {
+    "id": "scarmark.armor/XORD4KmUxlheY7Tb/Mail Barding (Horse)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor",
+      "document": {
+        "_id": "XORD4KmUxlheY7Tb",
+        "effects": [],
+        "name": "Mail Barding (Horse)",
+        "system": {
+          "carried": true,
+          "container": "",
+          "layer": 4,
+          "locations": [
+            "creatureNeck",
+            "creatureChest",
+            "creatureBelly"
+          ],
+          "protection": {
+            "blunt": 2,
+            "edged": 7,
+            "fire": 1,
+            "piercing": 4
+          },
+          "quality": 8,
+          "quantity": 1,
+          "value": 9000,
+          "weight": 15
+        },
+        "type": "armor"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 15,
+        "totalValue": 9000
+      }
+    }
+  },
+  {
+    "id": "scarmark.armor-locations/DnwFz0afU6H2s3V1/Tail",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor-locations",
+      "document": {
+        "_id": "DnwFz0afU6H2s3V1",
+        "effects": [],
+        "name": "Tail",
+        "system": {
+          "aim": {
+            "high": 0,
+            "low": 60,
+            "medium": 20
+          },
+          "injury": {
+            "t1": 1,
+            "t13": 3,
+            "t17": 4,
+            "t5": 1,
+            "t9": 2
+          },
+          "locationType": "tail",
+          "risk": {
+            "amputate": true,
+            "fumble": false,
+            "stumble": true
+          }
+        },
+        "type": "armorLocation"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.armor-locations/JxJ1pBnwg9byobui/Tail",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.armor-locations",
+      "document": {
+        "_id": "JxJ1pBnwg9byobui",
+        "effects": [],
+        "name": "Tail",
+        "system": {
+          "aim": {
+            "high": 0,
+            "low": 60,
+            "medium": 20
+          },
+          "injury": {
+            "t1": 1,
+            "t13": 3,
+            "t17": 4,
+            "t5": 1,
+            "t9": 2
+          },
+          "locationType": "tail",
+          "risk": {
+            "amputate": true,
+            "fumble": false,
+            "stumble": true
+          }
+        },
+        "type": "armorLocation"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.currencies/RvzcRZMb2MHCzrd9/Griwna",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.currencies",
+      "document": {
+        "_id": "RvzcRZMb2MHCzrd9",
+        "effects": [],
+        "name": "Griwna",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": false,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 60,
+          "weight": 0.01
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.01,
+        "totalValue": 60
+      }
+    }
+  },
+  {
+    "id": "scarmark.diseases/ExlaYILEcyf3rolQ/Pneumonia (15)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.diseases",
+      "document": {
+        "_id": "ExlaYILEcyf3rolQ",
+        "effects": [
+          {
+            "_id": "JjF4Z9FWv0FykSLt",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Pneumonia (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -15
+                },
+                {
+                  "key": "system.resources.fatigue",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 2
+                },
+                {
+                  "key": "system.mods.endurance",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -2
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Pneumonia (15)",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 3,
+          "vital": "",
+          "woundLevel": 3
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "severe",
+        "mendLabel": "3"
+      }
+    }
+  },
+  {
+    "id": "scarmark.diseases/H6pP9IcxE8jbnRS0/Unpleasant rash (0)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.diseases",
+      "document": {
+        "_id": "H6pP9IcxE8jbnRS0",
+        "effects": [
+          {
+            "_id": "ZVVdjPuAmQKoCVsR",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Unpleasant rash (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.attributes.pre.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -4
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Unpleasant rash (0)",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 0,
+          "vital": "",
+          "woundLevel": 0
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "light",
+        "mendLabel": "MRN"
+      }
+    }
+  },
+  {
+    "id": "scarmark.diseases/RTE9gJpSKxmCSM8V/Sepsis (20)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.diseases",
+      "document": {
+        "_id": "RTE9gJpSKxmCSM8V",
+        "effects": [
+          {
+            "_id": "OnthlGLzd0mUE0Nx",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Sepsis (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.resources.fatigue",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 3
+                },
+                {
+                  "key": "system.mods.skills.physical",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.skills.communication",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.skills.combat",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.skills.craft",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.skills.religion",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.skills.magic",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.skills.psionic",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Sepsis (20)",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 2,
+          "vital": "",
+          "woundLevel": 3
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "severe",
+        "mendLabel": "2"
+      }
+    }
+  },
+  {
+    "id": "scarmark.diseases/miLHSz8Gjs3mnHjg/Vampirism",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.diseases",
+      "document": {
+        "_id": "miLHSz8Gjs3mnHjg",
+        "effects": [
+          {
+            "_id": "Ik32Y0eXRnagrTPs",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Vampirism (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.attributes.str.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 2
+                },
+                {
+                  "key": "system.attributes.agl.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 2
+                },
+                {
+                  "key": "system.attributes.dex.base",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 2
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Vampirism",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 0,
+          "vital": "",
+          "woundLevel": 2
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "heavy",
+        "mendLabel": "MRN"
+      }
+    }
+  },
+  {
+    "id": "scarmark.diseases/qFImkfMfth4RQtSO/Infection (10)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.diseases",
+      "document": {
+        "_id": "qFImkfMfth4RQtSO",
+        "effects": [
+          {
+            "_id": "NWHRvDj8dtFu4hwG",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Infection (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -10
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Infection (10)",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 4,
+          "vital": "",
+          "woundLevel": 1
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "light",
+        "mendLabel": "4"
+      }
+    }
+  },
+  {
+    "id": "scarmark.diseases/qTJPhKfh0t64VvKX/You don´t feel well…",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.diseases",
+      "document": {
+        "_id": "qTJPhKfh0t64VvKX",
+        "effects": [
+          {
+            "_id": "bQvthmm4chLtLzOu",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "You don´t feel well… (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": -20
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "You don´t feel well…",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 5,
+          "vital": "",
+          "woundLevel": 1
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "light",
+        "mendLabel": "5"
+      }
+    }
+  },
+  {
+    "id": "scarmark.gear/ZhhsgxHTWNQAa1Q4/Sack",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.gear",
+      "document": {
+        "_id": "ZhhsgxHTWNQAa1Q4",
+        "effects": [],
+        "name": "Sack",
+        "system": {
+          "carried": true,
+          "maxCapacity": 15,
+          "quantity": 1,
+          "value": 5,
+          "weight": 0.25
+        },
+        "type": "container"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.25,
+        "totalValue": 5
+      }
+    }
+  },
+  {
+    "id": "scarmark.gear-funny/QLBUAqcbl15NykX2/Seven mile shoes",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.gear-funny",
+      "document": {
+        "_id": "QLBUAqcbl15NykX2",
+        "effects": [],
+        "name": "Seven mile shoes",
+        "system": {
+          "carried": true,
+          "container": "",
+          "layer": 3,
+          "locations": [
+            "shin"
+          ],
+          "protection": {
+            "blunt": 1,
+            "edged": 1,
+            "fire": 1,
+            "piercing": 1
+          },
+          "quality": 4,
+          "quantity": 1,
+          "value": 200,
+          "weight": 0.465
+        },
+        "type": "armor"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.465,
+        "totalValue": 200
+      }
+    }
+  },
+  {
+    "id": "scarmark.invocations/XLrdUjCKeBz6HFYv/2 Awe",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.invocations",
+      "document": {
+        "_id": "XLrdUjCKeBz6HFYv",
+        "effects": [],
+        "name": "2 Awe",
+        "system": {
+          "circle": 2,
+          "religion": "All"
+        },
+        "type": "invocation"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.invocations/hcLLVqEu6kWGFpQ0/3 Curse",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.invocations",
+      "document": {
+        "_id": "hcLLVqEu6kWGFpQ0",
+        "effects": [],
+        "name": "3 Curse",
+        "system": {
+          "circle": 3,
+          "religion": "All"
+        },
+        "type": "invocation"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.invocations/x50Tym0RDL9QtvcO/Erminfried",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.invocations",
+      "document": {
+        "_id": "x50Tym0RDL9QtvcO",
+        "effects": [],
+        "name": "Erminfried",
+        "system": {
+          "attribute1": "pre",
+          "attribute2": "int",
+          "attribute3": "str",
+          "category": "religion",
+          "faithPoints": 0,
+          "level": 0,
+          "sunsignBonuses": [
+            {
+              "bonus": 2,
+              "sunsign": "taurus"
+            },
+            {
+              "bonus": 1,
+              "sunsign": "aries"
+            },
+            {
+              "bonus": 1,
+              "sunsign": "gemini"
+            }
+          ]
+        },
+        "type": "skill"
+      }
+    },
+    "expected": {
+      "derived": {
+        "category": "esoterics",
+        "esotericKind": "religion",
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.poisonings/Cuz5GlaRjjqenmzu/Animal Poisoning (Grievous)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.poisonings",
+      "document": {
+        "_id": "Cuz5GlaRjjqenmzu",
+        "effects": [
+          {
+            "_id": "RjqmfF91gO3IAXAk",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Animal Poisoning (Grievous) (symptoms)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.resources.fatigue",
+                  "phase": "initial",
+                  "priority": 20,
+                  "type": "add",
+                  "value": 4
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Animal Poisoning (Grievous)",
+        "system": {
+          "heavyBleeding": false,
+          "mend": 1,
+          "vital": "",
+          "woundLevel": 4
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "dire",
+        "mendLabel": "1"
+      }
+    }
+  },
+  {
+    "id": "scarmark.poisonings/ObQpUiXMrvsmPtsl/Gravekiss Poisoning (Oral)",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.poisonings",
+      "document": {
+        "_id": "ObQpUiXMrvsmPtsl",
+        "effects": [],
+        "name": "Gravekiss Poisoning (Oral)",
+        "system": {
+          "heavyBleeding": true,
+          "mend": 1,
+          "vital": "",
+          "woundLevel": 5
+        },
+        "type": "injury"
+      }
+    },
+    "expected": {
+      "derived": {
+        "severityKey": "mortal",
+        "mendLabel": "1"
+      }
+    }
+  },
+  {
+    "id": "scarmark.psionic-talents/AHzzPTP2PtqE5Gl5/Hex",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.psionic-talents",
+      "document": {
+        "_id": "AHzzPTP2PtqE5Gl5",
+        "effects": [],
+        "name": "Hex",
+        "system": {
+          "attribute1": "spi",
+          "attribute2": "spi",
+          "attribute3": "wil",
+          "fatigue": 2,
+          "level": 0,
+          "sunsignBonuses": [
+            {
+              "bonus": 2,
+              "sunsign": "aries"
+            }
+          ]
+        },
+        "type": "psionic"
+      }
+    },
+    "expected": {
+      "derived": {
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.psionic-talents/KXyl9fWZ7QppzfZo/Medium",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.psionic-talents",
+      "document": {
+        "_id": "KXyl9fWZ7QppzfZo",
+        "effects": [],
+        "name": "Medium",
+        "system": {
+          "attribute1": "spi",
+          "attribute2": "spi",
+          "attribute3": "wil",
+          "fatigue": 2,
+          "level": 0,
+          "sunsignBonuses": [
+            {
+              "bonus": 2,
+              "sunsign": "virgo"
+            }
+          ]
+        },
+        "type": "psionic"
+      }
+    },
+    "expected": {
+      "derived": {
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.racial-traits/KxwsjZVhVhzNQ6Se/Blood Frenzy",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.racial-traits",
+      "document": {
+        "_id": "KxwsjZVhVhzNQ6Se",
+        "effects": [
+          {
+            "_id": "HikQCmUD9cuiGoGp",
+            "disabled": true,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Blood Frenzy",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skills.combat",
+                  "phase": "initial",
+                  "type": "add",
+                  "value": 10
+                },
+                {
+                  "key": "system.mods.impact",
+                  "phase": "initial",
+                  "type": "add",
+                  "value": 1
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Blood Frenzy",
+        "system": {
+          "category": "physical"
+        },
+        "type": "trait"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.racial-traits/TYOQ4ElqgjKFqWL2/Orc",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.racial-traits",
+      "document": {
+        "_id": "TYOQ4ElqgjKFqWL2",
+        "effects": [
+          {
+            "_id": "rRDRv80ncz4tLKOk",
+            "disabled": false,
+            "duration": {
+              "expired": false,
+              "expiry": null,
+              "units": "seconds",
+              "value": null
+            },
+            "name": "Ork (racial)",
+            "statuses": [],
+            "system": {
+              "changes": [
+                {
+                  "key": "system.mods.skills.communication",
+                  "phase": "initial",
+                  "priority": null,
+                  "type": "add",
+                  "value": -20
+                },
+                {
+                  "key": "system.mods.endurance",
+                  "phase": "initial",
+                  "priority": null,
+                  "type": "add",
+                  "value": 2
+                },
+                {
+                  "key": "system.mods.skill.Vitality",
+                  "phase": "initial",
+                  "priority": null,
+                  "type": "add",
+                  "value": 10
+                }
+              ]
+            },
+            "transfer": true,
+            "type": "base"
+          }
+        ],
+        "name": "Orc",
+        "system": {
+          "category": "physical"
+        },
+        "type": "trait"
+      }
+    },
+    "expected": {
+      "derived": {}
+    }
+  },
+  {
+    "id": "scarmark.racial-traits/ZBfx0GpFdMMQevN5/Cat Senses",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.racial-traits",
+      "document": {
+        "_id": "ZBfx0GpFdMMQevN5",
+        "effects": [],
+        "name": "Cat Senses",
+        "system": {
+          "attribute1": "per",
+          "attribute2": "per",
+          "attribute3": "per",
+          "category": "physical",
+          "faithPoints": 0,
+          "level": 0,
+          "sunsignBonuses": []
+        },
+        "type": "skill"
+      }
+    },
+    "expected": {
+      "derived": {
+        "category": "skill",
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.racial-traits/x7OfZATVv1BfnBeL/Elven Empathy",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.racial-traits",
+      "document": {
+        "_id": "x7OfZATVv1BfnBeL",
+        "effects": [],
+        "name": "Elven Empathy",
+        "system": {
+          "attribute1": "spi",
+          "attribute2": "int",
+          "attribute3": "pre",
+          "category": "communication",
+          "faithPoints": 0,
+          "level": 0,
+          "sunsignBonuses": []
+        },
+        "type": "skill"
+      }
+    },
+    "expected": {
+      "derived": {
+        "category": "skill",
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.services/TKJdNBWaZUUndttF/Bath",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.services",
+      "document": {
+        "_id": "TKJdNBWaZUUndttF",
+        "effects": [],
+        "name": "Bath",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "carried": true,
+          "consumable": false,
+          "container": "",
+          "quantity": 1,
+          "rune": false,
+          "value": 3,
+          "weight": 0
+        },
+        "type": "gear"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 3
+      }
+    }
+  },
+  {
+    "id": "scarmark.skills/DiL2bExnb9Mdgmy2/Lore",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.skills",
+      "document": {
+        "_id": "DiL2bExnb9Mdgmy2",
+        "effects": [],
+        "name": "Lore",
+        "system": {
+          "attribute1": "per",
+          "attribute2": "int",
+          "attribute3": "int",
+          "category": "craft",
+          "faithPoints": 0,
+          "level": 0,
+          "sunsignBonuses": [
+            {
+              "bonus": 2,
+              "sunsign": "virgo"
+            }
+          ]
+        },
+        "type": "skill"
+      }
+    },
+    "expected": {
+      "derived": {
+        "category": "skill",
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.skills/bENj80selbzACJJN/Riding",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.skills",
+      "document": {
+        "_id": "bENj80selbzACJJN",
+        "effects": [],
+        "name": "Riding",
+        "system": {
+          "attribute1": "dex",
+          "attribute2": "agl",
+          "attribute3": "wil",
+          "category": "combat",
+          "faithPoints": 0,
+          "level": 0,
+          "sunsignBonuses": [
+            {
+              "bonus": 1,
+              "sunsign": "capricornus"
+            },
+            {
+              "bonus": 1,
+              "sunsign": "aquarius"
+            }
+          ]
+        },
+        "type": "skill"
+      }
+    },
+    "expected": {
+      "derived": {
+        "sb": 0,
+        "esl": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.valuables/Z6gCBNR9Vs9TqH9w/Reliquary",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.valuables",
+      "document": {
+        "_id": "Z6gCBNR9Vs9TqH9w",
+        "effects": [],
+        "name": "Reliquary",
+        "system": {
+          "carried": true,
+          "maxCapacity": 2.5,
+          "quantity": 1,
+          "value": 400,
+          "weight": 0.25
+        },
+        "type": "container"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.25,
+        "totalValue": 400
+      }
+    }
+  },
+  {
+    "id": "scarmark.weapons/3hJkaYvC06XaN24b/Whip",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.weapons",
+      "document": {
+        "_id": "3hJkaYvC06XaN24b",
+        "effects": [],
+        "name": "Whip",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "associatedSkill": "close",
+          "attack": 3,
+          "broken": false,
+          "carried": true,
+          "container": "",
+          "defense": 1,
+          "impact": {
+            "blunt": 1,
+            "edged": 1,
+            "fire": -1,
+            "piercing": -1
+          },
+          "isShield": false,
+          "quality": 7,
+          "quantity": 1,
+          "rune": false,
+          "specialization": 0,
+          "value": 100,
+          "weight": 0.5
+        },
+        "type": "weapon"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.5,
+        "totalValue": 100
+      }
+    }
+  },
+  {
+    "id": "scarmark.weapons/5DQGAYCtPDAXGRuH/Boulder",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.weapons",
+      "document": {
+        "_id": "5DQGAYCtPDAXGRuH",
+        "effects": [],
+        "name": "Boulder",
+        "system": {
+          "aspect": "blunt",
+          "associatedSkill": "close",
+          "carried": true,
+          "container": "",
+          "impact": {
+            "extreme": 6,
+            "long": 8,
+            "medium": 10,
+            "short": 12
+          },
+          "magic": false,
+          "quality": 13,
+          "quantity": 1,
+          "range": {
+            "extreme": 11,
+            "long": 7,
+            "medium": 4,
+            "short": 2
+          },
+          "specialization": 0,
+          "spellClass": 1,
+          "value": 0,
+          "velocity": "low",
+          "weight": 0
+        },
+        "type": "missile"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.weapons/6LSNFg5FMTRfiUb1/Leg",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.weapons",
+      "document": {
+        "_id": "6LSNFg5FMTRfiUb1",
+        "effects": [],
+        "name": "Leg",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "associatedSkill": "unarmed",
+          "attack": 2,
+          "broken": false,
+          "carried": true,
+          "container": "",
+          "defense": 0,
+          "impact": {
+            "blunt": 1,
+            "edged": -1,
+            "fire": -1,
+            "piercing": -1
+          },
+          "isShield": false,
+          "quality": 0,
+          "quantity": 1,
+          "rune": false,
+          "specialization": 0,
+          "value": 0,
+          "weight": 0
+        },
+        "type": "weapon"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0,
+        "totalValue": 0
+      }
+    }
+  },
+  {
+    "id": "scarmark.weapons/XC2HwO030tYWOGWH/Dart",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.weapons",
+      "document": {
+        "_id": "XC2HwO030tYWOGWH",
+        "effects": [],
+        "name": "Dart",
+        "system": {
+          "aspect": "piercing",
+          "associatedSkill": "ranged",
+          "carried": true,
+          "container": "",
+          "impact": {
+            "extreme": 0,
+            "long": 0,
+            "medium": 1,
+            "short": 1
+          },
+          "magic": false,
+          "quality": 8,
+          "quantity": 1,
+          "range": {
+            "extreme": 8,
+            "long": 5,
+            "medium": 3,
+            "short": 2
+          },
+          "specialization": 0,
+          "spellClass": 1,
+          "value": 40,
+          "velocity": "high",
+          "weight": 0.1
+        },
+        "type": "missile"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 0.1,
+        "totalValue": 40
+      }
+    }
+  },
+  {
+    "id": "scarmark.weapons/xoGrxuEGmo3RPnqz/Magic Staff IV",
+    "source": "executed:sample",
+    "input": {
+      "pack": "scarmark.weapons",
+      "document": {
+        "_id": "xoGrxuEGmo3RPnqz",
+        "effects": [],
+        "name": "Magic Staff IV",
+        "system": {
+          "artifact": {
+            "active": false,
+            "attuned": false,
+            "class": 1
+          },
+          "associatedSkill": "arcane",
+          "attack": 7,
+          "broken": false,
+          "carried": true,
+          "container": "",
+          "defense": 9,
+          "impact": {
+            "blunt": 6,
+            "edged": -1,
+            "fire": 12,
+            "piercing": -1
+          },
+          "isShield": false,
+          "quality": 16,
+          "quantity": 1,
+          "rune": false,
+          "specialization": 0,
+          "value": 25000,
+          "weight": 1
+        },
+        "type": "weapon"
+      }
+    },
+    "expected": {
+      "derived": {
+        "totalWeight": 1,
+        "totalValue": 25000
+      }
+    }
+  }
+]

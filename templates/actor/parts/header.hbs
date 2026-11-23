@@ -1,0 +1,23 @@
+<header class="sheet-header">
+  {{> "systems/scarmark/templates/actor/partials/header-identity.hbs"}}
+
+  <div class="header-stats">
+    <div class="penalties">
+      <span class="stat"><span>{{localize 'SCARMARK.Fatigue'}}</span> {{system.resources.fatigue}}</span>
+      <span class="stat"><span>{{localize 'SCARMARK.WL'}}</span> {{system.wl}}</span>
+      <span class="stat" title="{{localize 'SCARMARK.BurdenHint'}}"><span>{{localize 'SCARMARK.Burden'}}</span> {{system.burden}}</span>
+    </div>
+
+    <div class="condition condition--{{system.condition.band}}">
+      <span>{{localize 'SCARMARK.ConditionLine' value=system.condition.value max=system.condition.max pct=system.condition.pct}}</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: {{conditionBarPct}}%"></div>
+      </div>
+    </div>
+
+    <div class="move">
+      <span>{{localize 'SCARMARK.Move'}}</span>
+      <span class="move-value">{{system.move}}</span>
+    </div>
+  </div>
+</header>

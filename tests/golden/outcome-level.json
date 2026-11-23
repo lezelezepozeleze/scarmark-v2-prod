@@ -1,0 +1,353 @@
+[
+  {
+    "id": "00-roll-1-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 1,
+      "target": 50
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "01-roll-5-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 5,
+      "target": 50
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "02-roll-49-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 49,
+      "target": 50
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "03-roll-50-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 50,
+      "target": 50
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "04-roll-51-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 51,
+      "target": 50
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "05-roll-55-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 55,
+      "target": 50
+    },
+    "expected": "cf"
+  },
+  {
+    "id": "06-roll-100-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 100,
+      "target": 50
+    },
+    "expected": "cf"
+  },
+  {
+    "id": "07-roll-99-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 99,
+      "target": 50
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "08-roll-1-vs-0",
+    "source": "executed",
+    "input": {
+      "roll": 1,
+      "target": 0
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "09-roll-5-vs-0",
+    "source": "executed",
+    "input": {
+      "roll": 5,
+      "target": 0
+    },
+    "expected": "cf"
+  },
+  {
+    "id": "10-roll-100-vs-95",
+    "source": "executed",
+    "input": {
+      "roll": 100,
+      "target": 95
+    },
+    "expected": "cf"
+  },
+  {
+    "id": "11-roll-95-vs-95",
+    "source": "executed",
+    "input": {
+      "roll": 95,
+      "target": 95
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "12-roll-96-vs-95",
+    "source": "executed",
+    "input": {
+      "roll": 96,
+      "target": 95
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "13-roll-100-vs-100",
+    "source": "executed",
+    "input": {
+      "roll": 100,
+      "target": 100
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "14-roll-100-vs-120",
+    "source": "executed",
+    "input": {
+      "roll": 100,
+      "target": 120
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "15-roll-1-vs--10",
+    "source": "executed",
+    "input": {
+      "roll": 1,
+      "target": -10
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "16-roll-5-vs--10",
+    "source": "executed",
+    "input": {
+      "roll": 5,
+      "target": -10
+    },
+    "expected": "cf"
+  },
+  {
+    "id": "17-roll-3-vs-1",
+    "source": "executed",
+    "input": {
+      "roll": 3,
+      "target": 1
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "18-roll-1-vs-1",
+    "source": "executed",
+    "input": {
+      "roll": 1,
+      "target": 1
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "19-roll-15-vs-22",
+    "source": "executed",
+    "input": {
+      "roll": 15,
+      "target": 22
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "20-roll-12-vs-29",
+    "source": "executed",
+    "input": {
+      "roll": 12,
+      "target": 29
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "21-roll-66-vs-107",
+    "source": "executed",
+    "input": {
+      "roll": 66,
+      "target": 107
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "22-roll-60-vs-92",
+    "source": "executed",
+    "input": {
+      "roll": 60,
+      "target": 92
+    },
+    "expected": "cs"
+  },
+  {
+    "id": "23-roll-68-vs-32",
+    "source": "executed",
+    "input": {
+      "roll": 68,
+      "target": 32
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "24-roll-16-vs-1",
+    "source": "executed",
+    "input": {
+      "roll": 16,
+      "target": 1
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "25-roll-64-vs-50",
+    "source": "executed",
+    "input": {
+      "roll": 64,
+      "target": 50
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "26-roll-85-vs-71",
+    "source": "executed",
+    "input": {
+      "roll": 85,
+      "target": 71
+    },
+    "expected": "cf"
+  },
+  {
+    "id": "27-roll-57-vs-44",
+    "source": "executed",
+    "input": {
+      "roll": 57,
+      "target": 44
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "28-roll-79-vs-106",
+    "source": "executed",
+    "input": {
+      "roll": 79,
+      "target": 106
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "29-roll-53-vs-59",
+    "source": "executed",
+    "input": {
+      "roll": 53,
+      "target": 59
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "30-roll-28-vs-72",
+    "source": "executed",
+    "input": {
+      "roll": 28,
+      "target": 72
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "31-roll-52-vs--3",
+    "source": "executed",
+    "input": {
+      "roll": 52,
+      "target": -3
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "32-roll-48-vs-85",
+    "source": "executed",
+    "input": {
+      "roll": 48,
+      "target": 85
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "33-roll-51-vs-60",
+    "source": "executed",
+    "input": {
+      "roll": 51,
+      "target": 60
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "34-roll-51-vs-86",
+    "source": "executed",
+    "input": {
+      "roll": 51,
+      "target": 86
+    },
+    "expected": "ms"
+  },
+  {
+    "id": "35-roll-83-vs-41",
+    "source": "executed",
+    "input": {
+      "roll": 83,
+      "target": 41
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "36-roll-76-vs--2",
+    "source": "executed",
+    "input": {
+      "roll": 76,
+      "target": -2
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "37-roll-51-vs-39",
+    "source": "executed",
+    "input": {
+      "roll": 51,
+      "target": 39
+    },
+    "expected": "mf"
+  },
+  {
+    "id": "38-roll-8-vs-20",
+    "source": "executed",
+    "input": {
+      "roll": 8,
+      "target": 20
+    },
+    "expected": "ms"
+  }
+]

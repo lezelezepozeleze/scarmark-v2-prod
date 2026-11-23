@@ -1,0 +1,39 @@
+{{!-- The Containers section of the Gear tab: every container with its weight and how full it is (context: containerRows, isOwner). --}}
+<div class="gear-section" data-sm-new-cont data-sm-primary-cont>
+  <div class="gear-section-header">
+    <span class="col-name">{{localize 'SCARMARK.Gear.categoryContainers'}}</span>
+    <span class="col-qty">{{localize 'SCARMARK.Quantity'}}</span>
+    <span class="col-weight">{{localize 'SCARMARK.Weight'}}</span>
+    <span class="col-capacity">{{localize 'SCARMARK.Gear.capacity'}}</span>
+    <span class="col-notes">{{localize 'SCARMARK.Trait.notes'}}</span>
+    <span class="col-actions">
+      {{#if @root.isOwner}}
+      <a data-action="addContainer" data-sm-container-action="add" title="{{localize 'SCARMARK.Container.add'}}"><i class="fa-solid fa-plus"></i></a>
+      {{/if}}
+    </span>
+  </div>
+  <ol class="gear-list">
+    {{#each containerRows as |row|}}
+    <li class="gear-entry{{#unless row.carried}} not-carried{{/unless}}" data-item-id="{{row.id}}" data-item-name="{{row.name}}">
+      <span class="col-name"><img class="gear-icon" alt="" src="{{row.img}}"><span class="name-text">{{row.name}}</span></span>
+      <span class="col-qty">{{row.quantity}}</span>
+      <span class="col-weight">{{row.weight}}</span>
+      <span class="col-capacity{{#if row.over}} sm-over-capacity{{/if}}">{{row.capacity}}</span>
+      <span class="col-notes" title="{{row.notes}}">{{row.notes}}</span>
+      <span class="col-actions">
+        {{#if @root.isOwner}}
+        <a data-action="unpackItem" data-sm-container-action="unpack" title="{{localize 'SCARMARK.Container.unpack'}}"><i class="fa-solid fa-box-open"></i></a>
+        <a data-action="toggleCarried" data-sm-container-action="carry" title="{{localize 'SCARMARK.Gear.carry'}}"><i class="fa-solid {{#if row.carried}}fa-briefcase{{else}}fa-box{{/if}}"></i></a>
+        {{/if}}
+        <a data-action="editGear" data-sm-container-action="edit" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+        {{#if @root.isOwner}}
+        <a data-action="deleteGear" data-sm-container-action="delete" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        {{/if}}
+      </span>
+    </li>
+    {{/each}}
+    {{#unless containerRows.length}}
+    <li class="gear-empty">{{localize 'SCARMARK.Container.noStored'}}</li>
+    {{/unless}}
+  </ol>
+</div>

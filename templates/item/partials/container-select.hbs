@@ -1,0 +1,10 @@
+{{!-- "In container" selector of a storable item (context: containerOptions). --}}
+<div class="field in-container">
+  <label>{{localize 'SCARMARK.Container.inContainer'}}</label>
+  <select name="system.container">
+    <option value="" {{#if (eq system.container "")}}selected{{/if}}>{{localize 'SCARMARK.Container.onPerson'}}</option>
+    {{#each containerOptions as |c|}}
+    <option value="{{c.id}}" {{#if (eq ../system.container c.id)}}selected{{/if}}>{{c.name}}</option>
+    {{/each}}
+  </select>
+</div>

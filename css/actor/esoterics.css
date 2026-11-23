@@ -1,0 +1,38 @@
+/* Actor sheet Esoterics tab. */
+
+/* Inline-editable SL/Level/Circle inputs in the Esoterics tables. */
+.scarmark .combat-table input.esoteric-field {
+  width: 3.2em;
+  padding: 1px 4px;
+  font-size: var(--sm-fs-row);
+  text-align: center;
+}
+
+/* ---------- Esoterics tab ---------- */
+.scarmark .esoteric-section {
+  margin-bottom: 16px;
+}
+
+.scarmark .esoteric-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--sm-accent);
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+}
+
+.scarmark .esoteric-section-title span {
+  font-family: var(--sm-font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--sm-text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.scarmark .esoteric-section-title a {
+  cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+}

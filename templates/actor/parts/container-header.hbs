@@ -1,0 +1,14 @@
+<header class="sheet-header">
+  {{> "systems/scarmark/templates/actor/partials/header-identity.hbs"}}
+
+  <div class="header-stats">
+    <div class="container-max-capacity">
+      <label>{{localize 'SCARMARK.Container.maxCapacity'}}</label>
+      <input type="number" step="1" min="0" name="system.maxCapacity" value="{{system.maxCapacity}}" />
+    </div>
+    <div class="container-contents-weight">
+      <label>{{localize 'SCARMARK.Container.contentsWeight'}}</label>
+      <span class="contents-weight-value">{{round1 gearSummary.total}}</span>
+    </div>
+  </div>
+</header>

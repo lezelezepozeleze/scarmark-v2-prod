@@ -1,0 +1,18 @@
+/* Actor sheet Journal tab. (The flex column on the actor .window-content is in base/sheet.css; drag markers too.) */
+
+/* ---------- Journal tab ---------- */
+/* The Journal editor fills the whole tab and grows/shrinks with the resized
+   sheet. Same pattern as the Spell/Invocation Description: only flex sizing on
+   <prose-mirror> itself, its internals stay core Foundry styling. */
+.scarmark.sheet.actor .tab.journal.active {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scarmark.sheet.actor .tab.journal prose-mirror {
+  flex: 1;
+  min-height: 0;
+}

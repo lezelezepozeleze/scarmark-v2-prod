@@ -1,0 +1,9 @@
+{{!-- The one-line Notes field of an item. Parameters: cls - the extra class of the field (note, skill-note, trait-note); grow - a box that grows with its text (one line when empty or short) instead of a one-line input. --}}
+<div class="field {{cls}}">
+  <label class="plain-label">{{localize 'SCARMARK.Trait.note'}}</label>
+  {{#if grow}}
+  <textarea rows="1" name="system.notes">{{system.notes}}</textarea>
+  {{else}}
+  <input type="text" name="system.notes" value="{{system.notes}}" />
+  {{/if}}
+</div>

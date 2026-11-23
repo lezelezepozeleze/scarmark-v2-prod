@@ -1,0 +1,71 @@
+<div class="tab profile{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="profile">
+
+  {{> "systems/scarmark/templates/actor/partials/attribute-rows.hbs"}}
+
+  {{#if showBirthInfo}}
+  <hr class="section-divider" />
+
+  <div class="profile-row">
+    <div class="field sunsign">
+      <label>{{localize 'SCARMARK.SunsignLabel'}}</label>
+      <span class="sunsign-value">{{#if sunsignLabel}}{{localize sunsignLabel}}{{/if}}</span>
+    </div>
+    <div class="field month">
+      <label>{{localize 'SCARMARK.MonthLabel'}}</label>
+      <select name="system.dob.month">
+        <option value=""></option>
+        {{#each months as |month key|}}
+        <option value="{{key}}" {{#if (eq key ../system.dob.month)}}selected{{/if}}>{{localize month.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="field day">
+      <label>{{localize 'SCARMARK.Day'}}</label>
+      <input type="text" name="system.dob.day" value="{{system.dob.day}}" />
+    </div>
+    <div class="field year">
+      <label>{{localize 'SCARMARK.Year'}}</label>
+      <input type="text" name="system.dob.year" value="{{system.dob.year}}" />
+    </div>
+    <div class="field birthplace">
+      <label>{{localize 'SCARMARK.Birthplace'}}</label>
+      <input type="text" name="system.birthplace" value="{{system.birthplace}}" />
+    </div>
+    <div class="field personality">
+      <label>{{localize 'SCARMARK.PersonalityLabel'}}</label>
+      <select name="system.personality">
+        <option value=""></option>
+        {{#each personalities as |label key|}}
+        <option value="{{key}}" {{#if (eq key ../system.personality)}}selected{{/if}}>{{localize label}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  {{/if}}
+
+  <hr class="section-divider" />
+
+  <div class="traits-row">
+    {{> "systems/scarmark/templates/actor/partials/trait-column.hbs" title="SCARMARK.Trait.physical" category="physical" traits=physicalTraits}}
+    {{> "systems/scarmark/templates/actor/partials/trait-column.hbs" title="SCARMARK.Trait.psyche" category="psyche" traits=psycheTraits}}
+  </div>
+
+  {{#unless showSpecialAbilities}}
+  <div class="specialization-box">
+    <div class="traits-header">
+      <h3>{{localize 'SCARMARK.Specialization'}}</h3>
+    </div>
+    <textarea name="system.specialization" rows="5" aria-label="{{localize 'SCARMARK.Specialization'}}">{{system.specialization}}</textarea>
+  </div>
+  {{/unless}}
+
+  {{#if showSpecialAbilities}}
+  <hr class="section-divider" />
+
+  <div class="special-abilities">
+    <h3>{{localize 'SCARMARK.SpecialAbilities'}}</h3>
+    <prose-mirror name="system.specialAbilities" value="{{system.specialAbilities}}"></prose-mirror>
+  </div>
+  {{/if}}
+
+</div>

@@ -1,0 +1,129 @@
+/* Item sheets, shared parts: header, Details fields, full-height Description editors. */
+
+/* ---------- Item header (simpler than actor header) ---------- */
+.scarmark .item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Equal specificity: ".trait-header .portrait" and ".skill-header .portrait" (item/skill-trait.css) must stay after this rule to resize it. */
+.scarmark .item-header .portrait {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: var(--sm-line);
+  cursor: pointer;
+}
+
+.scarmark .item-header .name-input {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  color: var(--sm-text);
+  flex: 1;
+}
+
+/* ---------- Generic field styling (Details tabs) ---------- */
+.scarmark .details .field {
+  margin-bottom: 10px;
+}
+
+/* Checkbox rows (.checkbox-label, .artifact-class) keep their own flex layout from base/controls.css; this rule would override it at higher specificity. */
+.scarmark .details .field label:not(.checkbox-label, .artifact-class, .sm-inline-field) {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* Injury Mend heading: the label and the roll link sit on one line, like the label that used to wrap the link. */
+.scarmark .details .field .mend-heading {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.scarmark .details .field .mend-heading label:not(.checkbox-label, .artifact-class, .sm-inline-field) {
+  display: inline;
+  margin-bottom: 0;
+}
+
+/* Field recipe of the Details tabs; also the Trait body and the In Container select (padding is 4px 6px, not --sm-pad-field). */
+.scarmark .details .field select,
+.scarmark .details .field textarea,
+.scarmark .details .field input[type="text"],
+.scarmark .trait-body select,
+.scarmark .trait-body input[type="text"],
+.scarmark .field.in-container select {
+  background: var(--sm-surface);
+  border: var(--sm-line);
+  color: var(--sm-text);
+  padding: 4px 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Label without the .field label look (used on Injury, Gear, Trait note and Container selects). */
+.scarmark .trait-body .plain-label,
+.scarmark .details .plain-label,
+.scarmark .skill-body .plain-label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 3px;
+  border-bottom: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* ---------- Description editors fill the item sheet ---------- */
+/* Every item Description editor (and the Psionic Misfire) takes all the height
+   left over in its sheet and grows/shrinks with the resized window. Flex chain:
+   .window-content > page (single-page body, or the active tab holding the
+   editor) > editor field > <prose-mirror>. Two editors on one page (Psionic)
+   split the space evenly. The editor keeps core's 150px min-height, so a
+   window too short for it scrolls instead of crushing the editor. Only flex
+   sizing touches <prose-mirror>; its internals stay core Foundry styling. */
+/* Item counterpart of ".scarmark.sheet.actor .window-content" in base/sheet.css. */
+.scarmark.sheet.item .window-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.scarmark.sheet.item .window-content > :is(.skill-body, .trait-body),
+.scarmark.sheet.item .window-content > .tab.active:has(> .field > prose-mirror) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scarmark.sheet.item .field:has(> prose-mirror) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scarmark.sheet.item .field > prose-mirror {
+  flex: 1;
+}
+
+/* Flex items don't collapse adjacent margins the way the old block layout
+   did; drop the duplicate half so spacing stays exactly as before.
+   (Spell/Invocation were flex columns already and keep their spacing.) */
+.scarmark .skill-body:not(.invocation-body) > .section-divider {
+  margin: 0;
+}
+
+.scarmark .skill-body:not(.invocation-body) > :is(.skill-attributes, .skill-sunsigns) {
+  margin-top: 0;
+}
+
+.scarmark .trait-body > .field.trait-note {
+  margin-bottom: 0;
+}
+
+/* The ONLY rule on <prose-mirror> is the flex-grow in "Description editors fill
+   the item sheet" above (flex:1 so it fills a resized item sheet).
+   Its internal display/height stays core Foundry styling - setting those
+   directly on the editor internals broke visibility/editing before, so don't. */

@@ -1,0 +1,10 @@
+{{!-- The body of the window that edits one action of an Actions panel (sheets/actions/action-editor.mjs). Context: row - one row of the view model from prepareActionsPanel, or null when the action is gone. The fields are named by the data path of the list, so the window saves them like a sheet does. --}}
+{{#if row}}
+<div class="actions-panel action-editor-body">
+  <input type="hidden" name="{{row.prefix}}.id" value="{{row.id}}" />
+  <div class="action-line">
+    <input type="text" class="action-name" name="{{row.name.name}}" value="{{row.name.value}}" placeholder="{{localize 'SCARMARK.Action.namePlaceholder'}}" />
+  </div>
+  {{> "systems/scarmark/templates/common/action-fields.hbs" row=row}}
+</div>
+{{/if}}

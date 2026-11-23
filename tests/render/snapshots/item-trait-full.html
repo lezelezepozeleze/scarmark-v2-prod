@@ -1,0 +1,39 @@
+<!-- part: body -->
+<div class="trait-body">
+<header class="item-header trait-header">
+<img class="portrait" src="icons/item.svg" data-action="editImage" alt="Item &lt;name&gt;" />
+<div class="trait-header-main">
+<input class="name-input" type="text" name="name" value="Item &lt;name&gt;" placeholder="{SCARMARK.NamePlaceholder}" />
+<div class="field trait-type">
+<label>{SCARMARK.Trait.type}</label>
+<select name="system.category">
+<option value="physical" selected>{SCARMARK.Trait.typePhysical}</option>
+<option value="psyche" >{SCARMARK.Trait.typePsyche}</option>
+</select>
+</div>
+</div>
+</header>
+<div class="field trait-description">
+<h3>{SCARMARK.Description}</h3>
+<prose-mirror name="system.description" value="&lt;b&gt;text&lt;/b&gt;">
+</prose-mirror>
+</div>
+<div class="field trait-note">
+<label class="plain-label">{SCARMARK.Trait.note}</label>
+<input type="text" name="system.notes" value="&lt;b&gt;text&lt;/b&gt;" />
+</div>
+<div class="effects-flat">
+<h3>{SCARMARK.Tabs.effects}</h3>
+<div class="effects-header">
+<span class="col-name">{SCARMARK.Effect.effect}</span>
+<span class="col-duration">{SCARMARK.Effect.duration}</span>
+<span class="col-changes">{SCARMARK.Effect.changes}</span>
+<a class="add-effect" data-action="createEffect">
+<i class="fa-solid fa-plus">
+</i> {SCARMARK.Add} </a>
+</div>
+<ol class="effects-list flat">
+<li class="effect-empty">{SCARMARK.Effect.none}</li>
+</ol>
+</div>
+</div>

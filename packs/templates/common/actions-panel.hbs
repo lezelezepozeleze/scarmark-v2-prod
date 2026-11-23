@@ -1,0 +1,20 @@
+{{!-- The Actions panel: the Add link on the right, then one row per action with its name only (like the Effects tab): the name opens the window that edits the action, the switch and the red bin sit on the right. A row drags out as a copy of its action, and an Action from the compendium or the Items directory dropped on the panel adds its action. Parameter: panel - the view model from prepareActionsPanel (sheets/actions/action-panel.mjs). Not tied to item sheets: the data path comes from panel.path. --}}
+<div class="actions-panel" data-actions-path="{{panel.path}}">
+  <div class="actions-header">
+    <a class="add-action" data-action="createAction">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+  <ol class="actions-list">
+    {{#each panel.rows as |row index|}}
+    <li class="action-entry{{#if row.disabled}} action-off{{/if}}" data-index="{{index}}">
+      <a class="action-label" data-action="editAction">{{row.label}}</a>
+      <a class="action-toggle" data-action="toggleAction" title="{{localize 'SCARMARK.Action.toggle'}}"><i class="fa-solid {{#if row.disabled}}fa-toggle-off{{else}}fa-toggle-on{{/if}}"></i></a>
+      <a class="action-delete" data-action="deleteAction" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+    </li>
+    {{/each}}
+    {{#unless panel.rows.length}}
+    <li class="action-empty">{{localize 'SCARMARK.Action.none'}}</li>
+    {{/unless}}
+  </ol>
+</div>

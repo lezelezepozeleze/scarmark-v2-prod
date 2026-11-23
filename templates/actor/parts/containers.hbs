@@ -1,0 +1,59 @@
+<div class="tab containers{{#if tab.active}} active{{/if}}" data-group="primary" data-tab="containers">
+
+  <div class="gear-section-header container-tab-header">
+    <span class="col-name">{{localize 'SCARMARK.Gear.categoryContainers'}}</span>
+    <a class="col-actions add-gear" data-action="addContainer">
+      <i class="fa-solid fa-plus"></i> {{localize 'SCARMARK.Add'}}
+    </a>
+  </div>
+
+  {{#each containers as |c|}}
+  <div class="container-block{{#unless c.carried}} not-carried{{/unless}}" data-item-id="{{c.id}}">
+    <div class="container-head">
+      <img class="gear-icon" src="{{c.img}}" alt="" />
+      <span class="container-name">{{c.name}}</span>
+      <span class="container-capacity{{#if c.overCapacity}} over{{/if}}">{{localize 'SCARMARK.Container.fillLine' value=(round1 c.contentWeight) max=(round1 c.maxCapacity)}}</span>
+      <span class="container-actions">
+        <a data-action="unpackItem" title="{{localize 'SCARMARK.Container.unpack'}}"><i class="fa-solid fa-box-open"></i></a>
+        <a data-action="toggleCarried" title="{{localize 'SCARMARK.Gear.carry'}}">
+          <i class="fa-solid {{#if c.carried}}fa-briefcase{{else}}fa-box{{/if}}"></i>
+        </a>
+        <a data-action="editGear" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+      </span>
+    </div>
+    <ol class="gear-list container-contents">
+      {{#each c.contents as |item|}}
+      <li class="gear-entry" data-item-id="{{item.id}}" data-item-name="{{item.name}}">
+        <span class="col-name">
+          <img class="gear-icon" src="{{item.img}}" alt="" />
+          <span class="name-text">{{item.name}}</span>
+        </span>
+        <span class="col-qty">{{item.system.quantity}}</span>
+        <span class="col-weight">{{num item.system.totalWeight}}</span>
+        <span class="col-notes" title="{{item.system.notes}}">{{item.system.notes}}</span>
+        <span class="col-actions">
+          {{#if item.system.usable}}
+          <a class="gear-use" title="{{localize 'SCARMARK.Gear.use'}}"><i class="fa-solid fa-hand-sparkles"></i></a>
+          {{/if}}
+          {{#if item.system.consumable}}
+          <a class="gear-consume" title="{{localize 'SCARMARK.Gear.consume'}}"><i class="fa-solid fa-flask"></i></a>
+          {{/if}}
+          <a data-action="ejectItem" title="{{localize 'SCARMARK.Container.unpack'}}"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+          <a data-action="editGear" title="{{localize 'SCARMARK.Skill.edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a data-action="deleteGear" title="{{localize 'SCARMARK.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </span>
+      </li>
+      {{/each}}
+      {{#unless c.contents.length}}
+      <li class="gear-empty">{{localize 'SCARMARK.Container.noStored'}}</li>
+      {{/unless}}
+    </ol>
+  </div>
+  {{/each}}
+
+  {{#unless containers.length}}
+  <div class="gear-empty">{{localize 'SCARMARK.Gear.notBuiltYet'}}</div>
+  {{/unless}}
+
+</div>
